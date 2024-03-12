@@ -12,18 +12,20 @@
             <img src="./public/img/logo_unal_blanco.webp" 
             alt="logo Universidad Nacional de Colombia">
         </div>
-        <nav class="header__menu">
+        <!--<nav class="header__menu">
             <ul>
                 <li><a href="">Inicio</a></li>
                 <li><a href="">Iniciar Sesión</a></li>
             </ul>
-        </nav>
+        </nav>-->
         <div class="header__logo-fce">
             <img src="./public/img/logo_FCE_blanco.webp" alt="">
         </div>
     </header>
 
     <main class="container__login">
+        <div class="blur"></div>
+
         <section class="login__form">
             <h1>
                 Iniciar sesión
@@ -50,17 +52,17 @@
     </main>
 
     <footer>
-        <section>
-            Enlaces de interés
+        <section class="footer__social_media">
+            <h3>
+                Redes Sociales
+            </h3>
             <ul>
-                <li><a href=""></a></li>
-                <li><a href=""></a></li>
                 <li><a href=""></a></li>
                 <li><a href=""></a></li>
                 <li><a href=""></a></li>
             </ul>
         </section>
-        <section>
+        <section class="footer__contact">
 
         </section>
     </footer>
