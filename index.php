@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./public/css/index.css">
+    <script src="https://kit.fontawesome.com/cddf3df688.js" crossorigin="anonymous"></script>
     <title>Iniciar Sesión</title>
 </head>
 <body>
@@ -19,7 +20,7 @@
             </ul>
         </nav>-->
         <div class="header__logo-fce">
-            <img src="./public/img/logo_FCE_blanco.webp" alt="">
+            <img src="./public/img/logo_FCE_blanco.webp" alt="Logo Facultad de Ciencias Económicas">
         </div>
     </header>
 
@@ -52,18 +53,39 @@
     </main>
 
     <footer>
-        <section class="footer__social_media">
-            <h3>
-                Redes Sociales
-            </h3>
-            <ul>
-                <li><a href=""></a></li>
-                <li><a href=""></a></li>
-                <li><a href=""></a></li>
+        <section class="container__footer__social_media">
+            <div class="footer__social_media_img">
+                <img src="./public/img/logo_FCE_blanco.webp" alt="Logo Facultad de Ciencias Económicas">
+            </div>
+            <ul class="footer__social_media">
+                <li>
+                    <a href="https://web.facebook.com/fceunal">
+                        <i class="fa-brands fa-facebook"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.instagram.com/bienestarfceun">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://x.com/fceunal">
+                        <i class="fa-brands fa-square-x-twitter"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.linkedin.com/company/fce-unal-bogota/"><i class="fa-brands fa-linkedin"></i>
+                </a>
+                </li>
+                <li>
+                    <a href="https://youtube.com/@prensacid">
+                        <i class="fa-brands fa-youtube"></i>
+                    </a>
+                </li>
             </ul>
         </section>
-        <section class="footer__contact">
-
+        <section class="container__footer__contact">
+            
         </section>
     </footer>
 </body>
