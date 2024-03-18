@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./public/css/index.css">
+    <link rel="stylesheet" href="./public/css/homepage/login.css">
     <script src="https://kit.fontawesome.com/cddf3df688.js" crossorigin="anonymous"></script>
     <title>Iniciar Sesión</title>
 </head>
@@ -60,7 +60,7 @@
             <ul class="footer__social_media">
                 <li>
                     <a href="https://web.facebook.com/fceunal">
-                        <i class="fa-brands fa-facebook"></i>
+                        <i class="fa-brands fa-facebook f"></i>
                     </a>
                 </li>
                 <li>
@@ -74,8 +74,9 @@
                     </a>
                 </li>
                 <li>
-                    <a href="https://www.linkedin.com/company/fce-unal-bogota/"><i class="fa-brands fa-linkedin"></i>
-                </a>
+                    <a href="https://www.linkedin.com/company/fce-unal-bogota/">
+                        <i class="fa-brands fa-linkedin"></i>
+                    </a>
                 </li>
                 <li>
                     <a href="https://youtube.com/@prensacid">
@@ -85,7 +86,11 @@
             </ul>
         </section>
         <section class="container__footer__contact">
-            
+            <h3>Contactanos</h3>
+            <form action="">
+                <input type="email" placeholder="Correo" class="container__footer__contact_email">
+                <input type="text" placeholder="PQRS" class="container__footer__contact_pqrs">
+            </form>
         </section>
     </footer>
 </body>
