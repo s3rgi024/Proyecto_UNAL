@@ -8,7 +8,7 @@ footer{
     
     
     & .container__footer__social_media{
-        width: 50%;
+        width: 30%;
         height: 100%;
         margin: 0 0 20px 40px;
         padding-top: 20px;
@@ -31,66 +31,120 @@ footer{
             & li{
                 font-size: 2rem;
                 display: inline-block;
-                transition: scale  ease-in-out 100ms;
-                -webkit-transition: scale  ease-in-out 100ms;
-                -moz-transition: scale  ease-in-out 100ms;
-                -ms-transition: scale  ease-in-out 100ms;
-                -o-transition: scale  ease-in-out 100ms;
-                &:hover{
-                    scale: 1.2;
-                }
+                
                 & a i{
-                    color: #fff;
-                    transition: background ease-out 100ms;
-                    -webkit-transition: background ease-out 100ms;
-                    -moz-transition: background ease-out 100ms;
-                    -ms-transition: background ease-out 100ms;
-                    -o-transition: background ease-out 100ms;
-}
+                    &:hover{
+                        scale: 1.2;
+                    }
 
-                & .fa-facebook:hover{
-                    background: linear-gradient(45deg, #3b5998, #4a63a4, #5b7fbc, #6b9ad3, #7bb6eb, #8ccff6, #9ce7fc, #aceaff, #c0eff9, #d3f6f6);
+                    color: #fff;
+                    font-size: 2.5rem;
+                    transition-duration: 100ms;
+                    transition-property: background, scale;
+                }
+
+                & .bxl-facebook-circle:hover{
+                    background: linear-gradient(45deg, #24458d, #3152a5, #2258b6, #1263c7, #0281f0, #0196ec, #0294bd, #1a92b9, #2f9db6, #d3f6f6);
                     -webkit-background-clip: text;
                     background-clip: text;
                     color: transparent;
+                    filter: drop-shadow(0 0 5px #2258b6);
+                    -webkit-filter: drop-shadow(0 0 5px #2258b6);
                 }
 
-                & .fa-instagram:hover{
+                & .bxl-instagram-alt:hover{
                     background: linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d, #f56040, #f77737, #fcaf45, #ffdc80);
                     -webkit-background-clip: text;
                     background-clip: text;
                     color: transparent;
+                    filter: drop-shadow(0 0 5px #5c183e);
+                    -webkit-filter: drop-shadow(0 0 5px #a73c79);
                 }
 
-                & .fa-square-x-twitter:hover{
-                    background: linear-gradient(45deg, rgba(2,0,36,1) 0%, rgba(0,0,0,1) 0%, rgba(255,255,255,1) 60%);                    -webkit-background-clip: text;
+                & .bxl-twitter:hover{
+                    background: linear-gradient(to right, #1DA1F2, #FFFFFF);
                     -webkit-background-clip: text;
                     background-clip: text;
                     color: transparent;
+                    filter: drop-shadow(0 0 5px #1DA1F2);
+                    -webkit-filter: drop-shadow(0 0 5px #1DA1F2);
                 }
 
-                & .fa-linkedin:hover{
+                & .bxl-linkedin-square:hover{
                     background: linear-gradient(90deg, #219ee2, #0A66C2);
                     -webkit-background-clip: text;
                     background-clip: text;
                     color: transparent;
+                    filter: drop-shadow(0 0 5px #0A66C2);
+                    -webkit-filter: drop-shadow(0 0 5px #0A66C2);
                 }
 
-                & .fa-youtube:hover{
+                & .bxl-youtube:hover{
                     background: linear-gradient(45deg, #FF0000, #FF0000 40%, #ffffff);
                     -webkit-background-clip: text;
                     background-clip: text;
                     color: transparent;
+                    filter: drop-shadow(0 0 2px #FF0000);
+                    -webkit-filter: drop-shadow(0 0 2px #FF0000);
                 }
             }
         }
 
     }
+
+    & .container__footer__about{
+        width: 40%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+
+        & .container__footer__about_list{
+            display: flex;
+            gap: 2rem;
+            margin: 25px 0 10px;
+            cursor: pointer;
+
+            & li{
+                transition: scale ease-in-out 200ms;
+                -webkit-transition: scale ease-in-out 200ms;
+                -moz-transition: scale ease-in-out 200ms;
+                -ms-transition: scale ease-in-out 200ms;
+                -o-transition: scale ease-in-out 200ms;
+                
+                &:hover{
+                    scale: 1.1;
+                }
+            }
+        }
+
+        & .container__footer__us_info, .container__footer__devs_info{
+            width: 80%;
+            text-align: center;
+            font-size: 0.7rem;
+            font-weight: 300;
+            margin: 10px;
+            line-height: 1.3;
+            transition: opacity 0.5s ease-out;
+            -webkit-transition: opacity 0.5s ease-out;
+            -moz-transition: opacity 0.5s ease-out;
+            -ms-transition: opacity 0.5s ease-out;
+            -o-transition: opacity 0.5s ease-out;
+}
+
+        & .container__footer__devs_info{
+            opacity: 0;
+            display: none;
+        }
+    }
     
 
     & .container__footer__contact{
-        width: 50%;
+        width: 30%;
         height: 100%;
+        display: flex;
+        flex-direction: column;
         
     }
 }
+

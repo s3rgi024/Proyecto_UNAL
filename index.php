@@ -4,94 +4,116 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./public/css/homepage/login.css">
-    <script src="https://kit.fontawesome.com/cddf3df688.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./node_modules/boxicons/css/boxicons.min.css">
     <title>Iniciar Sesión</title>
 </head>
 <body>
-    <header class="header">
-        <div class="header__logo-unal">
-            <img src="./public/img/logo_unal_blanco.webp" 
-            alt="logo Universidad Nacional de Colombia">
-        </div>
-        <!--<nav class="header__menu">
-            <ul>
-                <li><a href="">Inicio</a></li>
-                <li><a href="">Iniciar Sesión</a></li>
-            </ul>
-        </nav>-->
-        <div class="header__logo-fce">
-            <img src="./public/img/logo_FCE_blanco.webp" alt="Logo Facultad de Ciencias Económicas">
-        </div>
-    </header>
+    
+    <?php
+        include("./src/views/components/header.php"); 
+    ?>
 
     <main class="container__login">
         <div class="blur"></div>
 
-        <section class="login__form">
+        <section class="login__form" id="login__form">
             <h1>
                 Iniciar sesión
             </h1>
             <form action="">      
                 <div class="login__form-fields">
                     <label for="userName">Nombre de Usuario</label>
-                    <input type="text" name="userName" id="userName">
+                   <div>
+                        <label for="userName"><i class='bx bx-user' ></i></label>
+                        <div>
+                            <input type="text" name="userName" id="userName">
+                            <div class="underline"></div>
+                        </div>
+                   </div>
                 </div>
                 
                 <div class="login__form-fields">
                     <label for="password">Contraseña</label>
-                    <input type="password" name="password" id="password">
-                    <a href="">Olvidé mi contraseña</a>
+                    <div>
+                        <label for="password"><i class='bx bx-lock-alt'></i></label>
+                        <div>
+                            <input type="password" name="password" id="password">
+                            <div class="underline"></div>
+                        </div>
+                    </div>
+                    <div class="login__form-forget-password-link">
+                        <div>
+                        <a href="">Olvidé mi contraseña</a>
+                        </div>
+                    </div>
                 </div>
 
                 <div class="login__form-btn">
                     <button type="submit">
                         Ingresar
                     </button>
+                    <span>
+                        ¿No  tienes una cuenta?
+                        <span><a id="register_link">Registrate</a></span>
+                    </span>
+                </div>
+            </form>
+        </section>
+
+        <section class="register__form" id="register__form">
+            <h1>
+                Regístrate
+            </h1>
+            <form action="">
+                <div class="login__form-fields">
+                    <label for="userName">Tipo y número de documento</label>
+                   <div>
+                        <div>
+                                <div>
+                                    <select name="" id="">
+                                        <option value="C.C"></option>
+                                        <option value="C.E"></option>
+                                    </select>
+                                </div>
+                        </div>
+                        <div>
+                                <div>
+                                    <input type="number" name="userName" id="userName">
+                                    <div class="underline"></div>
+                                </div>
+                        </div>
+                   </div>
+                </div>   
+
+                <div class="login__form-fields">
+                    <label for="password">Correo</label>
+                    <div>
+                        <label for="password"><i class='bx bx-lock-alt'></i></label>
+                        <div>
+                            <input type="password" name="password" id="password">
+                            <div class="underline"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="login__form-btn">
+                    <button type="submit">
+                        Solicitar Usuario
+                    </button>
+                    <span>
+                        ¿Ya tienes una cuenta?
+                        <span><a id="login_link">Inicia Sesión</a></span>
+                    </span>
                 </div>
             </form>
         </section>
     </main>
+    
 
-    <footer>
-        <section class="container__footer__social_media">
-            <div class="footer__social_media_img">
-                <img src="./public/img/logo_FCE_blanco.webp" alt="Logo Facultad de Ciencias Económicas">
-            </div>
-            <ul class="footer__social_media">
-                <li>
-                    <a href="https://web.facebook.com/fceunal">
-                        <i class="fa-brands fa-facebook f"></i>
-                    </a>
-                </li>
-                <li>
-                    <a href="https://www.instagram.com/bienestarfceun">
-                        <i class="fa-brands fa-instagram"></i>
-                    </a>
-                </li>
-                <li>
-                    <a href="https://x.com/fceunal">
-                        <i class="fa-brands fa-square-x-twitter"></i>
-                    </a>
-                </li>
-                <li>
-                    <a href="https://www.linkedin.com/company/fce-unal-bogota/">
-                        <i class="fa-brands fa-linkedin"></i>
-                    </a>
-                </li>
-                <li>
-                    <a href="https://youtube.com/@prensacid">
-                        <i class="fa-brands fa-youtube"></i>
-                    </a>
-                </li>
-            </ul>
-        </section>
-        <section class="container__footer__contact">
-            <h3>Contactanos</h3>
-            <form action="">
-                <input type="email" placeholder="Correo" class="container__footer__contact_email">
-                <input type="text" placeholder="PQRS" class="container__footer__contact_pqrs">
-            </form>
-        </section>
-    </footer>
+    <?php
+        include("./src/views/components/footer.php"); 
+    ?>
+
+    <script src="./public/js/login.js"></script>
 </body>
 </html>
