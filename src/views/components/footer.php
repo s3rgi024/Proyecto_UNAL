@@ -1,7 +1,7 @@
 <footer>
         <section class="container__footer__social_media">
             <div class="footer__social_media_img">
-                <img src="./public/img/logo_FCE_blanco.webp" alt="Logo Facultad de Ciencias Económicas">
+                <img src="../../../public/img/logo_FCE_blanco.webp" alt="Logo Facultad de Ciencias Económicas">
             </div>
             <ul class="footer__social_media">
                 <li>
@@ -33,12 +33,12 @@
         </section>
         <section class="container__footer__about">
             <ul class="container__footer__about_list">
-                <li id="us">Nosotros</li>
-                <li id="devs">Desarrolladores</li>
+                <li id="us"><h4>Nosotros</h4></li>
+                <li id="devs"><h4>Desarrolladores</h4></li>
             </ul>
             
             <div id="about__content_us" class="container__footer__us_info">
-                olas nubssssssss Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
                 Accusamus, iste sit? Tempore voluptatum suscipit quibusdam.
             </div>
             <div id="about__content_devs" class="container__footer__devs_info">
@@ -54,4 +54,4 @@
         </section>
 </footer>
 
-<script src="./public/js/footer.js"></script>
+<script src="../../../public/js/footer.js"></script>

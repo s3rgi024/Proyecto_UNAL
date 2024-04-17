@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./public/css/homepage/login.css">
+    <link rel="stylesheet" href="./public/css/modules/login.css">
     <link rel="stylesheet" href="./node_modules/boxicons/css/boxicons.min.css">
-    <title>Iniciar Sesión</title>
+     <title>Iniciar Sesión</title>
 </head>
 <body>
     
@@ -43,14 +43,16 @@
                     </div>
                     <div class="login__form-forget-password-link">
                         <div>
-                        <a href="">Olvidé mi contraseña</a>
+                            <a href="">Olvidé mi contraseña</a>
                         </div>
                     </div>
                 </div>
 
                 <div class="login__form-btn">
                     <button type="submit">
-                        Ingresar
+                        <a href="./src/views/pages/main.php">
+                            Ingresar
+                        </a>
                     </button>
                     <span>
                         ¿No  tienes una cuenta?
@@ -65,14 +67,14 @@
                 Regístrate
             </h1>
             <form action="">
-                <div class="login__form-fields">
+                <div class="register__form-fields">
                     <label for="userName">Tipo y número de documento</label>
                    <div>
                         <div>
                                 <div>
-                                    <select name="" id="">
-                                        <option value="C.C"></option>
-                                        <option value="C.E"></option>
+                                    <select name="t_doc" id="t_doc">
+                                        <option value="C.C">C.C</option>
+                                        <option value="C.E">C.E</option>
                                     </select>
                                 </div>
                         </div>
@@ -85,10 +87,10 @@
                    </div>
                 </div>   
 
-                <div class="login__form-fields">
+                <div class="register__form-fields">
                     <label for="password">Correo</label>
                     <div>
-                        <label for="password"><i class='bx bx-lock-alt'></i></label>
+                        <label for="password"><i class='bx bx-envelope'></i></label>
                         <div>
                             <input type="password" name="password" id="password">
                             <div class="underline"></div>
@@ -96,7 +98,7 @@
                     </div>
                 </div>
 
-                <div class="login__form-btn">
+                <div class="register__form-btn">
                     <button type="submit">
                         Solicitar Usuario
                     </button>
