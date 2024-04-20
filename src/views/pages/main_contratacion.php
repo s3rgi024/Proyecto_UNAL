@@ -14,14 +14,20 @@
     
     ?>
 
+    <section class="main_contratacion__background">
+    </section>
+    
     <main class="main_contratacion__container min-main">
+
+        
 
         <section class="main_contratacion__text">
             <h1>
                 Gestión Contratación
             </h1>
             <p>
-            Bienvenido al sitema de contratación de docentes ocasionales de la facultad de ciencias económicas de la Universidad Nacional de Colombia.
+            Bienvenido al sitema de contratación de docentes ocasionales de la facultad de ciencias 
+            económicas de la Universidad Nacional de Colombia.
             <br>
             Seleccione una opción a continuación:
             </p>
@@ -65,8 +71,16 @@
                 </div>
             </div>
         </section>
+        
 
+        <section class="footer_logo">
+            <img src="../../../public/img/Logo_FCE_negro.webp" alt="Logo de la facultad de ciencias económicas">
+        </section>
     </main>
+
+    
+
     <script src="../../../public/js/navbar.js"></script>
+    <script src="../../../public/js/main_contratacion.js"></script>
 </body>
 </html>
