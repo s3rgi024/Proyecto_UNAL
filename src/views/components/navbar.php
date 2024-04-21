@@ -40,8 +40,6 @@
                 </li>
                 <li>
                     <a href="../../../src/views/pages/main_contratacion.php">
-                        <ion-icon name="person-add-outline"></ion-icon>
-                    <a href="#">
                         <i class="fa-solid fa-file-signature"></i>
                         <span class="oculto">Contratación</span>
                     </a>

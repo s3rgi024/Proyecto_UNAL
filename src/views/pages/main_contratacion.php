@@ -50,8 +50,6 @@
             <div>
                 <img src="../../../public/img/doc_aprobada.webp" alt="persona buscando perfiles">
                 <div class="contratacion_actions">
-                    <span>Documentación Aprobada</span>
-                    <i class='bx bx-info-circle'></i>
                     <span>
                         Documentación aprobada
                     </span>
@@ -65,12 +63,9 @@
             <div>
                 <img src="../../../public/img/doc_historial.webp" alt="persona buscando perfiles">
                 <div class="contratacion_actions">
-                    <span>Historial</span>
-                    <i class='bx bx-info-circle'></i>
                     <span>
                         Historial
                     </span>
-
                     <i class='fa-solid fa-circle-info' id="info"></i>
                 </div>
             </div>
