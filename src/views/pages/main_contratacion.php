@@ -41,7 +41,7 @@
                 <div class="contratacion_actions">
                     <span>Documentación Pendiente</span>
 
-                    <i class='bx bx-info-circle'></i>
+                    <i class='fa-solid fa-circle-info' id="info"></i>
                 </div>
             </div>
         </a>
@@ -52,6 +52,11 @@
                 <div class="contratacion_actions">
                     <span>Documentación Aprobada</span>
                     <i class='bx bx-info-circle'></i>
+                    <span>
+                        Documentación aprobada
+                    </span>
+
+                    <i class='fa-solid fa-circle-info' id="info"></i>
                 </div>
             </div>
         </a>
@@ -62,6 +67,11 @@
                 <div class="contratacion_actions">
                     <span>Historial</span>
                     <i class='bx bx-info-circle'></i>
+                    <span>
+                        Historial
+                    </span>
+
+                    <i class='fa-solid fa-circle-info' id="info"></i>
                 </div>
             </div>
         </a>

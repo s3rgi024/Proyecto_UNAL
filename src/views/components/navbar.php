@@ -2,7 +2,6 @@
 <html>
 <head>
     <link rel="stylesheet" href="../../../public/css/modules/navbar.css">
-    <link rel="stylesheet" href="../../../node_modules/boxicons/css/boxicons.min.css">
 
 </head>
 <body>
@@ -15,61 +14,70 @@
     <div class="barra-lateral mini-barra-lateral">
         <div>
             <div class="nombre-pagina">
-                <ion-icon id="cloud" name="business-outline"></ion-icon>
+                <div class="hamburger hamburger--spin" id="cloud">
+                    <div class="hamburger-box">
+                    <div class="hamburger-inner"></div>
+                    </div>
+                </div>
+
                 <span class="oculto">FCE</span>
             </div>
-            <button class="boton">
-                <ion-icon name="log-out-outline"></ion-icon>
-                <span class="oculto">Cerrar Sesión</span>
-            </button>
         </div>
 
         <nav class="navegacion">
             <ul>
                 <li>
                     <a id="inbox" href="../pages/main.php">
-                        <ion-icon name="home-outline"></ion-icon>
+                        <i class="fa-solid fa-house-chimney"></i>
                         <span class="oculto">Inicio</span>
                     </a>
                 </li>
                 <li>
                     <a href="#">
-                        <ion-icon name="grid-outline"></ion-icon>
+                        <i class="fa-solid fa-school"></i>
                         <span class="oculto">Salones</span>
                     </a>
                 </li>
                 <li>
                     <a href="../../../src/views/pages/main_contratacion.php">
                         <ion-icon name="person-add-outline"></ion-icon>
+                    <a href="#">
+                        <i class="fa-solid fa-file-signature"></i>
                         <span class="oculto">Contratación</span>
                     </a>
                 </li>
                 <li>
                     <a href="#">
-                        <ion-icon name="document-text-outline"></ion-icon>
+                        <i class="fa-solid fa-chart-column"></i>
                         <span class="oculto">Reportes</span>
                     </a>
                 </li>
                 <li>
                     <a href="#">
-                        <ion-icon name="settings-outline"></ion-icon>
+                        <i class="fa-solid fa-gear"></i>
                         <span class="oculto">Mantenimiento</span>
                     </a>
                 </li>
                 <li>
                     <a href="#">
-                        <ion-icon name="layers-outline"></ion-icon>
+                        <i class="fa-solid fa-clock-rotate-left"></i>
                         <span class="oculto">Historial</span>
                     </a>
                 </li>
                 <li>
                     <a href="#">
-                        <ion-icon name="information-circle-outline"></ion-icon>
+                        <i class="fa-solid fa-circle-info"></i>
                         <span class="oculto">Información</span>
                     </a>
                 </li>
             </ul>
+            <button class="boton">
+                <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                <span class="oculto">Cerrar Sesión</span>
+            </button>
         </nav>
+
+        
 
         <div>
             <div class="linea"></div>

@@ -64,8 +64,8 @@ body {
             -webkit-animation: up_down infinite ease-in-out 1.5s;
         }
 
-        & .doc_pendiente:hover ~ body{
-            background-color: rgb(0, 0, 99);
+        & > .doc_pendiente:hover{
+            box-shadow:  0 8px 8px #cccff9;
         }
 
         & > .doc_aprobada:hover img  {
@@ -73,9 +73,17 @@ body {
             -webkit-animation: up_down infinite ease-in-out 1.5s;
         }
 
+        & > .doc_aprobada:hover{
+            box-shadow:  0 8px 8px #edd394;
+        }
+
         & > .doc_historial:hover img  {
             animation: up_down infinite ease-in-out 1.5s;
             -webkit-animation: up_down infinite ease-in-out 1.5s;
+        }
+
+        & > .doc_historial:hover{
+            box-shadow:  0 8px 8px #f99485;
         }
 
         & .contratacion_option{
@@ -92,11 +100,12 @@ body {
             -moz-border-radius: 10px;
             -ms-border-radius: 10px;
             -o-border-radius: 10px;
-            transition: scale ease-in-out 0.2s;
-            -webkit-transition: scale ease-in-out 0.2s;
-            -moz-transition: scale ease-in-out 0.2s;
-            -ms-transition: scale ease-in-out 0.2s;
-            -o-transition: scale ease-in-out 0.2s;
+            transition: scale ease-in-out 0.2s, background-color 0.2s;
+            -webkit-transition: scale ease-in-out 0.2s, background-color 0.2s;
+            -moz-transition: scale ease-in-out 0.2s, background-color 0.2s;
+            -ms-transition: scale ease-in-out 0.2s, background-color 0.2s;
+            -o-transition: scale ease-in-out 0.2s, background-color 0.2s;
+            
             
             &:hover{
                 scale: 1.1;
@@ -111,6 +120,41 @@ body {
                     margin-top: 10px;
                     width: 80%;
                     text-align: center;
+                }
+
+                & i{
+                    margin-top: 10px;
+                    text-align: center;
+                }
+
+                & .show::after{
+                    display: block;
+                    transition: all 0.5s;
+                    -webkit-transition: all 0.5s;
+                    -moz-transition: all 0.5s;
+                    -ms-transition: all 0.5s;
+                    -o-transition: all 0.5s;
+                }
+
+                & i::after{
+                    display: none;
+                    position: absolute;
+                    content: "Más información";
+                    background-color: #ffffff;
+                    box-shadow: 0 8px 8px rgba(0, 0, 0, 0.1);
+                    font-family: "Roboto Condensed", sans-serif;
+                    font-size: 0.6rem;
+                    padding: 8px;
+                    border-radius: 5px;
+                    -webkit-border-radius: 5px;
+                    -moz-border-radius: 5px;
+                    -ms-border-radius: 5px;
+                    -o-border-radius: 5px;
+                    transition: all 0.5s;
+                    -webkit-transition: all 0.5s;
+                    -moz-transition: all 0.5s;
+                    -ms-transition: all 0.5s;
+                    -o-transition: all 0.5s;
                 }
             }
         }
