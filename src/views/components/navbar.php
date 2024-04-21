@@ -39,7 +39,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="../../../src/views/pages/main_contratacion.php">
                         <ion-icon name="person-add-outline"></ion-icon>
                         <span class="oculto">Contratación</span>
                     </a>

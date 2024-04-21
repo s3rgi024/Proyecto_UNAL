@@ -1,22 +1,32 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../../node_modules/boxicons/css/boxicons.min.css">
-    <link rel="stylesheet" href="../../../public/css/vis_arch.css" />
-    <title>Visualización Documentos</title>
-  </head>
+    <link rel="stylesheet" href="../../../public/css/vis_arch.css">
+    <title>Menú Contratación</title>
+</head>
   <body>
   
-    <?php
-    
-      include ("../components/header.php");
+  <?php   
+    include("../components/navbar.php");
+  ?>
 
-    ?>
+    <section class="main_contratacion__text">
+      <h1>
+        Documentación Pendiente
+      </h1>
+      <br>
+      <p>
+      Este módulo ha sido designado para permitirle acceder a la documentación proporcionada <br> por los docentes en el marco del proceso de vinculación con la universidad.      
+      <br>
+      <br>
+        Seleccione un registro a continuación:
+      </p>
+    </section>
 
-    <main class="main bd-grid">
+    <main class="main bd-grid min-main">
+      
       <article class="card">
         <div class="card__img">
           <img src="../../../public/img/hombre.png" alt="" />
@@ -43,7 +53,6 @@
         </div>
         <div class="card__precis">
           <a href="" class="card__icon"><i class='bx bx-info-circle'></i></a>
-
           <div>
             <span class="card__preci card__preci--before">Docente Ad-Honorem</span>
             <span class="card__preci card__preci--now">Juana Martinez</span>
@@ -61,7 +70,6 @@
         </div>
         <div class="card__precis">
           <a href="" class="card__icon"><i class='bx bx-info-circle'></i></a>
-
           <div>
             <span class="card__preci card__preci--before">Docente Ocasional</span>
             <span class="card__preci card__preci--now">Sergio Chaparro</span>
@@ -69,12 +77,59 @@
           <a href="" class="card__icon"><i class='bx bx-search'></i></a>
         </div>
       </article>
+
+      <article class="card">
+        <div class="card__img">
+          <img src="../../../public/img/mujer.png" alt="" />
+        </div>
+        <div class="card__name">
+          <p>Revisar Documentos</p>
+        </div>
+        <div class="card__precis">
+          <a href="" class="card__icon"><i class='bx bx-info-circle'></i></a>
+          <div>
+            <span class="card__preci card__preci--before">Docente Ocasional</span>
+            <span class="card__preci card__preci--now">Sonia Morales</span>
+          </div>
+          <a href="" class="card__icon"><i class='bx bx-search'></i></a>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card__img">
+          <img src="../../../public/img/hombre.png" alt="" />
+        </div>
+        <div class="card__name">
+          <p>Revisar Documentos</p>
+        </div>
+        <div class="card__precis">
+          <a href="" class="card__icon"><i class='bx bx-info-circle'></i></a>
+          <div>
+            <span class="card__preci card__preci--before">Docente Ocasional</span>
+            <span class="card__preci card__preci--now">Jair Duque</span>
+          </div>
+          <a href="" class="card__icon"><i class='bx bx-search'></i></a>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card__img">
+          <img src="../../../public/img/mujer.png" alt="" />
+        </div>
+        <div class="card__name">
+          <p>Revisar Documentos</p>
+        </div>
+        <div class="card__precis">
+          <a href="" class="card__icon"><i class='bx bx-info-circle'></i></a>
+          <div>
+            <span class="card__preci card__preci--before">Docente Ad-Honorem</span>
+            <span class="card__preci card__preci--now">Gloria Gallego</span>
+          </div>
+          <a href="" class="card__icon"><i class='bx bx-search'></i></a>
+        </div>
+      </article>
+
     </main>
-
-    <?php
-    
-      include ("../components/footer.php");
-
-    ?>
+    <script src="../../../public/js/navbar.js"></script>
   </body>
 </html>

@@ -30,11 +30,11 @@
         </section>
 
         <section class="main_contratacion__options">
-            <a href="../../../src/views/pages/vis_arch.php" class="contratacion_option doc_pendiente" style="text-decoration: none; color: inherit;">
+            <a href="../../../src/views/pages/form_docs.php" class="contratacion_option doc_pendiente" style="text-decoration: none; color: inherit;">
             <div>
                 <img src="../../../public/img/doc_pendiente.webp" alt="persona buscando perfiles">
                 <div class="contratacion_actions">
-                    <span>Documentación Pendiente</span>
+                    <span>Cargar Documentación</span>
                     <i class='bx bx-info-circle'></i>
                 </div>
             </div>
@@ -44,7 +44,7 @@
             <div>
                 <img src="../../../public/img/doc_aprobada.webp" alt="persona buscando perfiles">
                 <div class="contratacion_actions">
-                    <span>Documentación Aprobada</span>
+                    <span>Información Personal</span>
                     <i class='bx bx-info-circle'></i>
                 </div>
             </div>

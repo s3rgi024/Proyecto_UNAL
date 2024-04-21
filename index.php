@@ -50,7 +50,7 @@
 
                 <div class="login__form-btn">
                     <button type="submit">
-                        <a href="./src/views/pages/main.php">
+                        <a style="text-decoration: none; color: inherit;" href="./src/views/pages/main.php">
                             Ingresar
                         </a>
                     </button>
