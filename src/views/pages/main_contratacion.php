@@ -43,7 +43,7 @@
                         Documentación pendiente
                     </span>
 
-                    <i class='bx bx-info-circle'></i>
+                    <i class='fa-solid fa-circle-info' id="info"></i>
                 </div>
             </div>
 
@@ -55,7 +55,7 @@
                         Documentación aprobada
                     </span>
 
-                    <i class='bx bx-info-circle'></i>
+                    <i class='fa-solid fa-circle-info' id="info"></i>
                 </div>
             </div>
 
@@ -67,7 +67,7 @@
                         Historial
                     </span>
 
-                    <i class='bx bx-info-circle'></i>
+                    <i class='fa-solid fa-circle-info' id="info"></i>
                 </div>
             </div>
         </section>

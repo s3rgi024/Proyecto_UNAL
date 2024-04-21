@@ -87,11 +87,12 @@ body{
     background-color: var(--color-barra-lateral);
     transition: width 0.5s ease,background-color 0.3s ease,left 0.5s ease;
     z-index: 50;
-    -webkit-transition: width 0.5s ease,background-color 0.3s ease,left 0.5s ease;
+    -webkit-transition: width 0.5s ease, box-shadow 0.5s,background-color 0.3s ease,left 0.5s ease;
     -moz-transition: width 0.5s ease,background-color 0.3s ease,left 0.5s ease;
     -ms-transition: width 0.5s ease,background-color 0.3s ease,left 0.5s ease;
     -o-transition: width 0.5s ease,background-color 0.3s ease,left 0.5s ease;
     box-shadow: 5px 0 5px rgba(0, 0, 0, 0.1);
+    
 }
 
 
@@ -121,14 +122,12 @@ body{
     display: flex;
     align-items: center;
 }
-.barra-lateral .nombre-pagina ion-icon{
-    min-width: 50px;
-    font-size: 40px;
-    cursor: pointer;
-}
+
 .barra-lateral .nombre-pagina span{
     margin-left: 5px;
     font-size: 25px;
+    font-family: "Oswald", sans-serif;
+    letter-spacing: 2px;
 }
 
 
@@ -145,11 +144,12 @@ body{
     background-color: var(--color-boton);
     color: var(--color-boton-texto);
 }
-.barra-lateral .boton ion-icon{
+
+.barra-lateral .boton i{
+    transform: rotate(180deg);
     min-width: 50px;
     font-size: 25px;
 }
-
 
 /*--------------> Menu Navegación*/
 .barra-lateral .navegacion{
@@ -172,6 +172,7 @@ body{
     display: flex;
     margin-bottom: 5px;
 }
+
 .barra-lateral .navegacion a{
     width: 100%;
     height: 45px;
@@ -180,12 +181,13 @@ body{
     text-decoration: none;
     border-radius: 10px;
     color: var(--color-texto-menu);
+    text-align: center;
 }
 .barra-lateral .navegacion a:hover{
     background-color: var(--color-menu-hover);
     color: var(--color-menu-hover-texto);
 }
-.barra-lateral .navegacion ion-icon{
+.barra-lateral .navegacion i{
     min-width: 50px;
     font-size: 20px;
 }
