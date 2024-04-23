@@ -1,12 +1,7 @@
 let doc_pendiente = document.querySelector('.doc_pendiente');
-
 let doc_aprobada = document.querySelector('.doc_aprobada');
-
 let doc_historial = document.querySelector('.doc_historial');
-
 let navbar = document.querySelector(".barra-lateral");
-
-console.log(navbar);
 
 doc_pendiente.addEventListener('mouseover', function() {
     document.body.style.backgroundColor= "#cccff9";
@@ -18,17 +13,24 @@ doc_pendiente.addEventListener('mouseout', function() {
     navbar.style.boxShadow= "5px 0 5px #e6e6e6";
 });
 
+doc_pendiente.addEventListener("click", ()=>{
+  window.location.href = "./doc_revision.php";
+});
+
 
 
 doc_aprobada.addEventListener('mouseover', function() {
     document.body.style.backgroundColor= "#edd394";
     navbar.style.boxShadow= "10px 0 10px #edd394";
-  });
-  
+});
+
+doc_aprobada.addEventListener("click", ()=>{
+  window.location.href = "./doc_aprobada.php";
+});
+
 doc_aprobada.addEventListener('mouseout', function() {
     document.body.style.backgroundColor= "#dadada";
     navbar.style.boxShadow= "5px 0 5px #e6e6e6";
-
 });
 
 

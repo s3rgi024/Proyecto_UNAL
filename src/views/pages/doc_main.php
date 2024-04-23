@@ -18,9 +18,6 @@
     </section>
     
     <main class="main_contratacion__container min-main">
-
-        
-
         <section class="main_contratacion__text">
             <h1>
                 Gestión Contratación
@@ -45,6 +42,8 @@
                 </div>
             </div>
         </a>
+            <div class="contratacion_option doc_aprobada">
+                <img src="../../../public/img/doc_aprobada.webp" alt="persona llenando una lista de pendientes">
 
         <a href="../../../src/views/pages/doc_aprobada.php" class="contratacion_option doc_aprobada" style="text-decoration: none; color: inherit;">
             <div>
@@ -58,6 +57,8 @@
                 </div>
             </div>
         </a>
+            <div class="contratacion_option doc_historial">
+                <img src="../../../public/img/doc_historial.webp" alt="persona revisando un archivo">
 
         <a href="../../../src/views/pages/historial.php" class="contratacion_option doc_historial" style="text-decoration: none; color: inherit;">
             <div>
@@ -72,13 +73,10 @@
         </a>
         </section>
         
-
         <section class="footer_logo">
             <img src="../../../public/img/Logo_FCE_negro.webp" alt="Logo de la facultad de ciencias económicas">
         </section>
     </main>
-
-    
 
     <script src="../../../public/js/navbar.js"></script>
     <script src="../../../public/js/main_contratacion.js"></script>

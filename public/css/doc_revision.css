@@ -1,0 +1,237 @@
+@import "../../node_modules/swiper/swiper-bundle.min.css";
+
+
+.doc_revision__main{
+    display: flex;
+    flex-direction: column;
+
+    & .files_list{
+        width: 100%;
+        height: 15vh;
+        background-color: rgb(175, 204, 236);
+        border-radius: 0 0 10px 10px;
+        -webkit-border-radius: 0 0 10px 10px;
+        -moz-border-radius: 0 0 10px 10px;
+        -ms-border-radius: 0 0 10px 10px;
+        -o-border-radius: 0 0 10px 10px;
+
+        & h2{
+            margin: 10px 0 0 15px;
+        }
+
+        & .swiper_fileList{
+            width: 100%;
+            height: 50%;
+            overflow: hidden;
+            
+            & .swiper-wrapper{    
+                
+                & .swiper-slide{
+                    width:max-content;
+                    height: 60%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    margin: 5px;
+                    margin-bottom: 0;
+                    background-color: #fff;
+                    border-radius: 15PX;
+                    -webkit-border-radius: 15PX;
+                    -moz-border-radius: 15PX;
+                    -ms-border-radius: 15PX;
+                    -o-border-radius: 15PX;
+                    text-align: center;
+                    transition: all ease-in-out 0.3s;
+                    -webkit-transition: all ease-in-out 0.3s;
+                    -moz-transition: all ease-in-out 0.3s;
+                    -ms-transition: all ease-in-out 0.3s;
+                    -o-transition: all ease-in-out 0.3s;
+                    cursor: pointer;
+
+                    &:hover{
+                        scale: 1.05;
+                    }
+                }
+
+
+                & .swiper-button-prev-list, .swiper-button-next-list{
+                    --swiper-navigation-size: 30px;
+                    background-color: #fff;
+                    border-radius: 10px;
+                    -webkit-border-radius: 10px;
+                    -moz-border-radius: 10px;
+                    -ms-border-radius: 10px;
+                    -o-border-radius: 10px;
+                    width: 50px;
+                    color: black;
+                    font-weight: bold;
+                    transition: all 0.2s;
+                    -webkit-transition: all 0.2s;
+                    -moz-transition: all 0.2s;
+                    -ms-transition: all 0.2s;
+                    -o-transition: all 0.2s;
+                }
+            }
+        }
+    }
+
+    & .file_actions{
+        display: flex;
+        border-radius: 15px;
+        -webkit-border-radius: 15px;
+        -moz-border-radius: 15px;
+        -ms-border-radius: 15px;
+        -o-border-radius: 15px;
+        
+        & .file_action__pdf_view{
+            width: 97%;
+            height: 80vh;
+            margin: 15px;
+            border-radius: 15px;
+            -webkit-border-radius: 15px;
+            -moz-border-radius: 15px;
+            -ms-border-radius: 15px;
+            -o-border-radius: 15px;
+            
+            
+            & .pdf_view__file{
+                width: 100%;
+                height: 85%;
+                border-radius: 15px;
+                -webkit-border-radius: 15px;
+                -moz-border-radius: 15px;
+                -ms-border-radius: 15px;
+                -o-border-radius: 15px;
+                margin-bottom: 15px;
+
+                .swiper {
+                    border-radius: inherit;
+                    width: 100%;
+                    height: 100%;
+                    -webkit-border-radius: inherit;
+                    -moz-border-radius: inherit;
+                    -ms-border-radius: inherit;
+                    -o-border-radius: inherit;
+                    
+                    & .swiper-wrapper .swiper-slide iframe{
+                        width: 100%;
+                        height: 100%;
+                        border-radius: inherit;
+                        -webkit-border-radius: inherit;
+                        -moz-border-radius: inherit;
+                        -ms-border-radius: inherit;
+                        -o-border-radius: inherit;
+                        box-shadow: 0 8px 8px rgba(0, 0, 0, 0.452);
+                    }
+                }
+            }
+
+            & .pdf_view__details{
+                position: relative;
+                width: 100%;
+                height: 10%;
+                background-color: #e7e7e7;
+                border-radius: 15px;
+                -webkit-border-radius: 15px;
+                -moz-border-radius: 15px;
+                -ms-border-radius: 15px;
+                -o-border-radius: 15px;
+                box-shadow: 0 8px 8px rgba(0, 0, 0, 0.452);
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                & .swiper-button-prev, .swiper-button-next{
+                    --swiper-navigation-size: 20px;
+                    background-color: #fff;
+                    border-radius: 10px;
+                    -webkit-border-radius: 10px;
+                    -moz-border-radius: 10px;
+                    -ms-border-radius: 10px;
+                    -o-border-radius: 10px;
+                    width: 50px;
+                    color: black;
+                    font-weight: bold;
+                    transition: all 0.2s;
+                    -webkit-transition: all 0.2s;
+                    -moz-transition: all 0.2s;
+                    -ms-transition: all 0.2s;
+                    -o-transition: all 0.2s;
+                }
+
+                & .swiper-button-prev:hover, .swiper-button-next:hover{
+                    background-color: #cccff9;
+                    scale: 1.05;
+                }
+
+                & .swiper-button-prev{
+                    margin-left: 30px;
+                }
+
+                & .swiper-button-next{
+                    margin-right: 30px;
+                }
+
+                & .details__content{
+                    width: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    & span:first-child{
+                        width: 40%;
+                        background-color: #fff;
+                        padding: 5px;
+                        border-radius: 15px;
+                        -webkit-border-radius: 15px;
+                        -moz-border-radius: 15px;
+                        -ms-border-radius: 15px;
+                        -o-border-radius: 15px;
+                        text-align: center;
+                        margin-right: 10px;
+                        
+                        & span{
+                            font-weight: bold;
+                        }
+                    }
+                        
+                        & button{
+                            cursor: pointer;
+                            border: none;
+                            background-color: #edd394;
+                            padding: 5px;
+                            width: auto;
+                            border-radius: 15px;
+                            -webkit-border-radius: 15px;
+                            -moz-border-radius: 15px;
+                            -ms-border-radius: 15px;
+                            -o-border-radius: 15px;
+                            text-align: center;
+                            font-size: 1rem;
+                            transition: all 0.2s;
+                            -webkit-transition: all 0.2s;
+                            -moz-transition: all 0.2s;
+                            -ms-transition: all 0.2s;
+                            -o-transition: all 0.2s;
+
+                            &:hover{
+                                background-color: #8d8d8d;
+                            }
+                        }
+                }
+            }
+        }
+
+        & .file_action__checklist{
+            width: 30%;
+            height: 80vh;
+            background-color: black;
+            margin: 15px;
+            border-radius: inherit;
+            -webkit-border-radius: inherit;
+            -moz-border-radius: inherit;
+            -ms-border-radius: inherit;
+            -o-border-radius: inherit;
+        }
+    }
