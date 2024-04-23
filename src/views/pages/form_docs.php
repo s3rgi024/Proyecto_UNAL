@@ -106,6 +106,7 @@
                         <button type="button" class="btn-next">Siguiente</button>
                         <button type="button" class="btn-submit">Enviar</button>
                     </div> -->
+                    
                 </form>
             </div>
         </div>
