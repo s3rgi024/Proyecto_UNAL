@@ -64,20 +64,20 @@
                                 <input type="text" placeholder="App, Suite, Building">
                             </div>
                             <div>
-                                <label>City</label>
+                                <label>Cidudad</label>
                                 <input type="text" placeholder="City">
                             </div>
                             <div>
-                                <label>State</label>
+                                <label>vinculación</label>
                                 <input type="text" placeholder="State/Province">
                             </div>
-                            <div>
+                            <!-- <div>
                                 <label>Zip Code</label>
                                 <input type="text" placeholder="Postal/Zip Code">
-                            </div>
+                            </div> -->
                         </div>
                     </div>
-                    <div class="form-three form-step">
+                    <!-- <div class="form-three form-step">
                         <div class="bg-svg">
                             <h2>Security</h2>
                             <div>
@@ -105,7 +105,8 @@
                         <button type="button" class="btn-prev" disabled>Atrás</button>
                         <button type="button" class="btn-next">Siguiente</button>
                         <button type="button" class="btn-submit">Enviar</button>
-                    </div>
+                    </div> -->
+                    
                 </form>
             </div>
         </div>
