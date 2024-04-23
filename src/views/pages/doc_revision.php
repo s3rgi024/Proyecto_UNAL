@@ -20,7 +20,6 @@
 
             <div class="swiper_fileList">
                 <div class="swiper-wrapper">
-                    
                     <?php
                         $folder = '../../../docs';
                         $files = glob($folder . '/*');
