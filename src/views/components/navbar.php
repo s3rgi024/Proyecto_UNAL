@@ -40,7 +40,6 @@
                 </li>
                 <li>
                     <a href="../../../src/views/pages/doc_main.php">
-                    <a href="../../../src/views/pages/main_contratacion.php">
                         <i class="fa-solid fa-file-signature"></i>
                         <span class="oculto">Contratación</span>
                     </a>
@@ -70,13 +69,12 @@
                     </a>
                 </li>
             </ul>
-            <button class="boton">
-                <i class="fa-solid fa-arrow-right-from-bracket"></i>
-                <span class="oculto">Cerrar Sesión</span>
-            </button>
         </nav>
 
-        
+        <a class="logout" href="../../../index.php">
+            <i class="fa-solid fa-arrow-right-from-bracket"></i>
+            <span class="oculto">Cerrar Sesión</span>
+        </a>
 
         <div>
             <div class="linea"></div>

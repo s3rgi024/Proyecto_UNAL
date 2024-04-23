@@ -1,7 +1,33 @@
 body {
     overflow-y: hidden;
     overflow-x: hidden;
+    position: relative;
+    background-color: #dadada;
+    transition: background-color 0.5s;
+    -webkit-transition: background-color 0.5s;
+    -moz-transition: background-color 0.5s;
+    -ms-transition: background-color 0.5s;
+    -o-transition: background-color 0.5s;
 } 
+
+.main_contratacion__background{
+    width: 1400px;
+    height: 1400px;
+    background-color: rgb(255, 255, 255);
+    position: absolute;
+    border-radius: 100% 0 0;
+    -webkit-border-radius: 100% 90% 100% 100%;
+    -moz-border-radius: 100% 0 0;
+    -ms-border-radius: 100% 0 0;
+    -o-border-radius: 100% 0 0;
+    left: -20%;
+    top: 60%;
+    transform: translateY(-60%);
+    -webkit-transform: translateY(-60%);
+    -moz-transform: translateY(-60%);
+    -ms-transform: translateY(-60%);
+    -o-transform: translateY(-60%);
+}
 
 .main_contratacion__container{
     height: 100%;
@@ -12,10 +38,16 @@ body {
 
     & .main_contratacion__text{
         z-index: 20;
-        margin-bottom: 50px;
+        margin-bottom: 10px;
+        animation: fade_in 1.5s forwards;
+        -webkit-animation: fade_in 1.5s forwards;
 
         & h1{
             font-size: 2rem;
+        }
+
+        & p{
+            width: 75%;
         }
     }
 
@@ -23,49 +55,35 @@ body {
         display: flex;
         width: 75%;
         justify-content: space-between;
-        gap: 50px;
-
-        & > .doc_pendiente {
-            position: relative;
-        }
+        gap: 40px;
+        animation: appear_options 1s forwards;
+        -webkit-animation: appear_options 1s forwards;
 
         & > .doc_pendiente:hover img  {
             animation: up_down infinite ease-in-out 1.5s;
             -webkit-animation: up_down infinite ease-in-out 1.5s;
         }
 
-            /*& > .doc_pendiente:hover::after{
-                border-radius: 50%;
-                -webkit-border-radius: 50%;
-                -moz-border-radius: 50%;
-                -ms-border-radius: 50%;
-                -o-border-radius: 50%;
-                width: 20%;
-                height: 18%;
-                content: "";
-                display: block;
-                background-color: #525CEB;
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                transform: translate(-10%, 0%);
-                -webkit-transform: translate(-10%, 0%);
-                -moz-transform: translate(-10%, 0%);
-                -ms-transform: translate(-10%, 0%);
-                -o-transform: translate(-10%, 0%);
-                animation: grow_circle 1.5s both;
-                -webkit-animation: grow_circle 1.5s both;
-                z-index: -10;
-            } */
+        & > .doc_pendiente:hover{
+            box-shadow:  0 8px 8px #cccff9;
+        }
 
         & > .doc_aprobada:hover img  {
             animation: up_down infinite ease-in-out 1.5s;
             -webkit-animation: up_down infinite ease-in-out 1.5s;
         }
 
+        & > .doc_aprobada:hover{
+            box-shadow:  0 8px 8px #edd394;
+        }
+
         & > .doc_historial:hover img  {
             animation: up_down infinite ease-in-out 1.5s;
             -webkit-animation: up_down infinite ease-in-out 1.5s;
+        }
+
+        & > .doc_historial:hover{
+            box-shadow:  0 8px 8px #f99485;
         }
 
         & .contratacion_option{
@@ -82,11 +100,12 @@ body {
             -moz-border-radius: 10px;
             -ms-border-radius: 10px;
             -o-border-radius: 10px;
-            transition: scale ease-in-out 0.2s;
-            -webkit-transition: scale ease-in-out 0.2s;
-            -moz-transition: scale ease-in-out 0.2s;
-            -ms-transition: scale ease-in-out 0.2s;
-            -o-transition: scale ease-in-out 0.2s;
+            transition: scale ease-in-out 0.2s, background-color 0.2s;
+            -webkit-transition: scale ease-in-out 0.2s, background-color 0.2s;
+            -moz-transition: scale ease-in-out 0.2s, background-color 0.2s;
+            -ms-transition: scale ease-in-out 0.2s, background-color 0.2s;
+            -o-transition: scale ease-in-out 0.2s, background-color 0.2s;
+            
             
             &:hover{
                 scale: 1.1;
@@ -102,8 +121,51 @@ body {
                     width: 80%;
                     text-align: center;
                 }
+
+                & i{
+                    margin-top: 10px;
+                    text-align: center;
+                }
+
+                & .show::after{
+                    display: block;
+                    transition: all 0.5s;
+                    -webkit-transition: all 0.5s;
+                    -moz-transition: all 0.5s;
+                    -ms-transition: all 0.5s;
+                    -o-transition: all 0.5s;
+                }
+
+                & i::after{
+                    display: none;
+                    position: absolute;
+                    content: "Más información";
+                    background-color: #ffffff;
+                    box-shadow: 0 8px 8px rgba(0, 0, 0, 0.1);
+                    font-family: "Roboto Condensed", sans-serif;
+                    font-size: 0.6rem;
+                    padding: 8px;
+                    border-radius: 5px;
+                    -webkit-border-radius: 5px;
+                    -moz-border-radius: 5px;
+                    -ms-border-radius: 5px;
+                    -o-border-radius: 5px;
+                    transition: all 0.5s;
+                    -webkit-transition: all 0.5s;
+                    -moz-transition: all 0.5s;
+                    -ms-transition: all 0.5s;
+                    -o-transition: all 0.5s;
+                }
             }
         }
+    }
+
+    .footer_logo{
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 150px;
+        margin: 15px;
     }
 }
 
@@ -133,8 +195,30 @@ body {
     }
 }
 
-@keyframes grow_circle {
-    100%{
-        scale: 50;
+@keyframes appear_options {
+        from {
+          opacity: 0;
+          transform: translateY(500px);
+          -webkit-transform: translateY(500px);
+          -moz-transform: translateY(500px);
+          -ms-transform: translateY(500px);
+          -o-transform: translateY(500px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+          -webkit-transform: translateY(0);
+          -moz-transform: translateY(0);
+          -ms-transform: translateY(0);
+          -o-transform: translateY(0);
+    }
+}
+
+@keyframes fade_in {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
     }
 }
