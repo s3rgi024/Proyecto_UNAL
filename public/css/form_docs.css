@@ -47,15 +47,16 @@ h1,h2,h3{
     font-weight: 700;
     line-height: 1.25;
     margin: 0 0 0 5em;
+    margin-left: 80px;
 }
 
 img{
-    min-width: 100%;
+    max-width: 100%;
     vertical-align: middle;
 }
 
 .container{
-    min-width: 1100px;
+    max-width: 1100px;
     margin: 0 auto;
     padding: 0 2em;
 }
@@ -94,7 +95,7 @@ img{
     gap: 2em;
 }
 
-.progress ul.progress.steps li{
+.progress ul.progress-steps li{
     position: relative;
     display: flex;
     align-items: flex-start;
@@ -186,7 +187,46 @@ form .checkbox input{
     height: auto;
 }
 
-.form-two, .form-three {display: none;}
+form > div:not(.btn-group){
+    display: none;
+    -webkit-animation: fadeIn .6s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+    animation: fadeIn .6s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+}
+
+@keyframes fadeIn {
+    0%{
+        opacity: 0;
+        -webkit-animation: translateY(10%);
+        transform: translateY(10%);
+    }    
+    100%{
+        opacity: 1;
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+}
+
+form > div.active{
+    display: block;
+}
+
+form > div .bg-svg{
+    width: 60px;
+    height: 50px;
+}
+
+form > .form-one .bg-svg{
+    background: url();
+}
+
+form > .form-two .bg-svg{
+    background: url();
+}
+
+form > .form-three .bg-svg{
+    background: url();
+}
+
 .btn-group{
     display: flex;
     flex-wrap: wrap;
@@ -211,9 +251,27 @@ form .checkbox input{
     cursor: text;
 }
 
-.btn-group[class*="btn-"]:hover:not(:disabled){
+.btn-group [class*="btn-"]:hover:not(:disabled){
     background-color: var(--dark-color);
     border-color: var(--light-color);
+}
+
+.btn-group [class*="btn-"]:hover:not(:disabled){
+    background-color: var(--dark-color);
+    border-color: var(--light-color);
+}
+
+.btn-group .btn-submit,
+.form-three.active ~ .btn-group .btn-next{
+    display: none;
+}
+
+.form-three.active ~ .btn-group .btn-submit{
+    display: block;
+}
+
+.form-three.active ~ .btn-group{
+    justify-content: space-between;
 }
 
 ::placeholder{

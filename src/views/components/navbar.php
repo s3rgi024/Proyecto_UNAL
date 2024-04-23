@@ -40,6 +40,7 @@
                 </li>
                 <li>
                     <a href="../../../src/views/pages/doc_main.php">
+                    <a href="../../../src/views/pages/main_contratacion.php">
                         <i class="fa-solid fa-file-signature"></i>
                         <span class="oculto">Contratación</span>
                     </a>

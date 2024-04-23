@@ -32,21 +32,22 @@
 
         <section class="main_contratacion__options">
 
-            <div class="contratacion_option doc_pendiente">
+        <a href="../../../src/views/pages/vis_arch.php" class="contratacion_option doc_pendiente" style="text-decoration: none; color: inherit;">
+            <div>
                 <img src="../../../public/img/doc_pendiente.webp" alt="persona buscando perfiles">
-
                 <div class="contratacion_actions">
-                    <span>
-                        Documentación pendiente
-                    </span>
+                    <span>Documentación Pendiente</span>
 
                     <i class='fa-solid fa-circle-info' id="info"></i>
                 </div>
             </div>
-
+        </a>
             <div class="contratacion_option doc_aprobada">
                 <img src="../../../public/img/doc_aprobada.webp" alt="persona llenando una lista de pendientes">
 
+        <a href="../../../src/views/pages/doc_aprobada.php" class="contratacion_option doc_aprobada" style="text-decoration: none; color: inherit;">
+            <div>
+                <img src="../../../public/img/doc_aprobada.webp" alt="persona buscando perfiles">
                 <div class="contratacion_actions">
                     <span>
                         Documentación aprobada
@@ -55,18 +56,21 @@
                     <i class='fa-solid fa-circle-info' id="info"></i>
                 </div>
             </div>
-
+        </a>
             <div class="contratacion_option doc_historial">
                 <img src="../../../public/img/doc_historial.webp" alt="persona revisando un archivo">
 
+        <a href="../../../src/views/pages/historial.php" class="contratacion_option doc_historial" style="text-decoration: none; color: inherit;">
+            <div>
+                <img src="../../../public/img/doc_historial.webp" alt="persona buscando perfiles">
                 <div class="contratacion_actions">
                     <span>
                         Historial
                     </span>
-
                     <i class='fa-solid fa-circle-info' id="info"></i>
                 </div>
             </div>
+        </a>
         </section>
         
         <section class="footer_logo">

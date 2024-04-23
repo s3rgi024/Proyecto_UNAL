@@ -1,7 +1,7 @@
 <footer>
         <section class="container__footer__social_media">
             <div class="footer__social_media_img">
-                <img src="../../../public/img/logo_FCE_blanco.webp" alt="Logo Facultad de Ciencias Económicas">
+                <img src="./public/img/logo_FCE_blanco.webp" alt="Logo Facultad de Ciencias Económicas">
             </div>
             <ul class="footer__social_media">
                 <li>
@@ -54,4 +54,4 @@
         </section>
 </footer>
 
-<script src="../../../public/js/footer.js"></script>
+<script src="./public/js/footer.js"></script>

@@ -1,12 +1,12 @@
 const nextButton = document.querySelector('.btn-next');
 const prevButton = document.querySelector('.btn-prev');
 const steps = document.querySelectorAll('.step');
-const form_steps = document.querySelectorAll('.step');
+const form_steps = document.querySelectorAll('.form-step');
 let active = 1;
 
-nextButton.addEventListener('click', () =>{
+nextButton.addEventListener('click', () => {
     active++;
-    if (active > steps.length){
+    if (active > steps.length) {
         active = steps.length;
     }
     updateProgress();
