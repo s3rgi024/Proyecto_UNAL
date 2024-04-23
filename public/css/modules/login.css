@@ -86,7 +86,7 @@ a{
 
                         & .underline{
                             position: absolute;
-                            bottom: 15px;
+                            bottom: 0px;
                             height: 2px;
                             width: 100%;
                             z-index: 20;

@@ -20,11 +20,11 @@
             <h1>
                 Iniciar sesión
             </h1>
-            <form action="">      
+            <form action="./src/views/pages/main.php">      
                 <div class="login__form-fields">
                     <label for="userName">Nombre de Usuario</label>
                    <div>
-                        <label for="userName"><i class='bx bx-user' ></i></label>
+                        <label for="userName"><i class='bx bx-user'></i></label>
                         <div>
                             <input type="text" name="userName" id="userName">
                             <div class="underline"></div>
@@ -41,6 +41,7 @@
                             <div class="underline"></div>
                         </div>
                     </div>
+                    <br>
                     <div class="login__form-forget-password-link">
                         <div>
                             <a href="">Olvidé mi contraseña</a>
@@ -50,7 +51,7 @@
 
                 <div class="login__form-btn">
                     <button type="submit">
-                        <a style="text-decoration: none; color: inherit;" href="./src/views/pages/main.php">
+                        <a>
                             Ingresar
                         </a>
                     </button>
