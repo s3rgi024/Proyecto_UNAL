@@ -44,7 +44,7 @@
                 </div>
             </a>
 
-            <a href="./main_contratacion.php">
+            <a href="./doc_main.php">
                 <div class="main_option" id="contratacion">
                     <img src="../../../public/img/contratacion.jpg" alt="Contratación">
                     <div class="blur"></div>

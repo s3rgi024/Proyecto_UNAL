@@ -39,7 +39,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="../../../src/views/pages/doc_main.php">
                         <i class="fa-solid fa-file-signature"></i>
                         <span class="oculto">Contratación</span>
                     </a>
