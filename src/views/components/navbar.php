@@ -51,15 +51,15 @@
                     </a>
                 </li>
                 <li>
-                    <a href="#">
-                        <i class="fa-solid fa-gear"></i>
-                        <span class="oculto">Mantenimiento</span>
+                    <a href="../../../src/views/pages/vis_docente.php">
+                        <i class="fa-solid fa-dice-d6"></i>                        
+                        <span class="oculto">Docentes</span>
                     </a>
                 </li>
                 <li>
                     <a href="#">
-                        <i class="fa-solid fa-clock-rotate-left"></i>
-                        <span class="oculto">Historial</span>
+                        <i class="fa-solid fa-gear"></i>
+                        <span class="oculto">Mantenimiento</span>
                     </a>
                 </li>
                 <li>
