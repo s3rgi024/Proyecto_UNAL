@@ -12,7 +12,7 @@
     include("../components/navbar.php");
   ?>
 
-    <section class="main_contratacion__text">
+    <section class="main_contratacion__text min-main">
       <h1>
         Documentación Pendiente
       </h1>
@@ -40,7 +40,7 @@
             <span class="card__preci card__preci--before">Docente Ocasional</span>
             <span class="card__preci card__preci--now">Santiago Alza</span>
           </div>
-          <a href="" class="card__icon"><i class='bx bx-search'></i></a>
+          <a href="./doc_revision.php" class="card__icon"><i class="fa-solid fa-magnifying-glass"></i></a>
         </div>
       </article>
 
@@ -57,7 +57,7 @@
             <span class="card__preci card__preci--before">Docente Ad-Honorem</span>
             <span class="card__preci card__preci--now">Juana Martinez</span>
           </div>
-          <a href="" class="card__icon"><i class='bx bx-search'></i></a>
+          <a href="./doc_revision.php" class="card__icon"><i class="fa-solid fa-magnifying-glass"></i></a>
         </div>
       </article>
 
@@ -74,7 +74,7 @@
             <span class="card__preci card__preci--before">Docente Ocasional</span>
             <span class="card__preci card__preci--now">Sergio Chaparro</span>
           </div>
-          <a href="" class="card__icon"><i class='bx bx-search'></i></a>
+          <a href="./doc_revision.php" class="card__icon"><i class="fa-solid fa-magnifying-glass"></i></a>
         </div>
       </article>
 
@@ -91,7 +91,7 @@
             <span class="card__preci card__preci--before">Docente Ocasional</span>
             <span class="card__preci card__preci--now">Sonia Morales</span>
           </div>
-          <a href="" class="card__icon"><i class='bx bx-search'></i></a>
+          <a href="./doc_revision.php" class="card__icon"><i class="fa-solid fa-magnifying-glass"></i></a>
         </div>
       </article>
 
@@ -108,7 +108,7 @@
             <span class="card__preci card__preci--before">Docente Ocasional</span>
             <span class="card__preci card__preci--now">Jair Duque</span>
           </div>
-          <a href="" class="card__icon"><i class='bx bx-search'></i></a>
+          <a href="./doc_revision.php" class="card__icon"><i class="fa-solid fa-magnifying-glass"></i></a>
         </div>
       </article>
 
@@ -125,7 +125,7 @@
             <span class="card__preci card__preci--before">Docente Ad-Honorem</span>
             <span class="card__preci card__preci--now">Gloria Gallego</span>
           </div>
-          <a href="" class="card__icon"><i class='bx bx-search'></i></a>
+          <a href="./doc_revision.php" class="card__icon"><i class="fa-solid fa-magnifying-glass"></i></a>
         </div>
       </article>
 

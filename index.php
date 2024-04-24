@@ -3,9 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./public/css/modules/login.css">
-    <link rel="stylesheet" href="./node_modules/boxicons/css/boxicons.min.css">
-     <title>Iniciar Sesión</title>
+    <link rel="stylesheet" href="./public/css/login.css">
+    <title>Iniciar Sesión</title>
 </head>
 <body>
     

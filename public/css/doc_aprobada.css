@@ -118,7 +118,7 @@
     margin-bottom: 0.25rem;
   }
   
-  .card__preci--now {
+  .card__preci--now {<i class="fa-solid fa-magnifying-glass"></i>
     font-size: var(--h3-font-size);
     font-weight: bold;
   }

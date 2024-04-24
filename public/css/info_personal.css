@@ -264,7 +264,7 @@ form > .form-three .bg-svg{
 
 .btn-group .btn-submit,
 .form-three.active ~ .btn-group .btn-next{
-    display: none;
+    display: block;
 }
 
 .form-three.active ~ .btn-group .btn-submit{

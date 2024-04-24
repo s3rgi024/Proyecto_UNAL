@@ -1,6 +1,6 @@
-@import url(./header.css);
-@import url(./footer.css);
-@import url(../global_styles/variables.css);
+@import url(./modules/header.css);
+@import url(./modules/footer.css);
+@import url(./global_styles/variables.css);
 @import url(./register.css);
 
 a{
@@ -13,7 +13,7 @@ a{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url(../../img/foto_edificio_facultad.webp);
+    background-image: url(../img/foto_edificio_facultad.webp);
     background-size: cover;
     background-position: center;
     position: relative;
