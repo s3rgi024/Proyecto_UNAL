@@ -14,7 +14,7 @@
 
     <section class="main_contratacion__text min-main">
       <h1>
-        Documentación Aprobada x
+        Documentación Aprobada
       </h1>
       <br>
       <p>

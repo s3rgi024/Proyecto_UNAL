@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../../public/css/info_personal.css">
-    <title>Cargue Documentos</title>
+    <title>Información Personal</title>
 </head>
 <body>
     <div id="page" class="site">
         <div class="container">
             <div class="form-box">
                 <div class="progress">
-                    <div class="logo"><a href="../../../src/views/pages/main.php"><span>Formulario<br></span>Contratación</a></div>
+                    <div class="logo"><a href="../../../src/views/pages/main.php"><span>Información<br></span>Personal</a></div>
                     <ul class="progress-steps">
                         <li class="step active">
                             <span>1</span>
@@ -174,6 +174,6 @@
             </div>
         </div>
     </div>
-    <script src="../../../public/js/form_docs.js"></script>
+    <script src="../../../public/js/info_personal.js"></script>
 </body>
 </html>

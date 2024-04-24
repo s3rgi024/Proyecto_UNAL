@@ -46,7 +46,7 @@
             </div>
         </a>
 
-        <a href="#" class="contratacion_option doc_aprobada" style="text-decoration: none; color: inherit;">
+        <a href="../../../src/views/pages/info_personal.php" class="contratacion_option doc_aprobada" style="text-decoration: none; color: inherit;">
             <div>
                 <img src="../../../public/img/info_pers.webp" alt="persona buscando perfiles">
                 <div class="contratacion_actions">
