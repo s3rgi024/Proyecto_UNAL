@@ -15,82 +15,82 @@
                     <ul class="progress-steps">
                         <li class="step active">
                             <span>1</span>
-                            <p>Vinculación<br><span>Tipo de Vinculación con FCE</span></p>
+                            <p>Documentación Hoja de Vida</p>
                         </li>
                         <li class="step">
                             <span>2</span>
-                            <p>Datos Personales<br><span>Datos personales relevantes</span></p>
+                            <p>Estudio y experiencia laboral</p>
                         </li>
                         <li class="step">
                             <span>3</span> 
-                            <p>Datos Residencia<br><span>Datos relevantes residencia</span></p>
+                            <p>Documentación Vinculación</p>
                         </li>
                     </ul>
                 </div>
                 <form action="">
                     <div class="form-one form-step active">
                         <div class="bg-svg"></div>
-                        <h2>Vinculación FCE</h2>
-                        <p>Tipo de vinculación con la Universidad Nacional.</p>
+                        <h2>Hoja de Vida</h2>
+                        <p>Documentación personal requerida para vinculación.</p>
                         <div>
-                            <label>Tipo de vinculación que aspira tener en la FCE:</label>
-                            <select name="vinculacion" id="vinculacion">
-                                <option value="" disabled selected>Seleccione una opción a continuación...</option>
-                                <option value="">Docente Ocasional</option>
-                                <option value="">Docente Ocasional Especial</option>
-                                <option value="">Docente Ad-Honorem (Adjunto)</option>
-                            </select>
+                            <label>Hoja de Vida Función Pública</label>
+                            <input type="file" id="archivoPDF" name="archivoPDF" accept=".pdf">
+                        </div>
+                        <div>
+                            <label>Declaración Juramentada Ley 4 de 1992</label>
+                            <input type="file" id="archivoPDF" name="archivoPDF" accept=".pdf">
+                        </div>
+                        <div>
+                            <label>Verificación Inhabilidad Delito Sexual</label>
+                            <input type="file" id="archivoPDF" name="archivoPDF" accept=".pdf">
+                        </div>
+                        <div>
+                            <label>Autorización Notificación Correo Electrónico</label>
+                            <input type="file" id="archivoPDF" name="archivoPDF" accept=".pdf">
+                        </div>
+                        <div>
+                            <label>Compromiso Institucional Vinculación</label>
+                            <input type="file" id="archivoPDF" name="archivoPDF" accept=".pdf">
+                        </div>
+                        <div>
+                            <label>Autorización Tratamiento Datos Personales</label>
+                            <input type="file" id="archivoPDF" name="archivoPDF" accept=".pdf">
+                        </div>
+                        <div>
+                            <label>Visa Extranjeria</label>
+                            <input type="file" id="archivoPDF" name="archivoPDF" accept=".pdf">
+                        </div>
+                        <div>
+                            <label>Fotocopia Libreta Militar</label>
+                            <input type="file" id="archivoPDF" name="archivoPDF" accept=".pdf">
+                        </div>
+                        <div>
+                            <label>Tarjeta Profesional</label>
+                            <input type="file" id="archivoPDF" name="archivoPDF" accept=".pdf">
+                        </div>
+                        <div>
+                            <label>Matricula Profesional</label>
+                            <input type="file" id="archivoPDF" name="archivoPDF" accept=".pdf">
+                        </div>
+                        <div>
+                            <label>Reporte Médico (Aval SST)</label>
+                            <input type="file" id="archivoPDF" name="archivoPDF" accept=".pdf">
                         </div>
                     </div>
                     <div class="form-two form-step">
                         <div class="bg-svg"></div>
-                            <h2>Información Personal</h2>
-                            <p>Datos personales requeridos para la vinculación con la Universidad Nacional de Colombia</p>
-                            <div>
-                            <label>Nombres</label>
-                            <input type="text" placeholder="Ejemplo: Juan Sebastian">
-                        </div>
-                        <div>
-                            <label>Apellidos</label>
-                            <input type="text" placeholder="Ejemplo: Florez Sanchez">
-                        </div>
-                        <div>
-                            <label>Género:</label>
-                            <select name="genero" id="genero">
-                                <option value="" disabled selected>Seleccione una opción a continuación...</option>
-                                <option value="">Masculino</option>
-                                <option value="">Femenino</option>
-                                <option value="">Otro</option>
-                            </select>
-                        </div>
-                        <div>
-                            <label>Tipo documento de identidad</label>
-                            <select name="tdoc" id="tdoc">
-                                <option value="" disabled selected>Seleccione una opción a continuación...</option>
-                                <option value="">Cédula Ciudadania</option>
-                                <option value="">Cédula Extranjería</option>
-                                <option value="">Pasaporte</option>
-                            </select>
-                        </div>
-                        <div>
-                            <label>Número documento de identidad</label>
-                            <input type="number" id="documento" name="documento" placeholder="Ejemplo: 1234567890">
-                            <script>
-                                document.getElementById("documento").addEventListener("input", function() {
-                                    let input = this.value;
-                                        if (input.length > 10) {
-                                        alert("El documento no puede tener más de 10 dígitos.");
-                                        this.value = "";
-                                    }
-                                });
-                            </script>
-                        </div>
-                        <div>
-                            <label>Lugar de expedición del documento de identidad</label>
-                            <input type="text" placeholder="Ejemplo: Bogotá D.C.">
-                        </div>
+                            <h2>Certificados Estudio & Experiencia Laboral</h2>
+                            <br>
                         <div class="birth">
-                            <label>Fecha expedición documento de identidad</label>
+                            <label style="color: #6c5ce7">Pregrado</label>
+                            <label>Fecha inicio</label>
+                            <div class="grouping">
+                                <input type="text" patter="[0-9]*" name="day" velue="" min="0" max="31" placeholder="DD">
+                                <input type="text" patter="[0-9]*" name="month" velue="" min="0" max="12" placeholder="MM">
+                                <input type="text" patter="[0-9]*" name="year" velue="" min="0" max="2050" placeholder="AAAA">
+                            </div>
+                            <br>
+                            <label>Fecha fin</label>
                             <div class="grouping">
                                 <input type="text" patter="[0-9]*" name="day" velue="" min="0" max="31" placeholder="DD">
                                 <input type="text" patter="[0-9]*" name="month" velue="" min="0" max="12" placeholder="MM">
@@ -98,7 +98,47 @@
                             </div>
                         </div>
                         <div class="birth">
-                            <label>Fecha Nacimiento</label>
+                            <label style="color: #6c5ce7">Especialización</label>
+                            <label>Fecha inicio</label>
+                            <div class="grouping">
+                                <input type="text" patter="[0-9]*" name="day" velue="" min="0" max="31" placeholder="DD">
+                                <input type="text" patter="[0-9]*" name="month" velue="" min="0" max="12" placeholder="MM">
+                                <input type="text" patter="[0-9]*" name="year" velue="" min="0" max="2050" placeholder="AAAA">
+                            </div>
+                            <br>
+                            <label>Fecha fin</label>
+                            <div class="grouping">
+                                <input type="text" patter="[0-9]*" name="day" velue="" min="0" max="31" placeholder="DD">
+                                <input type="text" patter="[0-9]*" name="month" velue="" min="0" max="12" placeholder="MM">
+                                <input type="text" patter="[0-9]*" name="year" velue="" min="0" max="2050" placeholder="AAAA">
+                            </div>
+                        </div>
+                        <div class="birth">
+                            <label style="color: #6c5ce7">Maestría</label>
+                            <label>Fecha inicio</label>
+                            <div class="grouping">
+                                <input type="text" patter="[0-9]*" name="day" velue="" min="0" max="31" placeholder="DD">
+                                <input type="text" patter="[0-9]*" name="month" velue="" min="0" max="12" placeholder="MM">
+                                <input type="text" patter="[0-9]*" name="year" velue="" min="0" max="2050" placeholder="AAAA">
+                            </div>
+                            <br>
+                            <label>Fecha fin</label>
+                            <div class="grouping">
+                                <input type="text" patter="[0-9]*" name="day" velue="" min="0" max="31" placeholder="DD">
+                                <input type="text" patter="[0-9]*" name="month" velue="" min="0" max="12" placeholder="MM">
+                                <input type="text" patter="[0-9]*" name="year" velue="" min="0" max="2050" placeholder="AAAA">
+                            </div>
+                        </div>
+                        <div class="birth">
+                            <label style="color: #6c5ce7">Doctorado</label>
+                            <label>Fecha inicio</label>
+                            <div class="grouping">
+                                <input type="text" patter="[0-9]*" name="day" velue="" min="0" max="31" placeholder="DD">
+                                <input type="text" patter="[0-9]*" name="month" velue="" min="0" max="12" placeholder="MM">
+                                <input type="text" patter="[0-9]*" name="year" velue="" min="0" max="2050" placeholder="AAAA">
+                            </div>
+                            <br>
+                            <label>Fecha fin</label>
                             <div class="grouping">
                                 <input type="text" patter="[0-9]*" name="day" velue="" min="0" max="31" placeholder="DD">
                                 <input type="text" patter="[0-9]*" name="month" velue="" min="0" max="12" placeholder="MM">
@@ -106,63 +146,73 @@
                             </div>
                         </div>
                         <div>
-                            <label>Lugar de nacimiento</label>
-                            <input type="text" placeholder="Ejemplo: Bogotá D.C.">
+                            <label>Certificado Cursando Posgrado</label>
+                            <input type="file" id="archivoPDF" name="archivoPDF" accept=".pdf">
                         </div>
                         <div>
-                            <label>Estado Civil</label>
-                            <select name="estado_civil" id="estado_civil">
-                                <option value="" disabled selected>Seleccione una opción a continuación...</option>
-                                <option value="">Soltero (a)</option>
-                                <option value="">Casado (a)</option>
-                                <option value="">Otro (a)</option>
-                            </select>
+                            <label>Certificado Segunda Lengua</label>
+                            <input type="file" id="archivoPDF" name="archivoPDF" accept=".pdf">
                         </div>
                         <div>
-                            <label>Celular</label>
-                            <input type="number" id="celular" name="celular" placeholder="Ejemplo: 3XX XXX XXXX">
-                            <script>
-                                document.getElementById("celular").addEventListener("input", function() {
-                                    let input = this.value;
-                                        if (input.length > 10) {
-                                        alert("El celular no puede tener más de 10 dígitos.");
-                                        this.value = "";
-                                    }
-                                });
-                            </script>
+                            <label>Experiencia Laboral</label>
+                            <input type="file" id="archivoPDF" name="archivoPDF" accept=".pdf">
                         </div>
                         <div>
-                            <label>Correo Electrónico</label>
-                            <input type="email" placeholder="Ejemplo: unal@xxxx.com">
+                            <label>Antecedentes Disciplinarios Procuraduria</label>
+                            <input type="file" id="archivoPDF" name="archivoPDF" accept=".pdf">
                         </div>
                         <div>
-                            <label>Correo Electrónico Alterno</label>
-                            <input type="email" placeholder="Ejemplo: unal@xxxx.com">
+                            <label>Antecedentes Fiscal Contraloria</label>
+                            <input type="file" id="archivoPDF" name="archivoPDF" accept=".pdf">
                         </div>
                         <div>
-                            <label>Grupo Sanguíneo</label>
-                            <input type="text" placeholder="Ejemplo: O+">
+                            <label>Antecedente Judicial Policia Nacional</label>
+                            <input type="file" id="archivoPDF" name="archivoPDF" accept=".pdf">
                         </div>
                     </div>
                     <div class="form-three form-step">
                         <div class="bg-svg"></div>
-                            <h2>Datos Residenciales</h2>
-                            <p>Información relevante residencial.</p>
-                            <div>
-                                <label>Dirección de residencia</label>
-                                <input type="text" placeholder="Ejemplo: Carrera 1A #12B-3">
-                            </div>
-                            <div>
-                                <label>Barrio</label>
-                                <input type="text" placeholder="Ejemplo: Bosa">
-                            </div>
-                            <div>
-                                <label>Localidad</label>
-                                <input type="text" placeholder="Ejemplo: Porvenir">
-                            </div>
+                            <h2>Documentos Vinculación</h2>
+                            <p>Archivos requeridos para vinculación con la FCE.</p>
+                        <div>
+                            <label>Formato Afiliación Seguridad Social</label>
+                            <input type="file" id="archivoPDF" name="archivoPDF" accept=".pdf">
+                        </div>
+                        <div>
+                            <label>Formato Afiliación EPS</label>
+                            <input type="file" id="archivoPDF" name="archivoPDF" accept=".pdf">
+                        </div>
+                        <div>
+                            <label>Formato Afiliación Pensión</label>
+                            <input type="file" id="archivoPDF" name="archivoPDF" accept=".pdf">
+                        </div>
+                        <div>
+                            <label>Certificado Cuenta Bancaria</label>
+                            <input type="file" id="archivoPDF" name="archivoPDF" accept=".pdf">
+                        </div>
+                        <div>
+                            <label>Certificado Afilicación Ultima EPS</label>
+                            <input type="file" id="archivoPDF" name="archivoPDF" accept=".pdf">
+                        </div>
+                        <div>
+                            <label>Cédula Ciudadanía o Extranjería</label>
+                            <input type="file" id="archivoPDF" name="archivoPDF" accept=".pdf">
+                        </div>
+                        <div>
+                            <label>Declaración Pensionado o en Trámite</label>
+                            <input type="file" id="archivoPDF" name="archivoPDF" accept=".pdf">
+                        </div>
+                        <div>
+                            <label>Asignaturas, Días y Horarios</label>
+                            <input type="file" id="archivoPDF" name="archivoPDF" accept=".pdf">
+                        </div>
+                        <div>
+                            <label>Resolución de Nombramiento</label>
+                            <input type="file" id="archivoPDF" name="archivoPDF" accept=".pdf">
+                        </div>
                             <div class="checkbox">
                                 <input type="checkbox">
-                                <label>Confirmo que leí con atención y detenidamente las observaciones dadas por la EACP.</label>
+                                <label>He leido con atención las observaciones dadas por la EACP.</label>
                             </div>
                         </div>
                     <div class="btn-group">
