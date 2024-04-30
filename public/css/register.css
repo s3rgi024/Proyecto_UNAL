@@ -34,7 +34,7 @@
             justify-content: center;
             align-items: center;
         
-            & .login__form-fields{
+            & .register__form-fields{
                 display: flex;
                 flex-direction: column;
             
@@ -45,26 +45,78 @@
                 & div{
                     display: flex;
                     position: relative;
-                    & label{
-                        cursor: pointer;
 
-                        & i{
-                            font-size:  1.8rem;
+                    & .reg_email{
+                        width: 250px;
+                        height: 25px;
+                        border: none;
+                        outline: none;
+                        border-bottom: #02020241 solid 1px;
+                    }
+
+                    & .input_select_container{
+
+                        position: relative;
+                        margin-right: 5px;
+                        
+                        & .t_doc{
+                            font-size: 1rem;
+                            background-color: transparent;
+                            z-index: 1;
+                            cursor: pointer;
+                            width: 45px;
+                            border: none;
+                            appearance: none;
+                            outline: none;
+                            border-bottom: #02020241 solid 1px;
+                            
+                            & option:hover{
+                                background-color: #d1a664;
+                            }
+                        }
+
+                        & .t_doc:focus ~ .icon_select_container{
+                            color:#d1a664;
+                        }
+
+                        & .icon_select_container{
+                            z-index: 0;
+                            cursor: pointer;
+                            width: 10px;
+                            height: 100%;
+                            position: absolute;
+                            left: 70%;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            transition: color ease-out 0.2s;
+                            -webkit-transition: color ease-out 0.2s;
+                            -moz-transition: color ease-out 0.2s;
+                            -ms-transition: color ease-out 0.2s;
+                            -o-transition: color ease-out 0.2s;
                         }
                     }
 
                     & div{
+
+                        & input[type=number]::-webkit-inner-spin-button, 
+                        input[type=number]::-webkit-outer-spin-button { 
+                            -webkit-appearance: none; 
+                            margin: 0; 
+                        }
+
                         & input{
-                            width: 250px;
+                            font-size: 1rem;
+                            width: 200px;
                             height: 25px;
                             border: none;
                             outline: none;
-                            border-bottom: #02020218 solid 1px;
+                            border-bottom: #02020241 solid 1px;
                         }
 
                         & .underline{
                             position: absolute;
-                            bottom: 15px;
+                            bottom: 0px;
                             height: 2px;
                             width: 100%;
                             z-index: 20;
@@ -82,74 +134,59 @@
                             -ms-transform: scaleX(0);
                             -o-transform: scaleX(0);
                             transition: transform 0.3s;
-                            -webkit-transition: transform 0.3s ease;
-                            -moz-transition: transform 0.3s ease;
-                            -ms-transition: transform 0.3s ease;
-                            -o-transition: transform 0.3s ease;
-}
+                            -webkit-transition: transform 0.3s;
+                            -moz-transition: transform 0.3s;
+                            -ms-transition: transform 0.3s;
+                            -o-transition: transform 0.3s;
+                        }
 
                         & input:focus  ~ .underline:before {
                             transform: scaleX(1);
                         }
 
-                    } 
-                }
-            
-                & .register__form-forget-password-link{
-                    display: flex;
-                    justify-content: end;
-
-                    & div{
-                        position: relative;
-
-                        a{
-                            text-decoration: none;
-                            text-align: end;
-                            font-size: 0.8rem;
-                            color: #3a3939;
-                            transition:0.3s;
-                            -webkit-transition:0.2s;
-                            -moz-transition:0.2s;
-                            -ms-transition:0.2s;
-                            -o-transition:0.2s;
-    
-                            &:hover{
-                                color: #d1a664;
-                                font-weight: bold;
-                            }
-    
-                            &:after{
-                                content: "";
-                                position: absolute;
-                                background-color: #d1a664;
-                                height: 1px;
-                                width: 0;
-                                right: 0;
-                                bottom: -3px;
-                                transition: 0.3s;
-                                -webkit-transition: 0.3s;
-                                -moz-transition: 0.3s;
-                                -ms-transition: 0.3s;
-                                -o-transition: 0.3s;
-                            }
-    
-                            &:hover:after {
-                                width: 100%;
-                            }
+                        & select:focus  ~ .underline:before {
+                            transform: scaleX(1);
                         }
                     } 
-                    
+                }
+            }
+
+            & .register__form_tdata{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                
+                & div{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 260px;
+                    gap: 5px;
+
+                    & input[type="checkbox"]{
+                        width: 15px;
+
+                        &:checked ~ span{
+                            color: #a1a1a1;
+                        }
+
+                        }
+                    }
+
+                    & span{
+                        font-size: .7rem;
+                    }
                 }
             }
 
             & .register__form-btn{
-
+                margin-top: 10px;
                 display: flex;
                 flex-direction: column;
                 align-items: center;
 
                 & button{
-                    width: 90px;
+                    width: 120px;
                     height: 35px;
                     border-radius: 5px;
                     -webkit-border-radius: 5px;
@@ -173,8 +210,8 @@
                 }
                 
                 & span{
-                    font-size: 0.7rem;
-                    margin: 10px 0px 15px;
+                    font-size: 0.8rem;
+                    margin: 10px 0px 0px;
                     font-weight: 200;
                     position: relative;
 
@@ -182,6 +219,7 @@
                         text-decoration: none;
                         cursor: pointer;
                         transition:0.3s;
+                        color: #8685EF;
                         -webkit-transition:0.2s;
                         -moz-transition:0.2s;
                         -ms-transition:0.2s;
@@ -213,7 +251,48 @@
                     }
                 }
 
+                & .professor_link{
+                    font-size: 0.8rem;
+                    margin: 10px 0px 15px;
+                    font-weight: 200;
+                    position: relative;
+
+                    & a{
+                        text-decoration: none;
+                        cursor: pointer;
+                        transition:0.3s;
+                        color: #5e0083;
+                        -webkit-transition:0.2s;
+                        -moz-transition:0.2s;
+                        -ms-transition:0.2s;
+                        -o-transition:0.2s;
+
+                        &:hover{
+                            color: #5e0083;
+                            font-weight: bold;
+                        }
+
+                        &:after{
+                            content: "";
+                            position: absolute;
+                            background-color: #5e0083;
+                            height: 1px;
+                            width: 0;
+                            left: 0;
+                            bottom: -3px;
+                            transition: 0.3s;
+                            -webkit-transition: 0.3s;
+                            -moz-transition: 0.3s;
+                            -ms-transition: 0.3s;
+                            -o-transition: 0.3s;
+                        }
+
+                        &:hover:after {
+                            width: 100%;
+                        }
+                    }
+                }
+
             }
                 
         }
-    }

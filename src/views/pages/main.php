@@ -10,17 +10,15 @@
 <body>
 
     <?php
-    
         include("../components/navbar.php");
-    
     ?>
 
     <main class="main_content min-main">
 
         <section class="main_content_popup">
             <p>
-                Bienvenido <span>Sergio Chaparro</span>. Usted tiene el rol
-                de <span>Superadministrador</span>, por favor, seleccione el sistema al
+                Bienvenido <span><?php echo $nombre . " " . $apellido; ?></span>. Usted tiene el rol
+                de <span><?php echo $rol; ?></span>, por favor, seleccione el sistema al
                 que desea ingresar
             </p>
         </section>

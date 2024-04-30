@@ -43,7 +43,7 @@ footer{
                     transition-property: background, scale;
                 }
 
-                & .bxl-facebook-circle:hover{
+                & .fa-square-facebook:hover{
                     background: linear-gradient(45deg, #24458d, #3152a5, #2258b6, #1263c7, #0281f0, #0196ec, #0294bd, #1a92b9, #2f9db6, #d3f6f6);
                     -webkit-background-clip: text;
                     background-clip: text;
@@ -52,7 +52,7 @@ footer{
                     -webkit-filter: drop-shadow(0 0 5px #2258b6);
                 }
 
-                & .bxl-instagram-alt:hover{
+                & .fa-instagram:hover{
                     background: linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d, #f56040, #f77737, #fcaf45, #ffdc80);
                     -webkit-background-clip: text;
                     background-clip: text;
@@ -61,16 +61,16 @@ footer{
                     -webkit-filter: drop-shadow(0 0 5px #a73c79);
                 }
 
-                & .bxl-twitter:hover{
-                    background: linear-gradient(to right, #1DA1F2, #FFFFFF);
+                & .fa-square-x-twitter:hover{
+                    background: linear-gradient(to right, #4c5052, #FFFFFF);
                     -webkit-background-clip: text;
                     background-clip: text;
                     color: transparent;
-                    filter: drop-shadow(0 0 5px #1DA1F2);
-                    -webkit-filter: drop-shadow(0 0 5px #1DA1F2);
-                }
+                    filter: drop-shadow(0 0 5px #a0a0a063);
+                    -webkit-filter: drop-shadow(0 0 5px #a0a0a063);
+}
 
-                & .bxl-linkedin-square:hover{
+                & .fa-linkedin:hover{
                     background: linear-gradient(90deg, #219ee2, #0A66C2);
                     -webkit-background-clip: text;
                     background-clip: text;
@@ -79,7 +79,7 @@ footer{
                     -webkit-filter: drop-shadow(0 0 5px #0A66C2);
                 }
 
-                & .bxl-youtube:hover{
+                & .fa-youtube:hover{
                     background: linear-gradient(45deg, #FF0000, #FF0000 40%, #ffffff);
                     -webkit-background-clip: text;
                     background-clip: text;

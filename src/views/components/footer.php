@@ -5,28 +5,28 @@
             </div>
             <ul class="footer__social_media">
                 <li>
-                    <a href="https://web.facebook.com/fceunal">
-                        <i class='bx bxl-facebook-circle'></i>
+                    <a href="https://web.facebook.com/fceunal" target="_blank">
+                        <i class="fa-brands fa-square-facebook"></i>
                     </a>
                 </li>
                 <li>
-                    <a href="https://www.instagram.com/bienestarfceun">
-                        <i class='bx bxl-instagram-alt' ></i>
+                    <a href="https://www.instagram.com/bienestarfceun" target="_blank">
+                        <i class="fa-brands fa-instagram"></i>
                     </a>
                 </li>
                 <li>
-                    <a href="https://x.com/fceunal">
-                        <i class='bx bxl-twitter'></i>
+                    <a href="https://x.com/fceunal" target="_blank">
+                        <i class="fa-brands fa-square-x-twitter"></i>
                     </a>
                 </li>
                 <li>
-                    <a href="https://www.linkedin.com/company/fce-unal-bogota/">
-                        <i class='bx bxl-linkedin-square' ></i>
+                    <a href="https://www.linkedin.com/company/fce-unal-bogota/" target="_blank">
+                        <i class="fa-brands fa-linkedin"></i>
                     </a>
                 </li>
                 <li>
-                    <a href="https://youtube.com/@prensacid">
-                        <i class='bx bxl-youtube' ></i>
+                    <a href="https://youtube.com/@prensacid" target="_blank">
+                        <i class="fa-brands fa-youtube"></i>
                     </a>
                 </li>
             </ul>

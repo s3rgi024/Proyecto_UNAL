@@ -1,3 +1,13 @@
+<?php 
+    session_start();
+
+    $nombre = $_SESSION['nombre'];
+    $apellido = $_SESSION['apellido'];
+    $rol = $_SESSION['rol'];
+
+?>
+
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -83,8 +93,8 @@
                 <img src="../../../public/img/escudo_unal.webp" alt="Escudo Universidad Nacional de Colombia">
                 <div class="info-usuario">
                     <div class="nombre-email">
-                        <span class="nombre oculto">Rol</span>
-                        <span class="email oculto">Usuario</span>
+                        <span class="nombre oculto"><?php echo $nombre . " " . $apellido; ?></span>
+                        <span class="email oculto"><?php echo $rol; ?></span>
                     </div>
                 </div>
             </div>
