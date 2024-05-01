@@ -1,86 +1,96 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../../public/css/info_personal.css">
-    <title>Cargue Documentos</title>
-</head>
-<body>
-    <div id="page" class="site">
-        <div class="container">
-            <div class="form-box">
-                <div class="progress">
-                    <div class="logo"><a href="../../../src/views/pages/main.php"><span>Formulario<br></span>Contratación</a></div>
-                    <ul class="progress-steps">
-                        <li class="step active">
-                            <span>1</span>
-                            <p>Documentación Hoja de Vida</p>
-                        </li>
-                        <li class="step">
-                            <span>2</span>
-                            <p>Estudio y experiencia laboral</p>
-                        </li>
-                        <li class="step">
-                            <span>3</span> 
-                            <p>Documentación Vinculación</p>
-                        </li>
-                    </ul>
+<div class="container">
+    <div class="form-box">
+        <div class="progress">  
+                <div class="logo">
+                    <a href="../main.php">
+                        <span>Formulario<br></span>Contratación
+                    </a>
                 </div>
-                <form action="../../controllers/neg_dat_doc_ocasionales.php" method="POST">
-                    <div class="form-one form-step active">
-                        <div class="bg-svg"></div>
+
+                <ul class="progress-steps">
+                    <li class="step active">
+                        <span>1</span>
+                        <p>Documentación Hoja de Vida</p>
+                    </li>
+                    <li class="step">
+                        <span>2</span>
+                        <p>Estudio y experiencia laboral</p>
+                    </li>
+                    <li class="step">
+                        <span>3</span> 
+                        <p>Documentación Vinculación</p>
+                    </li>
+                </ul>
+            </div>
+            
+            <form action="../../controllers/neg_dat_doc_ocasionales.php" method="POST">
+                <div class="form-one form-step active">
+                    <div class="bg-svg"></div>
+
                         <h2>Hoja de Vida</h2>
                         <p>Documentación personal requerida para vinculación.</p>
+
                         <div>
                             <label>Hoja de Vida Función Pública</label>
                             <input type="file" id="hvFuncionPublica" name="hvFuncionPublica" accept=".pdf">
                         </div>
+
                         <div>
                             <label>Declaración Juramentada Ley 4 de 1992</label>
                             <input type="file" id="decJuramentada" name="decJuramentada" accept=".pdf">
                         </div>
+
                         <div>
                             <label>Verificación Inhabilidad Delito Sexual</label>
                             <input type="file" id="inhabDelito" name="inhabDelito" accept=".pdf">
                         </div>
+
                         <div>
                             <label>Autorización Notificación Correo Electrónico</label>
                             <input type="file" id="notiCorreo" name="notiCorreo" accept=".pdf">
                         </div>
+
                         <div>
                             <label>Compromiso Institucional Vinculación</label>
                             <input type="file" id="compIntitucional" name="compIntitucional" accept=".pdf">
                         </div>
+
                         <div>
                             <label>Autorización Tratamiento Datos Personales</label>
                             <input type="file" id="autoriDatos" name="autoriDatos" accept=".pdf">
                         </div>
+
                         <div>
                             <label>Visa Extranjeria</label>
                             <input type="file" id="visaExtranjeria" name="visaExtranjeria" accept=".pdf">
                         </div>
+
                         <div>
                             <label>Fotocopia Libreta Militar</label>
                             <input type="file" id="libMilitar" name="libMilitar" accept=".pdf">
                         </div>
+
                         <div>
                             <label>Tarjeta Profesional</label>
                             <input type="file" id="tarjeProfesional" name="tarjeProfesional" accept=".pdf">
                         </div>
+
                         <div>
                             <label>Matricula Profesional</label>
                             <input type="file" id="matriProfesional" name="matriProfesional" accept=".pdf">
                         </div>
+
                         <div>
                             <label>Reporte Médico (Aval SST)</label>
                             <input type="file" id="reportMedicoSST" name="reportMedicoSST" accept=".pdf">
                         </div>
                     </div>
+
                     <div class="form-two form-step">
                         <div class="bg-svg"></div>
-                            <h2>Certificados Estudio & Experiencia Laboral</h2>
-                            <br>
+                        <h2>Certificados Estudio & Experiencia Laboral</h2>
+                        <br>
+                        
                         <div class="birth">
                             <label style="color: #6c5ce7">Pregrado</label>
                             <label>Fecha inicio</label>
@@ -224,6 +234,3 @@
             </div>
         </div>
     </div>
-    <script src="../../../public/js/form_docs.js"></script>
-</body>
-</html>

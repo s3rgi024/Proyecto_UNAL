@@ -1,0 +1,137 @@
+@import url(../../modules/header.css);
+@import url(../../modules/footer.css);
+@import url(../../global_styles/variables.css);
+@import url(./register.css);
+@import url(./login.css);
+@import url(./register_professor.css);
+
+a{
+    text-decoration: none;
+}
+
+.container__login{
+    width: 100%;
+    height: 85vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../../../img/foto_edificio_facultad.webp);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+
+    & .blur{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        background-color: #00000070;
+    }
+}
+
+/*=========Animaciones=========*/
+
+/*=========Animaciones para visualizar 
+formulario de registro e inicio de sesión=========*/
+.enter_animation{
+    animation: show_form 0.7s linear both;
+    -webkit-animation: show_form 0.7s linear forwards;
+}
+
+.exit_animation{
+    animation: hide_form 0.2s linear 0.5s both;
+    -webkit-animation: hide_form 0.2s linear 0.5s forwards;
+}
+
+@keyframes show_form{
+    0% {
+        transform-origin: top left;
+        transform: rotate(5deg);
+        -webkit-transform: rotate(5deg);
+        -moz-transform: rotate(5deg);
+        -ms-transform: rotate(5deg);
+        -o-transform: rotate(5deg);
+    }
+    50%{
+        transform-origin: top left;
+        transform: rotate(95deg);
+        -webkit-transform: rotate(95deg);
+        -moz-transform: rotate(95deg);
+        -ms-transform: rotate(95deg);
+        -o-transform: rotate(95deg);
+        
+    }
+    100% {
+        transform-origin: top left;
+        z-index: 15;
+        transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+}    
+}
+
+@keyframes hide_form {
+    100%{
+        z-index: 1;
+        transform: rotate(5deg);
+        -webkit-transform: rotate(5deg);
+        -moz-transform: rotate(5deg);
+        -ms-transform: rotate(5deg);
+        -o-transform: rotate(5deg);
+    }
+}
+
+/*=========Animaciones para visualizar 
+formulario de registro de docentes=========*/
+
+.exit_forms_professor_animation {
+    -webkit-animation: slide-out-elliptic-top-bck 0.7s ease-in forwards;
+    animation: slide-out-elliptic-top-bck 0.7s ease-in forwards;
+}
+
+.enter_form_professor_animation {
+    -webkit-animation: slide-in-elliptic-top-fwd 0.7s cubic-bezier(0.250, 0.460, 0.450, 0.940) forwards;
+	animation: slide-in-elliptic-top-fwd 0.7s cubic-bezier(0.250, 0.460, 0.450, 0.940) forwards;
+}
+
+@keyframes slide-out-elliptic-top-bck {
+    0% {
+      -webkit-transform: translateY(0) rotateX(0) scale(1);
+              transform: translateY(0) rotateX(0) scale(1);
+      -webkit-transform-origin: 50% 1400px;
+              transform-origin: 50% 1400px;
+      opacity: 1;
+    }
+    100% {
+      -webkit-transform: translateY(-600px) rotateX(-30deg) scale(0);
+              transform: translateY(-600px) rotateX(-30deg) scale(0);
+      -webkit-transform-origin: 50% 100%;
+              transform-origin: 50% 100%;
+      opacity: 1;
+    }
+}
+  
+@keyframes slide-in-elliptic-top-fwd {
+    0% {
+      -webkit-transform: translateY(-600px) rotateX(-30deg) scale(0);
+              transform: translateY(-600px) rotateX(-30deg) scale(0);
+      -webkit-transform-origin: 50% 100%;
+              transform-origin: 50% 100%;
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: translateY(0) rotateX(0) scale(1);
+              transform: translateY(0) rotateX(0) scale(1);
+      -webkit-transform-origin: 50% 1400px;
+              transform-origin: 50% 1400px;
+      opacity: 1;
+    }
+}
+  
+
+
+
+
+
+

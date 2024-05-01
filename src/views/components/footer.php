@@ -49,8 +49,24 @@
             </div>
         </section>
         <section class="container__footer__contact">
-            <h3>Contactanos</h3>
-            
+            <div class="footer_contact__emails">
+                <h4><i class="fa-solid fa-phone fa-float"></i> Contáctanos</h4>
+                <ul>
+                    <li><a href="">soporte_fce@unal.edu.co <i class="fa-regular fa-envelope"></i></a></li>
+                    <li><a href="">contacto_fce@unal.edu.co <i class="fa-regular fa-envelope"></i></a></li>
+                </ul>
+            </div>
+
+            <div class="footer_contact__links">
+                <h4><i class="fa-solid fa-arrow-up-right-from-square"></i> Enlaces de Interés</h4>
+                <ul>
+                    <li><a href="">Instructivo</a></li>
+                    <li><a href="">Página de la Facultad</a></li>
+                    <li><a href="">Página de la Universidad</a></li>
+                </ul>
+            </div>
+
+
         </section>
 </footer>
 

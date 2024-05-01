@@ -141,10 +141,49 @@ footer{
 
     & .container__footer__contact{
         width: 30%;
-        height: 100%;
         display: flex;
-        flex-direction: column;
-        
+        flex-direction: row;
+        margin-top: 25px;
+        justify-content: center;
+        margin-right: 40px;
+        text-align: right;
+        gap: 20px;
+
+        & h4{
+            margin-bottom: 5px;
+            font-size: 1.1rem;
+        }
+
+        & ul li{
+            margin-bottom: 5px;
+
+            & a{
+                color: #b3b3b3;
+                transition: all ease-out .2s;
+                -webkit-transition: all ease-out .2s;
+                -moz-transition: all ease-out .2s;
+                -ms-transition: all ease-out .2s;
+                -o-transition: all ease-out .2s;
+            }
+        } 
+
+        & .footer_contact__emails{
+            
+            & ul{
+                & li a:hover{
+                        color: #40b9ff;
+                }
+            }
+
+        }
+
+        & .footer_contact__links{
+            & ul{
+                & li a:hover{
+                        color: #daa700;
+                }
+            }
+        }
     }
 }
 

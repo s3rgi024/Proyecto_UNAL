@@ -1,8 +1,7 @@
-
-    & .register__form{
+.register__form{
         width: 350px;
         height: auto;
-        display: flex;
+        display: none; /*cambiar por flex*/
         position: absolute;
         flex-direction: column;
         gap:20px;
@@ -295,4 +294,4 @@
 
             }
                 
-        }
+}
