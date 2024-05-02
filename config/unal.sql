@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 29-02-2024 a las 20:10:46
+-- Tiempo de generación: 02-05-2024 a las 16:38:43
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.2.12
 
@@ -57,7 +57,7 @@ CREATE TABLE `archivo_doc_oca` (
   `reso_nombramiento` varchar(50) NOT NULL,
   `fk_id_estado_documentacion` int(3) NOT NULL,
   `observaciones_estado` varchar(60) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_spanish_ci;
 
 -- --------------------------------------------------------
 
@@ -71,7 +71,7 @@ CREATE TABLE `asignaturas` (
   `asignatura` varchar(50) NOT NULL,
   `grupo` int(3) NOT NULL,
   `modalidad` varchar(30) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_spanish_ci;
 
 -- --------------------------------------------------------
 
@@ -86,7 +86,7 @@ CREATE TABLE `docentes` (
   `apellidos` varchar(30) NOT NULL,
   `correo` varchar(30) NOT NULL,
   `fk_vinculacion` int(2) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_spanish_ci;
 
 -- --------------------------------------------------------
 
@@ -97,7 +97,7 @@ CREATE TABLE `docentes` (
 CREATE TABLE `edificios` (
   `id_edificio` int(3) NOT NULL,
   `nom_edificio` varchar(30) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_spanish_ci;
 
 --
 -- Volcado de datos para la tabla `edificios`
@@ -117,7 +117,7 @@ INSERT INTO `edificios` (`id_edificio`, `nom_edificio`) VALUES
 CREATE TABLE `estados` (
   `id_estado` int(11) NOT NULL,
   `estado` varchar(30) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_spanish_ci;
 
 --
 -- Volcado de datos para la tabla `estados`
@@ -136,7 +136,7 @@ INSERT INTO `estados` (`id_estado`, `estado`) VALUES
 CREATE TABLE `estado_documentacion` (
   `id_estado` int(3) NOT NULL,
   `estado` varchar(30) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_spanish_ci;
 
 --
 -- Volcado de datos para la tabla `estado_documentacion`
@@ -163,7 +163,7 @@ CREATE TABLE `eventos` (
   `hora_inicio` time NOT NULL,
   `hora_fin` time NOT NULL,
   `observaciones` varchar(50) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_spanish_ci;
 
 -- --------------------------------------------------------
 
@@ -181,7 +181,7 @@ CREATE TABLE `reservas` (
   `hora_inicio` time NOT NULL,
   `hora_fin` time NOT NULL,
   `observaciones` varchar(50) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_spanish_ci;
 
 -- --------------------------------------------------------
 
@@ -192,7 +192,7 @@ CREATE TABLE `reservas` (
 CREATE TABLE `roles` (
   `id_rol` int(11) NOT NULL,
   `rol` varchar(30) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_spanish_ci;
 
 --
 -- Volcado de datos para la tabla `roles`
@@ -215,7 +215,7 @@ CREATE TABLE `salones` (
   `fk_id_edificio` int(3) NOT NULL,
   `fk_id_tipo_salon` int(3) NOT NULL,
   `capacidad` int(3) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_spanish_ci;
 
 --
 -- Volcado de datos para la tabla `salones`
@@ -275,18 +275,18 @@ INSERT INTO `salones` (`id_salon`, `salon`, `fk_id_edificio`, `fk_id_tipo_salon`
 
 CREATE TABLE `tipo_documento` (
   `id_tipo_documento` int(3) NOT NULL,
+  `abreviatura` varchar(5) NOT NULL,
   `documento` varchar(30) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_spanish_ci;
 
 --
 -- Volcado de datos para la tabla `tipo_documento`
 --
 
-INSERT INTO `tipo_documento` (`id_tipo_documento`, `documento`) VALUES
-(1, 'Cédula de Ciudadania'),
-(2, 'Cédula de Extranjería'),
-(3, 'NIT'),
-(4, 'Especial');
+INSERT INTO `tipo_documento` (`id_tipo_documento`, `abreviatura`, `documento`) VALUES
+(1, 'C.C.', 'Cédula de Ciudadania'),
+(2, 'C.E.', 'Cédula de Extranjería'),
+(3, 'NIT', 'Número de Identificación Tribu');
 
 -- --------------------------------------------------------
 
@@ -297,7 +297,7 @@ INSERT INTO `tipo_documento` (`id_tipo_documento`, `documento`) VALUES
 CREATE TABLE `tipo_reserva` (
   `id_tipo_reserva` int(3) NOT NULL,
   `tipo_reserva` varchar(30) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_spanish_ci;
 
 --
 -- Volcado de datos para la tabla `tipo_reserva`
@@ -315,7 +315,7 @@ INSERT INTO `tipo_reserva` (`id_tipo_reserva`, `tipo_reserva`) VALUES
 CREATE TABLE `tipo_salon` (
   `id_tipo_salon` int(3) NOT NULL,
   `tipo_salon` varchar(30) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_spanish_ci;
 
 --
 -- Volcado de datos para la tabla `tipo_salon`
@@ -337,11 +337,25 @@ INSERT INTO `tipo_salon` (`id_tipo_salon`, `tipo_salon`) VALUES
 --
 
 CREATE TABLE `usuarios` (
+  `id_tdoc` int(2) NOT NULL,
   `id_usuario` int(11) NOT NULL,
-  `usuario` int(11) NOT NULL,
+  `nombre1` varchar(10) NOT NULL,
+  `nombre2` varchar(15) NOT NULL,
+  `apellido1` varchar(15) NOT NULL,
+  `apellido2` varchar(15) NOT NULL,
+  `id_rol` int(2) NOT NULL,
+  `usuario` varchar(20) NOT NULL,
   `clave` int(11) NOT NULL,
-  `correo` varchar(30) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+  `correo` varchar(40) NOT NULL,
+  `id_estado` int(2) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_spanish_ci;
+
+--
+-- Volcado de datos para la tabla `usuarios`
+--
+
+INSERT INTO `usuarios` (`id_tdoc`, `id_usuario`, `nombre1`, `nombre2`, `apellido1`, `apellido2`, `id_rol`, `usuario`, `clave`, `correo`, `id_estado`) VALUES
+(1, 1031642393, 'Sergio', 'Esteban', 'Chaparro', 'Noguera', 3, 'Serch', 123456, 'sechaparron@unal.edu.co', 1);
 
 -- --------------------------------------------------------
 
@@ -352,7 +366,7 @@ CREATE TABLE `usuarios` (
 CREATE TABLE `vinculacion` (
   `id_vinculacion` int(11) NOT NULL,
   `vinculacion` varchar(30) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_spanish_ci;
 
 --
 -- Volcado de datos para la tabla `vinculacion`
