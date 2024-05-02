@@ -1,4 +1,4 @@
-//import "./form_docs.js";
+import "./form_docs.js";
 
 let register_link = document.getElementById('register_link');
 let login_link = document.getElementById('login_link');

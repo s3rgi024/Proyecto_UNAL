@@ -8,52 +8,62 @@
     --font-smaller: 14px;
     --font-bigger: 20px;
 }
+html{
+    scroll-behavior: smooth;
+}
 
 .container{
+
+    display: none;
     
-    max-width: 1100px;
-    margin: 0 auto;
+    width: 1200px;   
+    margin: 0;
     padding: 0 2em;
+    z-index: 2;
 
     & .form-box{
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         margin-top: 5em;
-        border: 8px solid var(--lighter-color);
-        border-radius: 15px;
-        background-color: #faf9ff;
+        background-color: #ffffff;
+        border-radius: 5px;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        -ms-border-radius: 5px;
+        -o-border-radius: 5px;
 
         & .progress{
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
 
             & .logo{
-                font-size: 1.75em;
+                font-size: 1.4em;
                 font-weight: 800;
                 color: var(--dark-color);
-                padding: 40px 48px;
+                padding: 0px 20px;
                 text-align: center;
+                
 
                 & span{
                     color: var(--main-color);
                 }
             }
     
-            & .form-box .progress{
-                position: relative;
-                padding: 1em;
-            }
-
             & ul.progress-steps{
                 display: flex;
-                flex-direction: row;
+                flex-direction: column;
                 align-items: center;
                 justify-content: center;
-                gap: 2em;
+                gap: 1.5em;
 
                 & li{
                     position: relative;
                     display: flex;
-                    align-items: flex-start;
-                    margin-bottom: 2em;
+                    align-items: center;
+                    margin-bottom: 1em;
 
                     & > span{
                         position: relative;
@@ -86,39 +96,91 @@
 
             & ul li p{
                 position: absolute;
-                top: -2em;
+                left: 50px;
                 font-size: 12px;
+                width: 90px;
             }
         }
 
         form{
             width: 100%;
-            padding: 3em 1em;
             background-color: white;
-            border-radius: 30px 30px 15px 15px;
-            -webkit-border-radius: 30px 30px 15px 15px;
-            -moz-border-radius: 30px 30px 15px 15px;
-            -ms-border-radius: 30px 30px 15px 15px;
-            -o-border-radius: 30px 30px 15px 15px;
 
             & > div{
-                max-width: 400px;
-                margin: 0 auto;
+                display: flex;
+                flex-wrap: wrap;
+                text-align: left;
+                column-gap: 10px;
+                
+                & .header_form{
 
-                & p{
-                    color: var(--light-color);
-                    margin-bottom: 2em;
+                    width: 100%;
+                    & p{
+                        color: var(--light-color);
+                        margin-bottom: .5em;
+                    }
                 }
 
                 & div:not(.checkbox){
                     display: flex;
                     flex-direction: column;
-                    margin-bottom: 2em;
+                    margin-bottom: .7em;
+                }
+            }
+
+            & .form-one{
+                & div:not(.header_form){
+                    width: calc(50% - 1em);
+                }
+
+            }
+
+            & .form-two{
+                & div:not(.header_form, :last-child){
+                    width: calc(50% - 1em);
+                }
+
+                & div:last-child{
+                    width: 97%;
+                }
+            }
+
+            & .form-three{
+                & div:not(.header_form){
+                    width: calc(50% - 1em);
+                }
+
+                & .birth{
+                    display: flex;
+                    flex-direction: row;
+                    flex-wrap: wrap;
+
+                    & .grouping{
+                        display: flex;
+                        flex-direction: row;
+        
+                        & input{
+                            width: 50px;
+                            text-align: center;
+                            margin-right: 3px;
+                            font-size: .71rem;
+                        }
+                    }
+                }
+            }
+
+            & .form-four{
+                & div:not(.header_form, :last-child){
+                    width: calc(50% - 1em);
+                }
+
+                & div:nth-child(10){
+                    width: 97.1%;
                 }
             }
 
             & :where(input,select){
-                height: 40px;
+                height: 30px;
                 padding: 0 1em;
                 border-radius: 7px;
                 outline-color: var(--secondary-color);
@@ -132,18 +194,25 @@
                 font-weight: 600;
             }
 
-            & .grouping{
-                display: flex;
+            & .checkbox {
 
-                & input{
-                    max-width: 70px;
-                    text-align: center;
-                    margin-right: 1em;
+                & input[type="checkbox"]{
+                    height: auto;
+
+                    &:checked ~ label{
+                        color: #a1a1a1;
+                        text-decoration: underline;
+                    }
                 }
-            }
 
-            & .checkbox input{
-                height: auto;
+                & label{
+                    font-weight: normal;
+                    margin-bottom: 0.5em;
+
+                    & span{
+                        font-weight: bold;
+                    }
+                }
             }
             
             & > div:not(.btn-group){
@@ -156,47 +225,60 @@
                 display: block;
             }
 
-            & > div .bg-svg{
-                width: 60px;
-                height: 50px;
-            }
-
-            & > .form-one .bg-svg{
-                background: url();
-            }
-
-            & > .form-two .bg-svg{
-                background: url();
-            }
-
-            & > .form-three .bg-svg{
-                background: url();
+            & .form-step.active.active {
+                display: flex;
             }
 
             & .btn-group{
                 display: flex;
-                flex-wrap: wrap;
                 gap: 1em;
-                margin-top: 2em;
+                margin-top: 1em;
+                justify-content: end;
+                align-items: center;
+                margin-right: 25px;
+                
+                & .btn-submit{
+                    display: none;
+                }
+    
+                & .btn-back{
+                    background-color: #d1a664;
+                }
+
+                & .btn-next{
+                    background-color: var(--main-color);
+                }
+
+                & .btn-prev{
+                    background-color: #d16473;
+                }
             }
 
+            
+
             & .btn-group [class*="btn-"]{
-                background-color: var(--main-color);
                 color: white;
-                padding: 1em 2.5em;
-                border: 4px solid var(--secondary-color);
-                border-radius: 30px;
+                padding: .8em 2em;
                 cursor: pointer;
                 -webkit-transition: background-color .3s, border-color .3s ease-out;
                 transition: background-color .3s, border-color .3s ease-out;
                 -moz-transition: background-color .3s, border-color .3s ease-out;
                 -ms-transition: background-color .3s, border-color .3s ease-out;
                 -o-transition: background-color .3s, border-color .3s ease-out;
+                border-radius: 15px;
+                -webkit-border-radius: 15px;
+                -moz-border-radius: 15px;
+                -ms-border-radius: 15px;
+                -o-border-radius: 15px;
+                border: none;
+
+                &:hover{
+                    scale: 1.05;
+
+                }
                 
                 &:disabled{
-                    background-color: var(--light-color);
-                    border-color: var(--lighter-color);
-                    cursor: text;
+                    background-color: var(--light-color);                    cursor: text;
                 }
 
                 & .btn-group [class*="btn-"]:hover:not(:disabled){
@@ -220,6 +302,7 @@
                 & ::placeholder{
                     color: var(--light-color);
                 }
+
             }
 
 
@@ -246,8 +329,7 @@
     }
 
     .form-box .progress{
-        flex: 1 0 35%;
-        min-width: 300px;
+        flex: 1 0 25%;
         padding: 3em;
     }
 
@@ -263,20 +345,23 @@
     .progress ul.progress-steps li:not(:last-child)::before{
         content: '';
         position: absolute;
-        left: 20px;
+        left: 19px;
         top: 30px;
-        width: 2px;
+        width: 3px;
         height: 65px;
         background-color: var(--lighter-color);
     }
 
     .form-box form{
-        padding: 3em;
+        padding: 2em;
         border-radius: 0 15px 15px 0;
+        -webkit-border-radius: 0 15px 15px 0;
+        -moz-border-radius: 0 15px 15px 0;
+        -ms-border-radius: 0 15px 15px 0;
+        -o-border-radius: 0 15px 15px 0;
     }
 
     .progress ul li p{
-        position: relative;
         top: auto;
         font-size: inherit;
     }
