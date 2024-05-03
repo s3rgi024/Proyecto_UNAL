@@ -45,6 +45,6 @@ $clave = $_POST["password"];
 
             } else {
 
-                print "<script>alert(\"Error al iniciar sesiòn, revise los campos e intente nuevamente o comuníquese con su administrador.\");window.location='../../index.php';</script>";
+                print "<script>alert(\"Error al iniciar sesión, revise los campos e intente nuevamente o comuníquese con su administrador.\");window.location='../../index.php';</script>";
                   
             }
