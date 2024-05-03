@@ -7,7 +7,7 @@ $clave = $_POST["password"];
             include '../../config/db_connection.php';
             
 
-            //Consuita de usuarios
+            //Consulta de usuarios
 
             $consulta="SELECT * FROM usuarios WHERE usuario ='$userName'";
             $sql = $db_connection->query($consulta);

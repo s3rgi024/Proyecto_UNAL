@@ -42,7 +42,7 @@
                 Accusamus, iste sit? Tempore voluptatum suscipit quibusdam.
             </div>
             <div id="about__content_devs" class="container__footer__devs_info">
-                <span>Sergio Chaparro</span> y <span>Santiago Alza</span> son desarrolladores wed egresados del SENA con un año 
+                <span>Sergio Chaparro</span> y <span>Santiago Alza</span> son desarrolladores web egresados del SENA con un año 
                 de experiencia, son expertos en el diseño, desarrollo y despliegue de sistemas de información personalizados. 
                 Con conocimientos en tecnologías como React, PHP, JS, CSS y HTML. Su capacidad para crear 
                 soluciones innovadoras y su actitud colaborativa los ha convertido en excelentes programadores.

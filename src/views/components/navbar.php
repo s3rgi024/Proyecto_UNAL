@@ -61,9 +61,9 @@
                     </a>
                 </li>
                 <li>
-                    <a href="../../../src/views/pages/vis_docente.php">
-                        <i class="fa-solid fa-dice-d6"></i>                        
-                        <span class="oculto">Docentes</span>
+                    <a href="../../../src/views/pages/usuarios.php">
+                        <i class="fa-solid fa-users"></i>                        
+                        <span class="oculto">Usuarios</span>
                     </a>
                 </li>
                 <li>
