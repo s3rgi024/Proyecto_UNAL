@@ -7,7 +7,7 @@ $clave = $_POST["password"];
             include '../../config/db_connection.php';
             
 
-            //Consuita de usuarios
+            //Consulta de usuarios
 
             $consulta="SELECT * FROM usuarios WHERE usuario ='$userName'";
             $sql = $db_connection->query($consulta);
@@ -45,6 +45,6 @@ $clave = $_POST["password"];
 
             } else {
 
-                print "<script>alert(\"Error al iniciar sesiòn, revise los campos e intente nuevamente o comuníquese con su administrador.\");window.location='../../index.php';</script>";
+                print "<script>alert(\"Error al iniciar sesión, revise los campos e intente nuevamente o comuníquese con su administrador.\");window.location='../../index.php';</script>";
                   
             }

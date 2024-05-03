@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../../public/css/doc_main.css">
-    <title>Menú Contratación</title>
+    <link rel="stylesheet" href="../../../public/css/usuarios.css">
+    <title>Gestión Usuarios</title>
 </head>
 <body>
 
@@ -20,37 +20,38 @@
     <main class="main_contratacion__container min-main">
         <section class="main_contratacion__text">
             <h1>
-                Gestión Contratación
+                Usuarios
             </h1>
             <br>
             <p>
-            Bienvenido al sitema de contratación de docentes ocasionales de la facultad de ciencias 
-            económicas de la Universidad Nacional de Colombia.
-            <br>
-            <br>
-            Seleccione una opción a continuación:
+            Bienvenido al sistema de gestión de usuarios, desde este punto, se gestionarán todos los aspectos relacionados con los perfiles, roles y datos de los usuarios que pertenecen a la Facultad.
             </p>
+            <br>
+            <p>
+                Seleccione una opción a continuación:
+            </p>
+            <br>
         </section>
 
         <section class="main_contratacion__options">
 
-        <a href="../../../src/views/pages/vis_arch.php" class="contratacion_option doc_pendiente" style="text-decoration: none; color: inherit;">
+        <a href="../../../src/views/pages/apro_usuarios.php" class="contratacion_option doc_pendiente" style="text-decoration: none; color: inherit;">
             <div>
-                <img src="../../../public/img/doc_pendiente.webp" alt="persona buscando perfiles">
+                <img src="../../../public/img/users.webp" alt="persona buscando perfiles">
                 <div class="contratacion_actions">
-                    <span>Documentación Pendiente</span>
+                    <span>Aprobación Usuarios</span>
 
                     <i class='fa-solid fa-circle-info' id="info"></i>
                 </div>
             </div>
         </a>
 
-        <a href="../../../src/views/pages/doc_aprobada.php" class="contratacion_option doc_aprobada" style="text-decoration: none; color: inherit;">
+        <a href="../../../src/views/pages/info_personal.php" class="contratacion_option doc_aprobada" style="text-decoration: none; color: inherit;">
             <div>
-                <img src="../../../public/img/doc_aprobada.webp" alt="persona buscando perfiles">
+                <img src="../../../public/img/users_inf.webp" alt="persona buscando perfiles">
                 <div class="contratacion_actions">
                     <span>
-                        Documentación aprobada
+                        Usuarios Pendientes
                     </span>
 
                     <i class='fa-solid fa-circle-info' id="info"></i>
@@ -60,10 +61,10 @@
 
         <a href="../../../src/views/pages/historial.php" class="contratacion_option doc_historial" style="text-decoration: none; color: inherit;">
             <div>
-                <img src="../../../public/img/doc_historial.webp" alt="persona buscando perfiles">
+                <img src="../../../public/img/user_info.webp" alt="persona buscando perfiles">
                 <div class="contratacion_actions">
                     <span>
-                        Historial
+                        Información Usuarios    
                     </span>
                     <i class='fa-solid fa-circle-info' id="info"></i>
                 </div>
@@ -80,6 +81,6 @@
     
 
     <script src="../../../public/js/navbar.js"></script>
-    <script src="../../../public/js/main_contratacion.js"></script>
+    <script src="../../../public/js/vis_docente.js"></script>
 </body>
 </html>
