@@ -38,8 +38,9 @@ body {
 
     & .main_contratacion__text{
         z-index: 20;
+        margin-top: 8em;
+        margin-left: -10rem;
         margin-bottom: 20px;
-        margin-top: -60px;
         animation: fade_in 1.5s forwards;
         -webkit-animation: fade_in 1.5s forwards;
 
