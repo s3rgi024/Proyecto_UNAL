@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../../public/css/usuarios_boot.css">
     <link rel="stylesheet" href="../../../public/css/apro_usuarios.css">
     <title>Aprobación Usuarios</title>
 </head>
@@ -18,8 +19,20 @@ $sql = $db_connection->query($consulta);
 
 <section class="main_contratacion__background"></section>
     <main class="main_contratacion__container min-main">
+    <section class="main_contratacion__text">
+            <h1>
+                Gestión Contratación
+            </h1>
+            <br>
+            <p>
+            Bienvenido al sitema de contratación de docentes ocasionales de la facultad de ciencias 
+            económicas de la Universidad Nacional de Colombia.
+            <br>
+            <br>
+            Seleccione una opción a continuación:
+            </p>
+        </section>
     <div class="container">
-            <h1>Usuarios</h1>    
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12">            
