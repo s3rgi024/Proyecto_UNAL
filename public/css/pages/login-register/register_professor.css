@@ -15,7 +15,6 @@ html{
 .container{
 
     display: none;
-    
     width: 1200px;   
     margin: 0;
     padding: 0 2em;
@@ -24,7 +23,6 @@ html{
     & .form-box{
         display: flex;
         flex-direction: row;
-        margin-top: 5em;
         background-color: #ffffff;
         border-radius: 5px;
         -webkit-border-radius: 5px;
@@ -132,12 +130,25 @@ html{
                 & div:not(.header_form){
                     width: calc(50% - 1em);
                 }
-
             }
 
             & .form-two{
                 & div:not(.header_form, :last-child){
                     width: calc(50% - 1em);
+                }
+
+                & .libreta_militar{
+
+                    & span{
+                        font-size: .8rem;
+                    }
+                }
+
+                & .tarjeta_profesional{
+
+                    & span{
+                        font-size: .8rem;
+                    }
                 }
 
                 & div:last-child{
@@ -174,8 +185,15 @@ html{
                     width: calc(50% - 1em);
                 }
 
-                & div:nth-child(10){
-                    width: 97.1%;
+                & div:last-child{
+                    width: 97%;
+                }
+
+                & .ultima_eps{
+
+                    & span{
+                        font-size: .8rem;
+                    }
                 }
             }
 
@@ -239,6 +257,7 @@ html{
                 
                 & .btn-submit{
                     display: none;
+                    background-color: var(--main-color);
                 }
     
                 & .btn-back{
@@ -260,18 +279,19 @@ html{
                 color: white;
                 padding: .8em 2em;
                 cursor: pointer;
-                -webkit-transition: background-color .3s, border-color .3s ease-out;
-                transition: background-color .3s, border-color .3s ease-out;
-                -moz-transition: background-color .3s, border-color .3s ease-out;
-                -ms-transition: background-color .3s, border-color .3s ease-out;
-                -o-transition: background-color .3s, border-color .3s ease-out;
-                border-radius: 15px;
-                -webkit-border-radius: 15px;
-                -moz-border-radius: 15px;
-                -ms-border-radius: 15px;
-                -o-border-radius: 15px;
+                -webkit-transition: background-color 3s, border-color .3s ease-out, scale .2s ease-out;
+                transition: background-color 3s, border-color .3s ease-out, scale .2s ease-out;
+                -moz-transition: background-color 3s, border-color .3s ease-out, scale .2s ease-out;
+                -ms-transition: background-color 3s, border-color .3s ease-out, scale .2s ease-out;
+                -o-transition: background-color 3s, border-color .3s ease-out, scale .2s ease-out;
+                border-radius: 10px;
+                -webkit-border-radius: 10px;
+                -moz-border-radius: 10px;
+                -ms-border-radius: 10px;
+                -o-border-radius: 10px;
                 border: none;
-
+                font-weight: bold;
+                
                 &:hover{
                     scale: 1.05;
 
@@ -286,26 +306,15 @@ html{
                     border-color: var(--light-color);
                 }
 
-                & .btn-group .btn-submit,
-                .form-three.active ~ .btn-group .btn-next{
-                    display: none;
-                }
-
-                & .form-three.active ~ .btn-group .btn-submit{
-                    display: block;
-                }
-                
                 & .form-three.active ~ .btn-group{
                     justify-content: space-between;
                 }
 
-                & ::placeholder{
-                    color: var(--light-color);
-                }
-
             }
 
-
+            & ::placeholder{
+                color: var(--light-color);
+            }
         }
     }
 }

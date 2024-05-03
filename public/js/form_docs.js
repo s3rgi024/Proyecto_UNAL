@@ -1,5 +1,6 @@
 const nextButton = document.querySelector('.btn-next');
 const prevButton = document.querySelector('.btn-prev');
+const submitButton = document.querySelector('.btn-submit');
 const steps = document.querySelectorAll('.step');
 const form_steps = document.querySelectorAll('.form-step');
 let active = 1;
@@ -39,7 +40,9 @@ const updateProgress = () => {
         prevButton.disabled = true;
     } else if (active === steps.length){
         nextButton.disabled = true;
+        submitButton.style.display = "block"
     } else {
+        submitButton.style.display = "none"
         prevButton.disabled = false;
         nextButton.disabled = false;
     }

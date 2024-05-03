@@ -1,4 +1,4 @@
-<section class="container">
+<section class="container" id="professor__form">
     <div class="form-box">
             <div class="progress">
                 
@@ -28,19 +28,22 @@
                 </ul>
             </div>
             
-            <form action="../../controllers/neg_dat_doc_ocasionales.php" method="POST">
+            <form action="../../../../src/controllers/neg_dat_register_professor.php" method="POST" enctype="multipart/form-data">
 
                 <div class="form-one form-step active">
 
                         
                         <div class="header_form">
                             <h2>Datos Personales</h2>
-                            <p></p>
+                            <p>Bienvenid@, a continuación, diligencie los campos con la información
+                                solicitada para continuar con su proceso de contratación.
+                                Recuerde que los campos marcados con (*) son obligatorios
+                            </p>
                         </div>                        
 
                         <div>
-                            <label for="t_doc_register">Tipo de documento</label>
-                            <select class="t_doc_register" name="t_doc_register" id="t_doc_register">
+                            <label for="t_doc_register">Tipo de documento *</label>
+                            <select class="t_doc_register" name="t_doc_register" id="t_doc_register" required>
                             <?php
                                 
                             $tdoc_query = "SELECT * FROM tipo_documento";
@@ -65,13 +68,13 @@
 
 
                         <div>
-                            <label for="dni_register_professor">Número de documento</label>
-                            <input type="number" name="dni_register_professor" id="dni_register_professor" min="100000" max="9999999999">
+                            <label for="dni_register_professor">Número de documento *</label>
+                            <input type="number" name="dni_register_professor" id="dni_register_professor" min="100000" max="9999999999" required>
                         </div>
                         
                         <div>
-                            <label for="name1_professor">Primer Nombre</label>
-                            <input type="text" name="name1_professor" id="name1_professor">
+                            <label for="name1_professor">Primer Nombre *</label>
+                            <input type="text" name="name1_professor" id="name1_professor" required>
                         </div>
 
                         <div>
@@ -80,8 +83,8 @@
                         </div>
 
                         <div>
-                            <label for="l_name1_professor">Primer Apellido</label>
-                            <input type="text" name="l_name1_professor" id="l_name1_professor">
+                            <label for="l_name1_professor">Primer Apellido *</label>
+                            <input type="text" name="l_name1_professor" id="l_name1_professor" required>
                         </div>
 
                         <div>
@@ -90,18 +93,23 @@
                         </div>
 
                         <div>
-                            <label for="email_professor">Correo Electrónico</label>
-                            <input type="email" name="email_professor" id="email_professor">
+                            <label for="email_professor">Correo Electrónico *</label>
+                            <input type="email" name="email_professor" id="email_professor" required>
                         </div>
 
                         <div>
-                            <label for="n_phone_professor">Número de Teléfono</label>
-                            <input type="tel" name="n_phone_professor" id="n_phone_professor">
+                            <label for="n_phone_professor">Número de Teléfono *</label>
+                            <input type="tel" name="n_phone_professor" id="n_phone_professor" required>
                         </div>
 
                         <div>
-                            <label for="password_professor">Contraseña</label>
-                            <input type="password" name="password_professor" id="password_professor">
+                            <label for="user_professor">Nombre de Usuario *</label>
+                            <input type="text" name="user_professor" id="user_professor" required>
+                        </div>
+
+                        <div>
+                            <label for="password_professor">Contraseña *</label>
+                            <input type="password" name="password_professor" id="password_professor" required>
                         </div>
 
  
@@ -116,33 +124,33 @@
                         </div>                        
 
                         <div>
-                            <label>Hoja de Vida Función Pública</label>
-                            <input type="file" id="hvFuncionPublica" name="hvFuncionPublica" accept=".pdf">
+                            <label>Hoja de Vida Función Pública *</label>
+                            <input type="file" id="hvFuncionPublica" name="hvFuncionPublica" accept=".pdf" required>
                         </div>
 
                         <div>
-                            <label>Declaración Juramentada Ley 4 de 1992</label>
-                            <input type="file" id="decJuramentada" name="decJuramentada" accept=".pdf">
+                            <label>Declaración Juramentada Ley 4 de 1992 *</label>
+                            <input type="file" id="decJuramentada" name="decJuramentada" accept=".pdf" required>
                         </div>
 
                         <div>
-                            <label>Verificación Inhabilidad Delito Sexual</label>
-                            <input type="file" id="inhabDelito" name="inhabDelito" accept=".pdf">
+                            <label>Verificación Inhabilidad Delito Sexual *</label>
+                            <input type="file" id="inhabDelito" name="inhabDelito" accept=".pdf" required>
                         </div>
 
                         <div>
-                            <label>Autorización Notificación Correo Electrónico</label>
-                            <input type="file" id="notiCorreo" name="notiCorreo" accept=".pdf">
+                            <label>Autorización Notificación Correo Electrónico *</label>
+                            <input type="file" id="notiCorreo" name="notiCorreo" accept=".pdf" required>
                         </div>
 
                         <div>
-                            <label>Compromiso Institucional Vinculación</label>
-                            <input type="file" id="compIntitucional" name="compIntitucional" accept=".pdf">
+                            <label>Compromiso Institucional Vinculación *</label>
+                            <input type="file" id="compIntitucional" name="compIntitucional" accept=".pdf" required>
                         </div>
 
                         <div>
-                            <label>Autorización Tratamiento Datos Personales</label>
-                            <input type="file" id="autoriDatos" name="autoriDatos" accept=".pdf">
+                            <label>Autorización Tratamiento Datos Personales *</label>
+                            <input type="file" id="autoriDatos" name="autoriDatos" accept=".pdf" required>
                         </div>
 
                         <div>
@@ -150,28 +158,28 @@
                             <input type="file" id="visaExtranjeria" name="visaExtranjeria" accept=".pdf">
                         </div>
 
-                        <div>
-                            <label>Fotocopia Libreta Militar</label>
+                        <div class="libreta_militar">
+                            <label>Fotocopia Libreta Militar  <span>(Aplica solo para hombres de 18 a 54 años)</span></label>
                             <input type="file" id="libMilitar" name="libMilitar" accept=".pdf">
                         </div>
 
-                        <div>
-                            <label>Tarjeta Profesional</label>
-                            <input type="file" id="tarjeProfesional" name="tarjeProfesional" accept=".pdf">
+                        <div class="tarjeta_profesional">
+                            <label>Tarjeta Profesional <span>(Si la carrera lo requiere)</span></label>
+                            <input type="file" id="tarjeProfesional" name="tarjeProfesional" accept=".pdf" required>
                         </div>
 
-                        <div>
-                            <label>Matricula Profesional</label>
+                        <div class="tarjeta_profesional">
+                            <label>Matricula Profesional <span>(Si la carrera lo requiere)</span></label>
                             <input type="file" id="matriProfesional" name="matriProfesional" accept=".pdf">
                         </div>
 
                         <div>
-                            <label>Reporte Médico (Aval SST)</label>
-                            <input type="file" id="reportMedicoSST" name="reportMedicoSST" accept=".pdf">
+                            <label>Reporte Médico (Aval SST) *</label>
+                            <input type="file" id="reportMedicoSST" name="reportMedicoSST" accept=".pdf" required>
                         </div>
                 </div>
 
-                <div class="form-three form-step">
+            <div class="form-three form-step">
 
                 <div class="header_form">
                     <h2>Certificados Estudio & Experiencia Laboral</h2>
@@ -266,20 +274,20 @@
                             <input type="file" id="certSegLengua" name="certSegLengua" accept=".pdf">
                         </div>
                         <div>
-                            <label>Experiencia Laboral</label>
-                            <input type="file" id="expLaboral" name="expLaboral" accept=".pdf">
+                            <label>Experiencia Laboral *</label>
+                            <input type="file" id="expLaboral" name="expLaboral" accept=".pdf" required>
                         </div>
                         <div>
-                            <label>Antecedentes Disciplinarios Procuraduria</label>
-                            <input type="file" id="antDisciplinarios" name="antDisciplinarios" accept=".pdf">
+                            <label>Antecedentes Disciplinarios Procuraduria *</label>
+                            <input type="file" id="antDisciplinarios" name="antDisciplinarios" accept=".pdf" required>
                         </div>
                         <div>
-                            <label>Antecedentes Fiscal Contraloria</label>
-                            <input type="file" id="antFiscales" name="antFiscales" accept=".pdf">
+                            <label>Antecedentes Fiscal Contraloria *</label>
+                            <input type="file" id="antFiscales" name="antFiscales" accept=".pdf" required>
                         </div>
                         <div>
-                            <label>Antecedente Judicial Policia Nacional</label>
-                            <input type="file" id="antJudiciales" name="antJudiciales" accept=".pdf">
+                            <label>Antecedente Judicial Policia Nacional *</label>
+                            <input type="file" id="antJudiciales" name="antJudiciales" accept=".pdf" required>
                         </div>
                 </div>
 
@@ -291,28 +299,32 @@
                     </div>
 
                         <div>
-                            <label>Formato Afiliación Seguridad Social</label>
-                            <input type="file" id="afiliSeguridad" name="afiliSeguridad" accept=".pdf">
+                            <label>Formato Afiliación Seguridad Social *</label>
+                            <input type="file" id="afiliSeguridad" name="afiliSeguridad" accept=".pdf" required>
                         </div>
                         <div>
-                            <label>Formato Afiliación EPS</label>
-                            <input type="file" id="afiliEPS" name="afiliEPS" accept=".pdf">
+                            <label>Formato Afiliación EPS *</label>
+                            <input type="file" id="afiliEPS" name="afiliEPS" accept=".pdf" required>
                         </div>
                         <div>
-                            <label>Formato Afiliación Pensión</label>
-                            <input type="file" id="afiliPension" name="afiliPension" accept=".pdf">
+                            <label>Formato Afiliación Pensión *</label>
+                            <input type="file" id="afiliPension" name="afiliPension" accept=".pdf" required>
                         </div>
                         <div>
-                            <label>Certificado Cuenta Bancaria</label>
-                            <input type="file" id="cueBancaria" name="cueBancaria" accept=".pdf">
+                            <label>Certificado Cuenta Bancaria *</label>
+                            <input type="file" id="cueBancaria" name="cueBancaria" accept=".pdf" required>
+                        </div>
+                        <div class="ultima_eps">
+                            <label>Certificado Afilicación Ultima EPS * <span>(Debe estar activo)</span></label>
+                            <input type="file" id="afiliUltiEPS" name="afiliUltiEPS" accept=".pdf" required>
+                        </div>
+                        <div class="ultima_eps">
+                            <label>Certificado Afilicación Fondo de Pensiones * <span>(Debe estar activo)</span></label>
+                            <input type="file" id="afiliUltiPension" name="afiliUltiPension" accept=".pdf" required>
                         </div>
                         <div>
-                            <label>Certificado Afilicación Ultima EPS</label>
-                            <input type="file" id="afiliUltiEPS" name="afiliUltiEPS" accept=".pdf">
-                        </div>
-                        <div>
-                            <label>Cédula Ciudadanía o Extranjería</label>
-                            <input type="file" id="cedulaCiudadania" name="cedulaCiudadania" accept=".pdf">
+                            <label>Cédula Ciudadanía o Extranjería *</label>
+                            <input type="file" id="cedulaCiudadania" name="cedulaCiudadania" accept=".pdf" required>
                         </div>
                         <div>
                             <label>Declaración Pensionado o en Trámite</label>
@@ -326,14 +338,14 @@
                             <label>Resolución de Nombramiento</label>
                             <input type="file" id="resNombramiento" name="resNombramiento" accept=".pdf">
                         </div>
-                            <div class="checkbox">
-                                <input type="checkbox" name="termn_condi" id="termn_condi">
-                                <label for="termn_condi">He leido con atención las observaciones dadas por la <span>EACP</span></label>
-                            </div>
+                        <div class="checkbox">
+                            <input type="checkbox" name="termn_condi" id="termn_condi" required>
+                            <label for="termn_condi">He leido con atención las observaciones dadas por la <span>EACP</span></label>
+                        </div>
                 </div>
 
                 <div class="btn-group">
-                    <button type="button" class="btn-back">Inicio</button>
+                    <button type="button" class="btn-back" id="btn_back">Volver al Inicio</button>
                     <button type="button" class="btn-prev" disabled>Atrás</button>
                     <button type="button" class="btn-next">Siguiente</button>
                     <button type="submit" class="btn-submit">Enviar</button>
