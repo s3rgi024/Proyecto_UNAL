@@ -28,7 +28,7 @@
                 </ul>
             </div>
             
-            <form action="../../../../src/controllers/neg_dat_register_professor.php" method="POST" enctype="multipart/form-data">
+            <form action="../../../src/controllers/neg_dat_register_professor.php" method="POST" enctype="multipart/form-data">
 
                 <div class="form-one form-step active">
 
