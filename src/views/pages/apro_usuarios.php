@@ -12,8 +12,13 @@
 
 <?php 
 include("../../../config/db_connection.php"); 
+$objeto = new Conexion();
+$conexion = $objeto->Conectar();
+
 $consulta = "SELECT id_usuario, nombre1, nombre2, apellido1, apellido2, usuario FROM usuarios";
-$sql = $db_connection->query($consulta);
+$resultado = $conexion->prepare($consulta);
+$resultado->execute();
+$data=$resultado->fetchAll(PDO::FETCH_ASSOC);
 ?>
 
 <section class="main_contratacion__background"></section>
