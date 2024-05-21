@@ -1,16 +1,6 @@
 <?php 
 //error_reporting(E_ALL & ~E_DEPRECATED & ~E_WARNING & ~E_NOTICE);
 
-function createDirs($professorName, $tdoc, $doc){
-    //crear carpeta de docente
-    $dir_professor = "../../docs/docentes_ocasionales/" . $professorName . "_" . $doc;
-    mkdir($dir_professor);
-
-    //crear carpetas de hoja de vida y vinculación
-    mkdir($dir_professor . "/Hoja de Vida");
-    mkdir($dir_professor . "/Vinculacion");
-}
-
 function saveFilesProfessor($professorName, $doc, $files) {
 
     include ("../../config/db_connection.php");
@@ -19,28 +9,54 @@ function saveFilesProfessor($professorName, $doc, $files) {
     $routeHojaVida = $generalRoute . "/Hoja de Vida";
     $routeVinculacion = $generalRoute . "/Vinculacion";
 
-    foreach ($files as $key => $file) {
-        if (!is_array($file) || !isset($file['tmp_name'])) {
-            continue; // Si el archivo no está presente, pasar al siguiente
-        }
-        $folderNumber = substr($key, 0, 1);
-        // Determinar la carpeta de destino basándose en el número
-        $destination = ($folderNumber === '1') ? $routeHojaVida : $routeVinculacion;
-        // Otorgar permisos de escritura a la carpeta de destino
-        chmod($destination, 0777); // 0777 otorga permisos completos, puedes ajustarlo según tus necesidades de seguridad
-
-        echo $destination;
-        move_uploaded_file($file["tmp_name"], $destination . "/" . $file["name"]);
-        $$key = $destination . "/" . $file["name"]; // Asignar ruta del archivo a una variable con el nombre correspondiente
+    if (!file_exists($generalRoute)) {
+        mkdir($generalRoute, 0777, true);
+    }
+    if (!file_exists($routeHojaVida)) {
+        mkdir($routeHojaVida, 0777, true);
+    }
+    if (!file_exists($routeVinculacion)) {
+        mkdir($routeVinculacion, 0777, true);
     }
 
-    // Insertar en la base de datos usando las variables creadas arriba
+    $fieldsFiles = "INSERT INTO archivo_doc_oca ( fk_dni";
+    $dataFiles = "VALUES ('$doc'";
+
+
+    foreach ($files as $key => $file) {
+        if (!is_array($file) || !isset($file['tmp_name'])) {
+            continue;
+        }
+        $folderNumber = substr($key, 0, 1);
+        
+        $destination = ($folderNumber === '1') ? $routeHojaVida : $routeVinculacion;
+
+        $newKey = substr($key, 2);
+
+        if (move_uploaded_file($file["tmp_name"], $destination . "/" . $file["name"])) {
+    
+            $newName = $destination . "/" . $newKey . "." . pathinfo($file["name"], PATHINFO_EXTENSION);
+    
+            rename($destination . "/" . $file["name"], $newName);
+    
+            $$newKey = $newName;
+    
+            $fieldsFiles = $fieldsFiles . ", " . $newKey;
+            $dataFiles = $dataFiles . ", '" . $$newKey . "'";
+        } else {
+            echo "Hubo un error al intentar mover el archivo.";
+        }
+    }
+
+    $fieldsFiles = $fieldsFiles . ", fk_id_estado_documentacion, observaciones_estado)";
+    $dataFiles = $dataFiles . ", 1, 'Primer Registro')";
+
+    $sql_insert = $fieldsFiles . $dataFiles;
    
+    mysqli_query($db_connection, $sql_insert);
 
-    echo "Inserciones exitosas.";
+    
 }
-
-
 
 function insertBasicDataProfessor($tdoc, $doc, $name1, $name2, $lName1,
 $lName2, $email, $nPhone, $userName, $password){
@@ -50,8 +66,6 @@ $lName2, $email, $nPhone, $userName, $password){
     $consulta="SELECT * FROM usuarios WHERE id_tdoc ='$tdoc' AND id_usuario ='$doc'";
     $sql = $db_connection->query($consulta);
 
-
-    //verificar si hay usuarios existentes con el mismo documento
     if ($sql->num_rows > 0) {
         print "<script>alert(\"Error este usuario ya existe, por favor inicie sesión o comuníquese con su administrador";
     }
@@ -75,12 +89,8 @@ $cert_segun_leng, $experien_lab, $antec_disc_procu, $antec_fisc_contral, $antec_
 $form_afil_eps, $form_afil_pension, $cert_cuen_bancaria, $cert_afil_ult_eps, $certi_afil_fond_pensiones,
 $cedula_ciu_ext, $decla_pen_sol_pens_tram, $asig_dia_hor, $reso_nombramiento){
 
-    //Se válida si ya existe un usuario y si no se crea uno con los datos básicos
     insertBasicDataProfessor($tdoc, $doc, $name1, $name2, $lName1,
     $lName2, $email, $nPhone, $userName, $password);
-
-    //se crean las carpetas del profesor
-    createDirs($name1 . $name2, $tdoc, $doc);
 
 
     $files = $files = array(
@@ -113,10 +123,11 @@ $cedula_ciu_ext, $decla_pen_sol_pens_tram, $asig_dia_hor, $reso_nombramiento){
         "2_asig_dia_hor" => $asig_dia_hor,
         "2_reso_nombramiento" => $reso_nombramiento
     );
-    //se guardan los archivos en el directorio creado
+    
+
     saveFilesProfessor($name1 . $lName1, $doc, $files);
 
-
+    echo "exito";
 }
 
 execute_register_professor($_POST["t_doc_register"], $_POST["dni_register_professor"], $_POST["name1_professor"], 

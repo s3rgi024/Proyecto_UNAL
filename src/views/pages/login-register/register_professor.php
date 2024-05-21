@@ -28,7 +28,7 @@
                 </ul>
             </div>
             
-            <form action="./src/controllers/neg_dat_register_professor.php" method="POST" enctype="multipart/form-data">
+            <form action="" method="POST" enctype="multipart/form-data" id="register_professor">
 
                 <div class="form-one form-step active">
 
@@ -348,8 +348,10 @@
                     <button type="button" class="btn-back" id="btn_back">Volver al Inicio</button>
                     <button type="button" class="btn-prev" disabled>Atrás</button>
                     <button type="button" class="btn-next">Siguiente</button>
-                    <button type="submit" class="btn-submit">Enviar</button>
+                    <button type="submit" onclick="registerRequest()" class="btn-submit">Enviar</button>
                 </div>
             </form>
     </div>
 </section>
+
+<script src="../../../../public/js/AJAX/requestRegister.js"></script>
