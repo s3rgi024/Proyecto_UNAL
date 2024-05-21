@@ -12,8 +12,13 @@
 
 <?php 
 include("../../../config/db_connection.php"); 
+$objeto = new Conexion();
+$conexion = $objeto->Conectar();
+
 $consulta = "SELECT id_usuario, nombre1, nombre2, apellido1, apellido2, usuario FROM usuarios";
-$sql = $db_connection->query($consulta);
+$resultado = $conexion->prepare($consulta);
+$resultado->execute();
+$data=$resultado->fetchAll(PDO::FETCH_ASSOC);
 ?>
 
 <section class="main_contratacion__background"></section>
@@ -87,8 +92,12 @@ $sql = $db_connection->query($consulta);
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
                 </button>
             </div>
-            <form id="formPersonas">    
+            <form id="formPersonas" action="../../../src/views/pages/apro_usuarios_crud.php">    
                 <div class="modal-body">
+                    <div class="form-group">
+                        <label for="id_tdoc" class="col-form-label">Tipo Documento:</label>                        
+                        <input type="number" class="form-control" id="id_tdoc">
+                    </div>
                     <div class="form-group">
                         <label for="id_usuario" class="col-form-label">DNI:</label>                        
                         <input type="number" class="form-control" id="id_usuario">
@@ -108,6 +117,26 @@ $sql = $db_connection->query($consulta);
                     <div class="form-group">
                         <label for="apellido2" class="col-form-label">Segundo Apellido:</label>
                         <input type="text" class="form-control" id="apellido2">
+                    </div>            
+                    <div class="form-group">
+                        <label for="id_rol" class="col-form-label">Rol:</label>
+                        <input type="text" class="form-control" id="id_rol">
+                    </div>            
+                    <div class="form-group">
+                        <label for="usuario" class="col-form-label">Usuario:</label>
+                        <input type="text" class="form-control" id="usuario">
+                    </div>            
+                    <div class="form-group">
+                        <label for="clave" class="col-form-label">Clave:</label>
+                        <input type="text" class="form-control" id="clave">
+                    </div>            
+                    <div class="form-group">
+                        <label for="correo" class="col-form-label">Correo:</label>
+                        <input type="text" class="form-control" id="correo">
+                    </div>            
+                    <div class="form-group">
+                        <label for="telefono" class="col-form-label">Telefono:</label>
+                        <input type="text" class="form-control" id="telefono">
                     </div>            
                 </div>
                 <div class="modal-footer">

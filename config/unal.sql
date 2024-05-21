@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 02-05-2024 a las 16:38:43
+-- Tiempo de generación: 10-05-2024 a las 21:17:27
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.2.12
 
@@ -347,6 +347,7 @@ CREATE TABLE `usuarios` (
   `usuario` varchar(20) NOT NULL,
   `clave` int(11) NOT NULL,
   `correo` varchar(40) NOT NULL,
+  `telefono` int(11) NOT NULL,
   `id_estado` int(2) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_spanish_ci;
 
@@ -354,8 +355,9 @@ CREATE TABLE `usuarios` (
 -- Volcado de datos para la tabla `usuarios`
 --
 
-INSERT INTO `usuarios` (`id_tdoc`, `id_usuario`, `nombre1`, `nombre2`, `apellido1`, `apellido2`, `id_rol`, `usuario`, `clave`, `correo`, `id_estado`) VALUES
-(1, 1031642393, 'Sergio', 'Esteban', 'Chaparro', 'Noguera', 3, 'Serch', 123456, 'sechaparron@unal.edu.co', 1);
+INSERT INTO `usuarios` (`id_tdoc`, `id_usuario`, `nombre1`, `nombre2`, `apellido1`, `apellido2`, `id_rol`, `usuario`, `clave`, `correo`, `telefono`, `id_estado`) VALUES
+(1, 1031642393, 'Sergio', '', 'Chaparro', '', 3, 'Serch', 123456, 'sechaparron@unal.edu.co', 0, 1),
+(1, 1031642684, 'sala', 'manca', 'elsa', '5465', 1, 'Serm', 12345612, 'ess@gm.com', 31352476, 2);
 
 -- --------------------------------------------------------
 
