@@ -1,6 +1,6 @@
 <section class="register__form" id="register__form">
     <h1>
-        Regístrate
+        Recuperar Contraseña
     </h1>
     <form action="./src/controllers/registro_administrativos.php" method="post">
         <div class="register__form-fields">
@@ -50,31 +50,14 @@
             </div>
         </div>
 
-        <div class="register__form_tdata">
-            <div>
-                <input type="checkbox" name="trat_datos" id="trat_datos" class="trat_datos" required>
-                <span>
-                    <label for="trat_datos">
-                        He leído y acepto la Política de Tratamiento de Datos
-                    </label>
-                </span>
-            </div>
-        </div>
-
         <div class="register__form-btn">
             <button type="submit">
-                Solicitar Usuario
+                Enviar Correo de Recuperación
             </button>
             <span>
                 ¿Ya tienes una cuenta?
                 <span>
                     <a id="login_link">Inicia Sesión</a>
-                </span>
-            </span>
-            <span class="professor_link">
-                    ¿Eres docente? Regístrate
-                <span>
-                    <a id="professor_link">aquí</a>
                 </span>
             </span>
         </div>

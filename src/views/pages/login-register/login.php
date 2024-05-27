@@ -30,7 +30,7 @@
                 <br>
                 <div class="login__form-forget-password-link">
                     <div>
-                        <a href="">Olvidé mi contraseña</a>
+                        <a id="register_link">Olvidé mi contraseña</a>
                     </div>
                 </div>
         </div>
@@ -41,10 +41,10 @@
                     Ingresar
                 </a>
             </button>
-            <span>
-                ¿No  tienes una cuenta?
+            <span class="professor_link">
+                    ¿Eres docente? Regístrate
                 <span>
-                    <a id="register_link">Registrate</a>
+                    <a id="professor_link">aquí</a>
                 </span>
             </span>
         </div>

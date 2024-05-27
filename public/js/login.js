@@ -1,8 +1,6 @@
 import "./form_docs.js";
 
 
-import Swal from '../../node_modules/sweetalert2/dist/sweetalert2.all.min.js';
-Swal.fire("SweetAlert2 is working!");
 
 let register_link = document.getElementById('register_link');
 let login_link = document.getElementById('login_link');

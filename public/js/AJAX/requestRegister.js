@@ -1,6 +1,8 @@
+import Swal from '../../../node_modules/sweetalert2/src/sweetalert2.js';
 
+function registerRequest(event) {
 
-function registerRequest() {
+    event.preventDefault();
 
     let form = document.getElementById("register_professor"); 
     let data = new FormData(form);
@@ -19,7 +21,13 @@ function registerRequest() {
             title: "¡Registro completado!",
             text: "Enviaremos novedades a su correo en cuanto el usuario sea aprobado",
             icon: "success"
-        });
+
+        }).then((result) => {
+                if (result.isConfirmed) {
+                    // Redirigir a otra página
+                    window.location.href = '../../../index.php';
+                }
+            });
       
     } else {
         console.error('Hubo un error al procesar la solicitud.');
@@ -28,3 +36,5 @@ function registerRequest() {
     
     xhr.send(data);
 }
+
+document.getElementById('register_professor').addEventListener('submit', registerRequest);

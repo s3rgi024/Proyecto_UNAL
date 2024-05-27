@@ -4,7 +4,7 @@
 @import url(./register.css);
 @import url(./login.css);
 @import url(./register_professor.css);
-
+@import url('../../../../node_modules/sweetalert2/dist/sweetalert2.css');
 a{
     text-decoration: none;
 }

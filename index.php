@@ -18,7 +18,7 @@
 
         <?php 
             include ("./src/views/pages/login-register/login.php");
-            include ("./src/views/pages/login-register/register.php");
+            include ("./src/views/pages/login-register/forget_pass.php");
             include ("./src/views/pages/login-register/register_professor.php");
         ?>
 

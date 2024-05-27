@@ -96,6 +96,7 @@
             & .login__form-forget-password-link{
                 display: flex;
                 justify-content: end;
+                cursor: pointer;
 
                 & div{
                     position: relative;

@@ -126,8 +126,6 @@ $cedula_ciu_ext, $decla_pen_sol_pens_tram, $asig_dia_hor, $reso_nombramiento){
     
 
     saveFilesProfessor($name1 . $lName1, $doc, $files);
-
-    echo "exito";
 }
 
 execute_register_professor($_POST["t_doc_register"], $_POST["dni_register_professor"], $_POST["name1_professor"], 
