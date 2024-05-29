@@ -3,170 +3,81 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../../public/css/usuarios_boot.css">
+    <!-- <link rel="stylesheet" href="../../../public/css/apro_usuarios.css"> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
     <title>Aprobación Usuarios</title>
 </head>
 <body>
+    <?php 
+        include("../components/navbar.php");
+    ?>
 
-<?php include("../components/navbar.php"); ?>
-
-<?php 
-include("../../../config/db_connection.php"); 
-$objeto = new Conexion();
-$conexion = $objeto->Conectar();
-
-$consulta = "SELECT id_usuario, nombre1, nombre2, apellido1, apellido2, usuario FROM usuarios";
-$resultado = $conexion->prepare($consulta);
-$resultado->execute();
-$data=$resultado->fetchAll(PDO::FETCH_ASSOC);
-?>
-
-<section class="main_contratacion__background"></section>
+    <section class="main_contratacion__background">
+    </section>
     <main class="main_contratacion__container min-main">
-    <div class="container">
-            <h1>Usuarios</h1>    
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12">            
-                        <button id="btnNuevo" type="button" class="btn btn-success" data-toggle="modal">Crear Usuario</button>    
-                    </div>    
-                </div>    
-            </div>    
-        <br>  
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="table-responsive">        
-                        <table id="tablaPersonas" class="table table-striped table-bordered table-condensed" style="width:100%">
-                            <thead class="text-center">
-                                <tr>
-                                    <th>DNI</th>
-                                    <th>Primer Nombre</th>
-                                    <th>Segundo Nombre</th>         
-                                    <th>Primer Apellido</th>  
-                                    <th>Segundo Apellido</th>
-                                    <th>Acciones</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <?php
-                                // Verificar si se obtuvieron resultados
-                                if ($sql->num_rows > 0) {
-                                    // Iterar sobre los resultados
-                                    while ($usuario_cons = $sql->fetch_assoc()) {
-                                        $id_usuario = $usuario_cons['id_usuario'];
-                                        $nombre1 = $usuario_cons['nombre1'];
-                                        $nombre2 = $usuario_cons['nombre2'];
-                                        $apellido1 = $usuario_cons['apellido1'];
-                                        $apellido2 = $usuario_cons['apellido2'];
-                                ?>
-                                        <tr>
-                                            <td><?php echo $id_usuario ?></td>
-                                            <td><?php echo $nombre1 ?></td>
-                                            <td><?php echo $nombre2 ?></td>
-                                            <td><?php echo $apellido1 ?></td>
-                                            <td><?php echo $apellido2 ?></td>
-                                            <td></td>
-                                        </tr>   
-                                <?php
-                                    }
-                                } else {
-                                    echo "<tr><td colspan='7'>No se encontraron usuarios.</td></tr>";
-                                }
-                                ?>
-                            </tbody>        
-                        </table>                                              
-                    </div>
-                </div>
-            </div>  
-        </div>    
+    <div class="container my5">
+        <h2>Lista de Usuarios</h2>
+        <a class="btn btn-primary" href="../../../src/views/pages/create_usuarios.php" role="button">Crear Usuario</a>
+        <br>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Tipo Documento</th>
+                    <th>DNI</th>
+                    <th>Nombre</th>
+                    <th>Apellido</th>
+                    <th>Rol</th>
+                    <th>Usuario</th>
+                    <th>Correo</th>
+                    <th>Telefono</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php
+                $host = "localhost";
+                $user = "root"; 
+                $pass = ""; 
+                $database = "unal";
+
+                $db_connection = new mysqli($host, $user, $pass, $database);
+
+                if ($db_connection->connect_error){
+                    die("Connection failed: " . $db_connection->connect_error);
+                }
+
+                $sql = "SELECT * FROM usuarios";
+                $result = $db_connection->query($sql);
+
+                if (!$result){
+                    die("Invalid query: " . $db_connection->error);
+                }
+
+                while($row = $result->fetch_assoc()){
+                    echo "
+                    <tr>
+                        <td>$row[id_tdoc]</td>
+                        <td>$row[id_usuario]</td>
+                        <td>$row[nombre1]</td>
+                        <td>$row[apellido1]</td>
+                        <td>$row[id_rol]</td>
+                        <td>$row[usuario]</td>
+                        <td>$row[correo]</td>
+                        <td>$row[telefono]</td>
+                        <td>
+                        <a class='btn btn-primary btn-sm' href='#'>Edit</a>
+                        <a class='btn btn-danger btn-sm' href='#'>Delete</a>
+                        </td>
+                    </tr>
+                    ";
+                }
+                ?>
+            </tbody>
+        </table>
     </div>
-</main>
-
-<!--Modal para CRUD-->
-<div class="modal fade" id="modalCRUD" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel"></h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <form id="formPersonas" action="../../../src/views/pages/apro_usuarios_crud.php">    
-                <div class="modal-body">
-                    <div class="form-group">
-                        <label for="id_tdoc" class="col-form-label">Tipo Documento:</label>                        
-                        <input type="number" class="form-control" id="id_tdoc">
-                    </div>
-                    <div class="form-group">
-                        <label for="id_usuario" class="col-form-label">DNI:</label>                        
-                        <input type="number" class="form-control" id="id_usuario">
-                    </div>
-                    <div class="form-group">
-                        <label for="nombre1" class="col-form-label">Primer Nombre:</label>
-                        <input type="text" class="form-control" id="nombre1">
-                    </div>                
-                    <div class="form-group">
-                        <label for="nombre2" class="col-form-label">Segundo Nombre:</label>
-                        <input type="text" class="form-control" id="nombre2">
-                    </div>            
-                    <div class="form-group">
-                        <label for="apellido1" class="col-form-label">Primer Apellido:</label>
-                        <input type="text" class="form-control" id="apellido1">
-                    </div>            
-                    <div class="form-group">
-                        <label for="apellido2" class="col-form-label">Segundo Apellido:</label>
-                        <input type="text" class="form-control" id="apellido2">
-                    </div>            
-                    <div class="form-group">
-                        <label for="id_rol" class="col-form-label">Rol:</label>
-                        <input type="text" class="form-control" id="id_rol">
-                    </div>            
-                    <div class="form-group">
-                        <label for="usuario" class="col-form-label">Usuario:</label>
-                        <input type="text" class="form-control" id="usuario">
-                    </div>            
-                    <div class="form-group">
-                        <label for="clave" class="col-form-label">Clave:</label>
-                        <input type="text" class="form-control" id="clave">
-                    </div>            
-                    <div class="form-group">
-                        <label for="correo" class="col-form-label">Correo:</label>
-                        <input type="text" class="form-control" id="correo">
-                    </div>            
-                    <div class="form-group">
-                        <label for="telefono" class="col-form-label">Telefono:</label>
-                        <input type="text" class="form-control" id="telefono">
-                    </div>            
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-light" data-dismiss="modal">Cancelar</button>
-                    <button type="submit" id="btnGuardar" class="btn btn-dark">Guardar</button>
-                </div>
-            </form>    
-        </div>
-    </div>
-</div>  
-
-<a class="scroll-to-top rounded" href="#page-top">
-    <i class="fas fa-angle-up"></i>
-</a>
-
-<!-- Bootstrap core JavaScript-->
-<script src="../../../public/js/jquery.min.js"></script>
-<script src="../../../public/js/bootstrap.bundle.min.js"></script>
-
-<!-- Core plugin JavaScript-->
-<script src="../../../public/js/jquery.easing.min.js"></script>
-
-<!-- Custom scripts for all pages-->
-<script src="../../../public/js/sb-admin-2.min.js"></script>
-
-<!-- datatables JS -->
-<script type="text/javascript" src="../../../public/js/datatables.min.js"></script>    
-
-<script src="../../../public/js/apro_usuarios.js"></script>
-<script src="../../../public/js/navbar.js"></script>
-
+    </main>
+    
+    <script src="../../../public/js/navbar.js"></script>
+    <script src="../../../public/js/vis_docente.js"></script>
 </body>
 </html>
