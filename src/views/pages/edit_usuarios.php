@@ -21,27 +21,60 @@ $telefono = "";
 $errorMessage = "";
 $successMessage = "";
 
-if ($_SERVER['REQUEST_METHOD'] == 'POST'){
-    $id_tdoc = $_POST["id_tdoc"];
-    $id_usuario = $_POST["id_usuario"];
-    $nombre1 = $_POST["nombre1"];
-    $nombre2 = $_POST["nombre2"];
-    $apellido1 = $_POST["apellido1"];
-    $apellido2 = $_POST["apellido2"];
-    $id_rol = $_POST["id_rol"];
-    $usuario = $_POST["usuario"];
-    $clave = $_POST["clave"];
-    $correo = $_POST["correo"];
-    $telefono = $_POST["telefono"];
+if ( $_SERVER['REQUEST_METHOD'] == 'GET' ){
+    if(!isset($_GET["id_usuario"])){
+        header("location: ../pages/apro_usuarios.php");
+        exit;
+    }
 
-    do {
+    $id_usuario = $_GET["id_usuario"];
+
+    $sql = "SELECT * FROM usuarios WHERE id_usuario = $id_usuario";
+    $result = $db_connection->query($sql);
+    $row = $result->fetch_assoc();
+
+    if(!$row){
+        header("location: ../pages/apro_usuarios.php");
+        exit;
+    }
+
+    $id_tdoc = $row["id_tdoc"];
+    $id_usuario = $row["id_usuario"];
+    $nombre1 = $row["nombre1"];
+    $nombre2 = $row["nombre2"];
+    $apellido1 = $row["apellido1"];
+    $apellido2 = $row["apellido2"];
+    $id_rol = $row["id_rol"];
+    $usuario = $row["usuario"];
+    $clave = $row["clave"];
+    $correo = $row["correo"];
+    $telefono = $row["telefono"];
+}
+else{
+
+    $id_tdoc = $row["id_tdoc"];
+    $id_usuario = $row["id_usuario"];
+    $nombre1 = $row["nombre1"];
+    $nombre2 = $row["nombre2"];
+    $apellido1 = $row["apellido1"];
+    $apellido2 = $row["apellido2"];
+    $id_rol = $row["id_rol"];
+    $usuario = $row["usuario"];
+    $clave = $row["clave"];
+    $correo = $row["correo"];
+    $telefono = $row["telefono"];
+
+    do{
         if (empty($id_tdoc) || empty($id_usuario) || empty($nombre1) || empty($apellido1) || empty($id_rol) || empty($usuario) || empty($clave) || empty($correo) || empty($telefono)){
             $errorMessage = "Todos los campos deben estar diligenciados";
             break;
         }
+        
+        $sql = "UPDATE usuarios " .
+               "SET name = '$name', email = '$email', phone = '$phone', address = '$adress' " .
+               "WHERE id_usuario = $id_usuario"; 
 
-
-        $sql = "INSERT INTO usuarios (id_tdoc, id_usuario, nombre1, nombre2, apellido1, apellido2, id_rol, usuario, clave, correo, telefono, id_estado) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, 1)";
+        $result = $db_connection->query($sql);
 
         try {
             // Prepara la declaración
@@ -81,8 +114,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
             break;
         }
 
-    } while(false);
+    } while (true);
 }
+
 ?>
 
 <!DOCTYPE html>
@@ -92,7 +126,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <title>Creación Usuarios</title>
+    <title>Edición Usuarios</title>
 </head>
 <body>
     <?php include("../components/navbar.php"); ?>
@@ -110,6 +144,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
             <?php } ?>
 
             <form method="post">
+                <input type="hidden" value="<?php echo $id; ?>">
                 <div class="row mb-3">
                     <label class="col-sm-3 col-form-label">Tipo Documento</label>
                     <div class="col-sm-6">

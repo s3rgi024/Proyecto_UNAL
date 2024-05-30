@@ -65,8 +65,8 @@
                         <td>$row[correo]</td>
                         <td>$row[telefono]</td>
                         <td>
-                        <a class='btn btn-primary btn-sm' href='#'>Edit</a>
-                        <a class='btn btn-danger btn-sm' href='#'>Delete</a>
+                        <a class='btn btn-primary btn-sm' href='../../views/pages/edit_usuarios.php'>Editar</a>
+                        <a class='btn btn-danger btn-sm' href='#'>Cancelar</a>
                         </td>
                     </tr>
                     ";

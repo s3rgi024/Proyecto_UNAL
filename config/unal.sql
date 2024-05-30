@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 28-05-2024 a las 22:12:32
+-- Tiempo de generación: 30-05-2024 a las 23:58:55
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.2.12
 
@@ -29,32 +29,32 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `archivo_doc_oca` (
   `fk_dni` int(10) NOT NULL,
-  `hoja_vida_func_pub` varchar(150) NOT NULL,
-  `decl_jur_ley` varchar(150) NOT NULL,
-  `ver_inh_del_sex` varchar(150) NOT NULL,
-  `notif_corr_elec` varchar(150) NOT NULL,
-  `com_ins_vinc` varchar(150) NOT NULL,
-  `aut_trat_dat_per` varchar(150) NOT NULL,
-  `visa_ext` varchar(150) NOT NULL,
-  `fotoc_libr_mil` varchar(150) NOT NULL,
-  `tarjeta_prof` varchar(150) NOT NULL,
-  `matri_prof` varchar(150) NOT NULL,
-  `aval_sst` varchar(150) NOT NULL,
-  `cert_segun_leng` varchar(150) NOT NULL,
-  `experien_lab` varchar(150) NOT NULL,
-  `antec_disc_procu` varchar(150) NOT NULL,
-  `antec_fisc_contral` varchar(150) NOT NULL,
-  `antec_judic_pol_nal` varchar(150) NOT NULL,
-  `form_afil_seg_social` varchar(150) NOT NULL,
-  `form_afil_eps` varchar(150) NOT NULL,
-  `form_afil_pension` varchar(150) NOT NULL,
-  `cert_cuen_bancaria` varchar(150) NOT NULL,
-  `cert_afil_ult_eps` varchar(150) NOT NULL,
-  `certi_afil_fond_pensiones` varchar(150) NOT NULL,
-  `cedula_ciu_ext` varchar(150) NOT NULL,
-  `decla_pen_sol_pens_tram` varchar(150) NOT NULL,
-  `asig_dia_hor` varchar(150) NOT NULL,
-  `reso_nombramiento` varchar(150) NOT NULL,
+  `hoja_vida_func_pub` varchar(50) NOT NULL,
+  `decl_jur_ley` varchar(50) NOT NULL,
+  `ver_inh_del_sex` varchar(50) NOT NULL,
+  `notif_corr_elec` varchar(50) NOT NULL,
+  `com_ins_vinc` varchar(50) NOT NULL,
+  `aut_trat_dat_per` varchar(50) NOT NULL,
+  `visa_ext` varchar(50) NOT NULL,
+  `fotoc_libr_mil` varchar(50) NOT NULL,
+  `tarjeta_prof` varchar(50) NOT NULL,
+  `matri_prof` varchar(50) NOT NULL,
+  `aval_sst` varchar(50) NOT NULL,
+  `cert_segun_leng` varchar(50) NOT NULL,
+  `experien_lab` varchar(50) NOT NULL,
+  `antec_disc_procu` varchar(50) NOT NULL,
+  `antec_fisc_contral` varchar(50) NOT NULL,
+  `antec_judic_pol_nal` varchar(50) NOT NULL,
+  `form_afil_seg_social` varchar(50) NOT NULL,
+  `form_afil_eps` varchar(50) NOT NULL,
+  `form_afil_pension` varchar(50) NOT NULL,
+  `cert_cuen_bancaria` varchar(50) NOT NULL,
+  `cert_afil_ult_eps` varchar(50) NOT NULL,
+  `certi_afil_fond_pensiones` varchar(50) NOT NULL,
+  `cedula_ciu_ext` varchar(50) NOT NULL,
+  `decla_pen_sol_pens_tram` varchar(50) NOT NULL,
+  `asig_dia_hor` varchar(50) NOT NULL,
+  `reso_nombramiento` varchar(50) NOT NULL,
   `fk_id_estado_documentacion` int(3) NOT NULL,
   `observaciones_estado` varchar(60) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_spanish_ci;
@@ -345,11 +345,20 @@ CREATE TABLE `usuarios` (
   `apellido2` varchar(15) NOT NULL,
   `id_rol` int(2) NOT NULL,
   `usuario` varchar(20) NOT NULL,
-  `clave` int(11) NOT NULL,
+  `clave` varchar(30) NOT NULL,
   `correo` varchar(40) NOT NULL,
-  `telefono` int(11) NOT NULL,
+  `telefono` int(10) UNSIGNED NOT NULL,
   `id_estado` int(2) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_spanish_ci;
+
+--
+-- Volcado de datos para la tabla `usuarios`
+--
+
+INSERT INTO `usuarios` (`id_tdoc`, `id_usuario`, `nombre1`, `nombre2`, `apellido1`, `apellido2`, `id_rol`, `usuario`, `clave`, `correo`, `telefono`, `id_estado`) VALUES
+(1, 1031642393, 'Sergio', '', 'Chaparro', '', 3, 'Serch', '123456', 'sechaparron@unal.edu.co', 0, 1),
+(1, 1034279644, 'Emir', 'Santiago', 'Alza', 'Sánchez', 3, 'ealza', '123456', 'ealza@unal.edu.co', 3222820415, 1),
+(1, 1234567890, 'Nombre uno', 'Nombre dos ', 'Apellido uno ', 'Apellidos dos', 2, 'NaN', '666', 'prueba@gmail.com', 123, 1);
 
 -- --------------------------------------------------------
 
