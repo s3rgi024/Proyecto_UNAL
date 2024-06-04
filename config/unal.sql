@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 10-05-2024 a las 21:17:27
+-- Tiempo de generación: 30-05-2024 a las 23:58:55
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.2.12
 
@@ -345,9 +345,9 @@ CREATE TABLE `usuarios` (
   `apellido2` varchar(15) NOT NULL,
   `id_rol` int(2) NOT NULL,
   `usuario` varchar(20) NOT NULL,
-  `clave` int(11) NOT NULL,
+  `clave` varchar(30) NOT NULL,
   `correo` varchar(40) NOT NULL,
-  `telefono` int(11) NOT NULL,
+  `telefono` int(10) UNSIGNED NOT NULL,
   `id_estado` int(2) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_spanish_ci;
 
@@ -356,8 +356,9 @@ CREATE TABLE `usuarios` (
 --
 
 INSERT INTO `usuarios` (`id_tdoc`, `id_usuario`, `nombre1`, `nombre2`, `apellido1`, `apellido2`, `id_rol`, `usuario`, `clave`, `correo`, `telefono`, `id_estado`) VALUES
-(1, 1031642393, 'Sergio', '', 'Chaparro', '', 3, 'Serch', 123456, 'sechaparron@unal.edu.co', 0, 1),
-(1, 1031642684, 'sala', 'manca', 'elsa', '5465', 1, 'Serm', 12345612, 'ess@gm.com', 31352476, 2);
+(1, 1031642393, 'Sergio', '', 'Chaparro', '', 3, 'Serch', '123456', 'sechaparron@unal.edu.co', 0, 1),
+(1, 1034279644, 'Emir', 'Santiago', 'Alza', 'Sánchez', 3, 'ealza', '123456', 'ealza@unal.edu.co', 3222820415, 1),
+(1, 1234567890, 'Nombre uno', 'Nombre dos ', 'Apellido uno ', 'Apellidos dos', 2, 'NaN', '666', 'prueba@gmail.com', 123, 1);
 
 -- --------------------------------------------------------
 
