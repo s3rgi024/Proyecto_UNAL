@@ -112,7 +112,10 @@
                             <input type="password" name="password_professor" id="password_professor" required>
                         </div>
 
- 
+                        <div>
+                            <label for="password_confirm">Confirmar Contraseña *</label>
+                            <input type="password" name="password_confirm" id="password_confirm" required>
+                        </div>
                 </div>
 
                 <div class="form-two form-step">
@@ -191,18 +194,18 @@
                             <div>
                                 <label>Fecha inicio</label>
                                 <div class="grouping">
-                                    <input type="text" patter="[0-9]*" name="day" velue="" min="0" max="31" placeholder="DD">
-                                    <input type="text" patter="[0-9]*" name="month" velue="" min="0" max="12" placeholder="MM">
-                                    <input type="text" patter="[0-9]*" name="year" velue="" min="0" max="2050" placeholder="AAAA">
+                                    <input type="text" pattern="[0-9]*" name="day" value="" min="0" max="31" placeholder="DD">
+                                    <input type="text" pattern="[0-9]*" name="month" value="" min="0" max="12" placeholder="MM">
+                                    <input type="text" pattern="[0-9]*" name="year" value="" min="0" max="2050" placeholder="AAAA">
                                 </div>
                             </div>
                             
                             <div>
                                 <label>Fecha fin</label>
                                 <div class="grouping">
-                                    <input type="text" patter="[0-9]*" name="day" velue="" min="0" max="31" placeholder="DD">
-                                    <input type="text" patter="[0-9]*" name="month" velue="" min="0" max="12" placeholder="MM">
-                                    <input type="text" patter="[0-9]*" name="year" velue="" min="0" max="2050" placeholder="AAAA">
+                                    <input type="text" pattern="[0-9]*" name="day" value="" min="0" max="31" placeholder="DD">
+                                    <input type="text" pattern="[0-9]*" name="month" value="" min="0" max="12" placeholder="MM">
+                                    <input type="text" pattern="[0-9]*" name="year" value="" min="0" max="2050" placeholder="AAAA">
                                 </div>
                             </div>
                         </div>
@@ -211,18 +214,18 @@
                             <div>
                                 <label>Fecha inicio</label>
                                 <div class="grouping">
-                                    <input type="text" patter="[0-9]*" name="day" velue="" min="0" max="31" placeholder="DD">
-                                    <input type="text" patter="[0-9]*" name="month" velue="" min="0" max="12" placeholder="MM">
-                                    <input type="text" patter="[0-9]*" name="year" velue="" min="0" max="2050" placeholder="AAAA">
+                                    <input type="text" pattern="[0-9]*" name="day" value="" min="0" max="31" placeholder="DD">
+                                    <input type="text" pattern="[0-9]*" name="month" value="" min="0" max="12" placeholder="MM">
+                                    <input type="text" pattern="[0-9]*" name="year" value="" min="0" max="2050" placeholder="AAAA">
                                 </div>
                             </div>
                            
                             <div>
                                 <label>Fecha fin</label>
                                 <div class="grouping">
-                                    <input type="text" patter="[0-9]*" name="day" velue="" min="0" max="31" placeholder="DD">
-                                    <input type="text" patter="[0-9]*" name="month" velue="" min="0" max="12" placeholder="MM">
-                                    <input type="text" patter="[0-9]*" name="year" velue="" min="0" max="2050" placeholder="AAAA">
+                                    <input type="text" pattern="[0-9]*" name="day" value="" min="0" max="31" placeholder="DD">
+                                    <input type="text" pattern="[0-9]*" name="month" value="" min="0" max="12" placeholder="MM">
+                                    <input type="text" pattern="[0-9]*" name="year" value="" min="0" max="2050" placeholder="AAAA">
                                 </div>
                             </div>
                         </div>
@@ -231,18 +234,18 @@
                             <div>    
                                 <label>Fecha inicio</label>
                                 <div class="grouping">
-                                    <input type="text" patter="[0-9]*" name="day" velue="" min="0" max="31" placeholder="DD">
-                                    <input type="text" patter="[0-9]*" name="month" velue="" min="0" max="12" placeholder="MM">
-                                    <input type="text" patter="[0-9]*" name="year" velue="" min="0" max="2050" placeholder="AAAA">
+                                    <input type="text" pattern="[0-9]*" name="day" value="" min="0" max="31" placeholder="DD">
+                                    <input type="text" pattern="[0-9]*" name="month" value="" min="0" max="12" placeholder="MM">
+                                    <input type="text" pattern="[0-9]*" name="year" value="" min="0" max="2050" placeholder="AAAA">
                                 </div>
                             </div>
                             
                             <div>
                                 <label>Fecha fin</label>
                                 <div class="grouping">
-                                    <input type="text" patter="[0-9]*" name="day" velue="" min="0" max="31" placeholder="DD">
-                                    <input type="text" patter="[0-9]*" name="month" velue="" min="0" max="12" placeholder="MM">
-                                    <input type="text" patter="[0-9]*" name="year" velue="" min="0" max="2050" placeholder="AAAA">
+                                    <input type="text" pattern="[0-9]*" name="day" value="" min="0" max="31" placeholder="DD">
+                                    <input type="text" pattern="[0-9]*" name="month" value="" min="0" max="12" placeholder="MM">
+                                    <input type="text" pattern="[0-9]*" name="year" value="" min="0" max="2050" placeholder="AAAA">
                                 </div>
                             </div>
                         </div>
@@ -251,17 +254,17 @@
                             <div>
                                 <label>Fecha inicio</label>
                                 <div class="grouping">
-                                    <input type="text" patter="[0-9]*" name="day" velue="" min="0" max="31" placeholder="DD">
-                                    <input type="text" patter="[0-9]*" name="month" velue="" min="0" max="12" placeholder="MM">
-                                    <input type="text" patter="[0-9]*" name="year" velue="" min="0" max="2050" placeholder="AAAA">
+                                    <input type="text" pattern="[0-9]*" name="day" value="" min="0" max="31" placeholder="DD">
+                                    <input type="text" pattern="[0-9]*" name="month" value="" min="0" max="12" placeholder="MM">
+                                    <input type="text" pattern="[0-9]*" name="year" value="" min="0" max="2050" placeholder="AAAA">
                                 </div>
                             </div>
                             <div>
                                 <label>Fecha fin</label>
                                 <div class="grouping">
-                                    <input type="text" patter="[0-9]*" name="day" velue="" min="0" max="31" placeholder="DD">
-                                    <input type="text" patter="[0-9]*" name="month" velue="" min="0" max="12" placeholder="MM">
-                                    <input type="text" patter="[0-9]*" name="year" velue="" min="0" max="2050" placeholder="AAAA">
+                                    <input type="text" pattern="[0-9]*" name="day" value="" min="0" max="31" placeholder="DD">
+                                    <input type="text" pattern="[0-9]*" name="month" value="" min="0" max="12" placeholder="MM">
+                                    <input type="text" pattern="[0-9]*" name="year" value="" min="0" max="2050" placeholder="AAAA">
                                 </div>
                             </div>
                         </div>

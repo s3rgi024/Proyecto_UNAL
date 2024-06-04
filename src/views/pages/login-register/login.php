@@ -2,7 +2,7 @@
     <h1>
         Iniciar sesión
     </h1>
-    <form action="./src/controllers/inicio_sesion.php" method="post">      
+    <form action="" method="post" id="form_login">      
         <div class="login__form-fields">    
                 <label for="userName">Nombre de Usuario</label>
                 <div>
@@ -42,7 +42,9 @@
                 </a>
             </button>
             <span class="professor_link">
-                    ¿Eres docente? Regístrate
+                    ¿Eres docente y no tienes una cuenta?
+                    <br>
+                    Regístrate
                 <span>
                     <a id="professor_link">aquí</a>
                 </span>
@@ -50,3 +52,5 @@
         </div>
     </form>
 </section>
+
+<script type="module" src="../../../../public/js/AJAX/requestLogin.js"></script>

@@ -81,16 +81,13 @@
                         -moz-transition: transform 0.3s ease;
                         -ms-transition: transform 0.3s ease;
                         -o-transition: transform 0.3s ease;
-}
+                    }
 
                     & input:focus  ~ .underline:before {
                         transform: scaleX(1);
                     }
 
                 } 
-                
-
-                
             }
         
             & .login__form-forget-password-link{
@@ -137,7 +134,6 @@
                         }
                     }
                 } 
-                
             }
         }
 
@@ -174,6 +170,7 @@
             & span{
                 font-size: 0.8rem;
                 margin: 10px 0px 15px;
+                text-align: center;
                 font-weight: 200;
                 position: relative;
 

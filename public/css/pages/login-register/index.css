@@ -1,7 +1,7 @@
 @import url(../../modules/header.css);
 @import url(../../modules/footer.css);
 @import url(../../global_styles/variables.css);
-@import url(./register.css);
+@import url(./recover_pass.css);
 @import url(./login.css);
 @import url(./register_professor.css);
 @import url('../../../../node_modules/sweetalert2/dist/sweetalert2.css');

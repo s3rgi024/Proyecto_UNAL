@@ -1,7 +1,5 @@
 import "./form_docs.js";
 
-
-
 let register_link = document.getElementById('register_link');
 let login_link = document.getElementById('login_link');
 let register_professor_link = document.getElementById('professor_link');
@@ -65,6 +63,8 @@ btn_back.addEventListener( 'click', function(){
 
     register_form.classList.remove("exit_form_professor_animation");
     login_form.classList.remove("exit_form_professor_animation");
+    register_form.classList.remove("exit_animation");
+    login_form.classList.remove("enter_animation");
 
     register_form.classList.add("enter_form_professor_animation");
     login_form.classList.add("enter_form_professor_animation");

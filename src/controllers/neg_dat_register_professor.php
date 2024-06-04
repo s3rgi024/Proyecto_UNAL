@@ -1,6 +1,7 @@
 <?php 
-//error_reporting(E_ALL & ~E_DEPRECATED & ~E_WARNING & ~E_NOTICE);
 
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
 function saveFilesProfessor($professorName, $doc, $files) {
 
     include ("../../config/db_connection.php");
@@ -43,8 +44,7 @@ function saveFilesProfessor($professorName, $doc, $files) {
     
             $fieldsFiles = $fieldsFiles . ", " . $newKey;
             $dataFiles = $dataFiles . ", '" . $$newKey . "'";
-        } else {
-            echo "Hubo un error al intentar mover el archivo.";
+
         }
     }
 
@@ -66,16 +66,14 @@ $lName2, $email, $nPhone, $userName, $password){
     $consulta="SELECT * FROM usuarios WHERE id_tdoc ='$tdoc' AND id_usuario ='$doc'";
     $sql = $db_connection->query($consulta);
 
-    if ($sql->num_rows > 0) {
-        print "<script>alert(\"Error este usuario ya existe, por favor inicie sesión o comuníquese con su administrador";
-    }
+        $password = password_hash($password, PASSWORD_BCRYPT);
 
+        $sql = "INSERT INTO usuarios (id_tdoc, id_usuario, nombre1, nombre2, apellido1, 
+        apellido2, correo, telefono, id_rol, usuario, clave, id_estado) 
+        VALUES ('$tdoc', '$doc', '$name1', '$name2', '$lName1', '$lName2', '$email', '$nPhone', 1, '$userName', '$password', 2)";
 
-    mysqli_query($db_connection, "INSERT INTO usuarios (id_tdoc, id_usuario, nombre1, nombre2, apellido1, 
-    apellido2, correo, telefono, id_rol, usuario, clave, id_estado) 
-    VALUES ('$tdoc', '$doc', '$name1', '$name2', '$lName1', '$lName2', '$email', '$nPhone', 1, '$userName', '$password', 2)");
-
-
+        mysqli_query($db_connection, $sql);
+    
 }
 
 
@@ -92,40 +90,42 @@ $cedula_ciu_ext, $decla_pen_sol_pens_tram, $asig_dia_hor, $reso_nombramiento){
     insertBasicDataProfessor($tdoc, $doc, $name1, $name2, $lName1,
     $lName2, $email, $nPhone, $userName, $password);
 
-
-    $files = $files = array(
-        "1_hoja_vida_func_pub" => $hoja_vida_func_pub,
-        "1_decl_jur_ley" => $decl_jur_ley,
-        "1_ver_inh_del_sex" => $ver_inh_del_sex,
-        "1_notif_corr_elec" => $notif_corr_elec,
-        "1_com_ins_vinc" => $com_ins_vinc,
-        "1_aut_trat_dat_per" => $aut_trat_dat_per,
-        "1_visa_ext" => $visa_ext,
-        "1_fotoc_libr_mil" => $fotoc_libr_mil,
-        "1_tarjeta_prof" => $tarjeta_prof,
-        "1_matri_prof" => $matri_prof,
-        "1_aval_sst" => $aval_sst,
-        "1_cert_segun_leng" => $cert_segun_leng,
-        "1_experien_lab" => $experien_lab,
-        "1_antec_disc_procu" => $antec_disc_procu,
-        "1_antec_fisc_contral" => $antec_fisc_contral,
-        "1_antec_judic_pol_nal" => $antec_judic_pol_nal,
-
-
-        "2_form_afil_seg_social" => $form_afil_seg_social,
-        "2_form_afil_eps" => $form_afil_eps,
-        "2_form_afil_pension" => $form_afil_pension,
-        "2_cert_cuen_bancaria" => $cert_cuen_bancaria,
-        "2_cert_afil_ult_eps" => $cert_afil_ult_eps,
-        "2_certi_afil_fond_pensiones" => $certi_afil_fond_pensiones,
-        "2_cedula_ciu_ext" => $cedula_ciu_ext,
-        "2_decla_pen_sol_pens_tram" => $decla_pen_sol_pens_tram,
-        "2_asig_dia_hor" => $asig_dia_hor,
-        "2_reso_nombramiento" => $reso_nombramiento
-    );
+        $files = $files = array(
+            "1_hoja_vida_func_pub" => $hoja_vida_func_pub,
+            "1_decl_jur_ley" => $decl_jur_ley,
+            "1_ver_inh_del_sex" => $ver_inh_del_sex,
+            "1_notif_corr_elec" => $notif_corr_elec,
+            "1_com_ins_vinc" => $com_ins_vinc,
+            "1_aut_trat_dat_per" => $aut_trat_dat_per,
+            "1_visa_ext" => $visa_ext,
+            "1_fotoc_libr_mil" => $fotoc_libr_mil,
+            "1_tarjeta_prof" => $tarjeta_prof,
+            "1_matri_prof" => $matri_prof,
+            "1_aval_sst" => $aval_sst,
+            "1_cert_segun_leng" => $cert_segun_leng,
+            "1_experien_lab" => $experien_lab,
+            "1_antec_disc_procu" => $antec_disc_procu,
+            "1_antec_fisc_contral" => $antec_fisc_contral,
+            "1_antec_judic_pol_nal" => $antec_judic_pol_nal,
     
+    
+            "2_form_afil_seg_social" => $form_afil_seg_social,
+            "2_form_afil_eps" => $form_afil_eps,
+            "2_form_afil_pension" => $form_afil_pension,
+            "2_cert_cuen_bancaria" => $cert_cuen_bancaria,
+            "2_cert_afil_ult_eps" => $cert_afil_ult_eps,
+            "2_certi_afil_fond_pensiones" => $certi_afil_fond_pensiones,
+            "2_cedula_ciu_ext" => $cedula_ciu_ext,
+            "2_decla_pen_sol_pens_tram" => $decla_pen_sol_pens_tram,
+            "2_asig_dia_hor" => $asig_dia_hor,
+            "2_reso_nombramiento" => $reso_nombramiento
+        );
 
     saveFilesProfessor($name1 . $lName1, $doc, $files);
+    
+    echo json_encode(['status' => 'success', 'message' => $email]);
+
+    
 }
 
 execute_register_professor($_POST["t_doc_register"], $_POST["dni_register_professor"], $_POST["name1_professor"], 
