@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 30-05-2024 a las 23:58:55
+-- Tiempo de generación: 04-06-2024 a las 20:00:03
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.2.12
 
@@ -29,35 +29,44 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `archivo_doc_oca` (
   `fk_dni` int(10) NOT NULL,
-  `hoja_vida_func_pub` varchar(50) NOT NULL,
-  `decl_jur_ley` varchar(50) NOT NULL,
-  `ver_inh_del_sex` varchar(50) NOT NULL,
-  `notif_corr_elec` varchar(50) NOT NULL,
-  `com_ins_vinc` varchar(50) NOT NULL,
-  `aut_trat_dat_per` varchar(50) NOT NULL,
-  `visa_ext` varchar(50) NOT NULL,
-  `fotoc_libr_mil` varchar(50) NOT NULL,
-  `tarjeta_prof` varchar(50) NOT NULL,
-  `matri_prof` varchar(50) NOT NULL,
-  `aval_sst` varchar(50) NOT NULL,
-  `cert_segun_leng` varchar(50) NOT NULL,
-  `experien_lab` varchar(50) NOT NULL,
-  `antec_disc_procu` varchar(50) NOT NULL,
-  `antec_fisc_contral` varchar(50) NOT NULL,
-  `antec_judic_pol_nal` varchar(50) NOT NULL,
-  `form_afil_seg_social` varchar(50) NOT NULL,
-  `form_afil_eps` varchar(50) NOT NULL,
-  `form_afil_pension` varchar(50) NOT NULL,
-  `cert_cuen_bancaria` varchar(50) NOT NULL,
-  `cert_afil_ult_eps` varchar(50) NOT NULL,
-  `certi_afil_fond_pensiones` varchar(50) NOT NULL,
-  `cedula_ciu_ext` varchar(50) NOT NULL,
-  `decla_pen_sol_pens_tram` varchar(50) NOT NULL,
-  `asig_dia_hor` varchar(50) NOT NULL,
-  `reso_nombramiento` varchar(50) NOT NULL,
+  `hoja_vida_func_pub` varchar(150) NOT NULL,
+  `decl_jur_ley` varchar(150) NOT NULL,
+  `ver_inh_del_sex` varchar(150) NOT NULL,
+  `notif_corr_elec` varchar(150) NOT NULL,
+  `com_ins_vinc` varchar(150) NOT NULL,
+  `aut_trat_dat_per` varchar(150) NOT NULL,
+  `visa_ext` varchar(150) NOT NULL,
+  `fotoc_libr_mil` varchar(150) NOT NULL,
+  `tarjeta_prof` varchar(150) NOT NULL,
+  `matri_prof` varchar(150) NOT NULL,
+  `aval_sst` varchar(150) NOT NULL,
+  `cert_segun_leng` varchar(150) NOT NULL,
+  `experien_lab` varchar(150) NOT NULL,
+  `antec_disc_procu` varchar(150) NOT NULL,
+  `antec_fisc_contral` varchar(150) NOT NULL,
+  `antec_judic_pol_nal` varchar(150) NOT NULL,
+  `form_afil_seg_social` varchar(150) NOT NULL,
+  `form_afil_eps` varchar(150) NOT NULL,
+  `form_afil_pension` varchar(150) NOT NULL,
+  `cert_cuen_bancaria` varchar(150) NOT NULL,
+  `cert_afil_ult_eps` varchar(150) NOT NULL,
+  `certi_afil_fond_pensiones` varchar(150) NOT NULL,
+  `cedula_ciu_ext` varchar(150) NOT NULL,
+  `decla_pen_sol_pens_tram` varchar(150) NOT NULL,
+  `asig_dia_hor` varchar(150) NOT NULL,
+  `reso_nombramiento` varchar(150) NOT NULL,
   `fk_id_estado_documentacion` int(3) NOT NULL,
   `observaciones_estado` varchar(60) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_spanish_ci;
+
+--
+-- Volcado de datos para la tabla `archivo_doc_oca`
+--
+
+INSERT INTO `archivo_doc_oca` (`fk_dni`, `hoja_vida_func_pub`, `decl_jur_ley`, `ver_inh_del_sex`, `notif_corr_elec`, `com_ins_vinc`, `aut_trat_dat_per`, `visa_ext`, `fotoc_libr_mil`, `tarjeta_prof`, `matri_prof`, `aval_sst`, `cert_segun_leng`, `experien_lab`, `antec_disc_procu`, `antec_fisc_contral`, `antec_judic_pol_nal`, `form_afil_seg_social`, `form_afil_eps`, `form_afil_pension`, `cert_cuen_bancaria`, `cert_afil_ult_eps`, `certi_afil_fond_pensiones`, `cedula_ciu_ext`, `decla_pen_sol_pens_tram`, `asig_dia_hor`, `reso_nombramiento`, `fk_id_estado_documentacion`, `observaciones_estado`) VALUES
+(0, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 1, 'Primer Registro'),
+(123123123, '../../docs/docentes_ocasionales/salaelsa_123123123/Hoja de Vida/hoja_vida_func_pub.pdf', '../../docs/docentes_ocasionales/salaelsa_123123123/Hoja de Vida/decl_jur_ley.pdf', '../../docs/docentes_ocasionales/salaelsa_123123123/Hoja de Vida/ver_inh_del_sex.pdf', '../../docs/docentes_ocasionales/salaelsa_123123123/Hoja de Vida/notif_corr_elec.pdf', '../../docs/docentes_ocasionales/salaelsa_123123123/Hoja de Vida/com_ins_vinc.pdf', '../../docs/docentes_ocasionales/salaelsa_123123123/Hoja de Vida/aut_trat_dat_per.pdf', '../../docs/docentes_ocasionales/salaelsa_123123123/Hoja de Vida/visa_ext.pdf', '../../docs/docentes_ocasionales/salaelsa_123123123/Hoja de Vida/fotoc_libr_mil.pdf', '../../docs/docentes_ocasionales/salaelsa_123123123/Hoja de Vida/tarjeta_prof.pdf', '../../docs/docentes_ocasionales/salaelsa_123123123/Hoja de Vida/matri_prof.pdf', '../../docs/docentes_ocasionales/salaelsa_123123123/Hoja de Vida/aval_sst.pdf', '../../docs/docentes_ocasionales/salaelsa_123123123/Hoja de Vida/cert_segun_leng.pdf', '../../docs/docentes_ocasionales/salaelsa_123123123/Hoja de Vida/experien_lab.pdf', '../../docs/docentes_ocasionales/salaelsa_123123123/Hoja de Vida/antec_disc_procu.pdf', '../../docs/docentes_ocasionales/salaelsa_123123123/Hoja de Vida/antec_fisc_contral.pdf', '../../docs/docentes_ocasionales/salaelsa_123123123/Hoja de Vida/antec_judic_pol_nal.pdf', '../../docs/docentes_ocasionales/salaelsa_123123123/Vinculacion/form_afil_seg_social.pdf', '../../docs/docentes_ocasionales/salaelsa_123123123/Vinculacion/form_afil_eps.pdf', '../../docs/docentes_ocasionales/salaelsa_123123123/Vinculacion/form_afil_pension.pdf', '../../docs/docentes_ocasionales/salaelsa_123123123/Vinculacion/cert_cuen_bancaria.pdf', '../../docs/docentes_ocasionales/salaelsa_123123123/Vinculacion/cert_afil_ult_eps.pdf', '../../docs/docentes_ocasionales/salaelsa_123123123/Vinculacion/certi_afil_fond_pensiones.pdf', '../../docs/docentes_ocasionales/salaelsa_123123123/Vinculacion/cedula_ciu_ext.pdf', '../../docs/docentes_ocasionales/salaelsa_123123123/Vinculacion/decla_pen_sol_pens_tram.pdf', '../../docs/docentes_ocasionales/salaelsa_123123123/Vinculacion/asig_dia_hor.pdf', '../../docs/docentes_ocasionales/salaelsa_123123123/Vinculacion/reso_nombramiento.pdf', 1, 'Primer Registro'),
+(1034153625, '../../docs/docentes_ocasionales/serelsa_1034153625/Hoja de Vida/hoja_vida_func_pub.pdf', '../../docs/docentes_ocasionales/serelsa_1034153625/Hoja de Vida/decl_jur_ley.pdf', '../../docs/docentes_ocasionales/serelsa_1034153625/Hoja de Vida/ver_inh_del_sex.pdf', '../../docs/docentes_ocasionales/serelsa_1034153625/Hoja de Vida/notif_corr_elec.pdf', '../../docs/docentes_ocasionales/serelsa_1034153625/Hoja de Vida/com_ins_vinc.pdf', '../../docs/docentes_ocasionales/serelsa_1034153625/Hoja de Vida/aut_trat_dat_per.pdf', '../../docs/docentes_ocasionales/serelsa_1034153625/Hoja de Vida/visa_ext.pdf', '../../docs/docentes_ocasionales/serelsa_1034153625/Hoja de Vida/fotoc_libr_mil.pdf', '../../docs/docentes_ocasionales/serelsa_1034153625/Hoja de Vida/tarjeta_prof.pdf', '../../docs/docentes_ocasionales/serelsa_1034153625/Hoja de Vida/matri_prof.pdf', '../../docs/docentes_ocasionales/serelsa_1034153625/Hoja de Vida/aval_sst.pdf', '../../docs/docentes_ocasionales/serelsa_1034153625/Hoja de Vida/cert_segun_leng.pdf', '../../docs/docentes_ocasionales/serelsa_1034153625/Hoja de Vida/experien_lab.pdf', '../../docs/docentes_ocasionales/serelsa_1034153625/Hoja de Vida/antec_disc_procu.pdf', '../../docs/docentes_ocasionales/serelsa_1034153625/Hoja de Vida/antec_fisc_contral.pdf', '../../docs/docentes_ocasionales/serelsa_1034153625/Hoja de Vida/antec_judic_pol_nal.pdf', '../../docs/docentes_ocasionales/serelsa_1034153625/Vinculacion/form_afil_seg_social.pdf', '../../docs/docentes_ocasionales/serelsa_1034153625/Vinculacion/form_afil_eps.pdf', '../../docs/docentes_ocasionales/serelsa_1034153625/Vinculacion/form_afil_pension.pdf', '../../docs/docentes_ocasionales/serelsa_1034153625/Vinculacion/cert_cuen_bancaria.pdf', '../../docs/docentes_ocasionales/serelsa_1034153625/Vinculacion/cert_afil_ult_eps.pdf', '../../docs/docentes_ocasionales/serelsa_1034153625/Vinculacion/certi_afil_fond_pensiones.pdf', '../../docs/docentes_ocasionales/serelsa_1034153625/Vinculacion/cedula_ciu_ext.pdf', '../../docs/docentes_ocasionales/serelsa_1034153625/Vinculacion/decla_pen_sol_pens_tram.pdf', '../../docs/docentes_ocasionales/serelsa_1034153625/Vinculacion/asig_dia_hor.pdf', '../../docs/docentes_ocasionales/serelsa_1034153625/Vinculacion/reso_nombramiento.pdf', 1, 'Primer Registro');
 
 -- --------------------------------------------------------
 
@@ -345,9 +354,9 @@ CREATE TABLE `usuarios` (
   `apellido2` varchar(15) NOT NULL,
   `id_rol` int(2) NOT NULL,
   `usuario` varchar(20) NOT NULL,
-  `clave` varchar(30) NOT NULL,
+  `clave` varchar(80) NOT NULL,
   `correo` varchar(40) NOT NULL,
-  `telefono` int(10) UNSIGNED NOT NULL,
+  `telefono` int(11) NOT NULL,
   `id_estado` int(2) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_spanish_ci;
 
@@ -356,9 +365,10 @@ CREATE TABLE `usuarios` (
 --
 
 INSERT INTO `usuarios` (`id_tdoc`, `id_usuario`, `nombre1`, `nombre2`, `apellido1`, `apellido2`, `id_rol`, `usuario`, `clave`, `correo`, `telefono`, `id_estado`) VALUES
-(1, 1031642393, 'Sergio', '', 'Chaparro', '', 3, 'Serch', '123456', 'sechaparron@unal.edu.co', 0, 1),
-(1, 1034279644, 'Emir', 'Santiago', 'Alza', 'Sánchez', 3, 'ealza', '123456', 'ealza@unal.edu.co', 3222820415, 1),
-(1, 1234567890, 'Nombre uno', 'Nombre dos ', 'Apellido uno ', 'Apellidos dos', 2, 'NaN', '666', 'prueba@gmail.com', 123, 1);
+(0, 0, '', '', '', '', 1, '', '$2y$10$AZgDBWYqqZD2NoWwDqGD5OsPyGkt/SplZYmQ5qQtZJuu3hZbNI7tO', '', 0, 2),
+(1, 123123123, 'sala', 'manca', 'elsa', 'bado', 1, 'a', '$2y$10$RvUjuom8gD6f/B.ksYywcOVSRri8/xIeoWw9DZPeHyjQEti5ttPPG', '35@gg.vom', 31352476, 1),
+(1, 1031642393, 'Sergio', 'Esteban', 'Chaparro', 'Noguera', 2, 'Serch', '$2y$10$J82TX8nZKMka3aMSO.j/GOTqDgVnx752c8jAolBfMDrX1MduhUjDW', 'sechaparron@unal.edu.co', 313270352, 1),
+(1, 1034153625, 'ser', 'gio', 'elsa', 'bado', 1, 'Serc', '$2y$10$VQ67WRenI8sXsPwhHFpJkue8sqZ4viaJzCn0A5Of/VcZpbwQTz1fa', 'sergioechaparron@gmail.com', 31352476, 1);
 
 -- --------------------------------------------------------
 
