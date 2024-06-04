@@ -64,4 +64,4 @@
     </form>
 </section>
 
-<script type="module" src="../../../../public/js/AJAX/requestRecoverPass.js"></script>
+<script type="module" src="./public/js/AJAX/requestRecoverPass.js"></script>

@@ -53,4 +53,4 @@
     </form>
 </section>
 
-<script type="module" src="../../../../public/js/AJAX/requestLogin.js"></script>
+<script type="module" src="./public/js/AJAX/requestLogin.js"></script>

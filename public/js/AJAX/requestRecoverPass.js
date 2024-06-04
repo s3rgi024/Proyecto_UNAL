@@ -8,7 +8,7 @@ function recoverPassRequest(event) {
         let data = new FormData(form);
         let xhr = new XMLHttpRequest();
 
-        let url = "../../../src/controllers/neg_dat_recover_pass.php";
+        let url = "./src/controllers/neg_dat_recover_pass.php";
 
         xhr.open("POST", url, true);
 

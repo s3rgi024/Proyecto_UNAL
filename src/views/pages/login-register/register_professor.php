@@ -357,4 +357,4 @@
     </div>
 </section>
 
-<script type="module" src="../../../../public/js/AJAX/requestRegister.js"></script>
+<script type="module" src="./public/js/AJAX/requestRegister.js"></script>

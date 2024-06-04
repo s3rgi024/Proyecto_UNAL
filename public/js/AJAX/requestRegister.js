@@ -10,7 +10,7 @@ function registerRequest(event) {
       let data = new FormData(form);
       let xhr = new XMLHttpRequest();
     
-      let url = "../../../src/controllers/neg_dat_register_professor.php";
+      let url = "./src/controllers/neg_dat_register_professor.php";
     
       xhr.open("POST", url, true);
       
@@ -26,7 +26,7 @@ function registerRequest(event) {
 
             }).then((result) => {
                     if (result.isConfirmed) {
-                        window.location.href = '../../../index.php';
+                        window.location.href = './index.php';
                     }
             });
           } else {

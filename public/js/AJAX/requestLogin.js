@@ -12,7 +12,7 @@ async function loginRequest(event) {
         }
 
         try {
-            let response = await fetch("../../../src/controllers/neg_dat_login.php", {
+            let response = await fetch("./src/controllers/neg_dat_login.php", {
                 method: "POST",
                 body: data
             });
@@ -20,7 +20,7 @@ async function loginRequest(event) {
             if (response.ok) {
                 let result = await response.json();
                 if (result.status === 'success') {
-                    window.location.href = '../../../src/views/pages/main.php';
+                    window.location.href = './src/views/pages/main.php';
                 } else {
                     Swal.fire({
                         title: "Error",
