@@ -1,4 +1,7 @@
 <?php
+
+require '../../controllers/security.php';
+
 $host = "localhost";
 $user = "root"; 
 $pass = ""; 

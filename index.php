@@ -1,3 +1,9 @@
+<?php 
+
+require './src/controllers/security.php';
+
+?>
+
 <!DOCTYPE html>
 <html lang="es">
 <head>

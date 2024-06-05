@@ -1,4 +1,5 @@
 <?php 
+    require '../../controllers/security.php';
 
     $nombre = $_SESSION['nombre'];
     $apellido = $_SESSION['apellido'];
