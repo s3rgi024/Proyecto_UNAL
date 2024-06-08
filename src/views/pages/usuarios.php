@@ -65,7 +65,7 @@ require '../../controllers/security.php';
             </div>
         </a>
 
-        <a href="../../../src/views/pages/historial.php" class="contratacion_option doc_historial" style="text-decoration: none; color: inherit;">
+        <a href="../../../src/views/pages/info_usuarios.php" class="contratacion_option doc_historial" style="text-decoration: none; color: inherit;">
             <div>
                 <img src="../../../public/img/user_info.webp" alt="persona buscando perfiles">
                 <div class="contratacion_actions">
