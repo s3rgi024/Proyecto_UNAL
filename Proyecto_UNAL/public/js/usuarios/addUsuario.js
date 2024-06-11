@@ -1,7 +1,7 @@
 /**
  * Modal para agregar un nuevo empleado
  */
-async function modalRegistrarEmpleado() {
+async function modalRegistrarUsuario() {
     try {
       // Ocultar la modal si está abierta
       const existingModal = document.getElementById("detalleEmpleadoModal");
@@ -13,7 +13,7 @@ async function modalRegistrarEmpleado() {
         existingModal.remove(); // Eliminar la modal existente
       }
   
-      const response = await fetch("modales/modalAdd.php");
+      const response = await fetch("../../../src/views/modals/modalAdd.php");
   
       if (!response.ok) {
         throw new Error("Error al cargar la modal");
@@ -51,7 +51,7 @@ async function modalRegistrarEmpleado() {
       const formData = new FormData(formulario);
   
       // Enviar los datos del formulario al backend usando Axios
-      const response = await axios.post("acciones/acciones.php", formData);
+      const response = await axios.post("../../../src/controllers/crud_usuarios/acciones.php", formData);
   
       // Verificar la respuesta del backend
       if (response.status === 200) {

@@ -7,15 +7,16 @@ error_reporting(E_ALL);
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     include("../../../config/db_connection.php");
-    $tbl_usuarios = "tbl_usuarios";
+    $tbl_usuarios = "usuarios";
 
 
-    $nombre = trim($_POST['nombre']);
-    $edad = trim($_POST['edad']);
-    $cedula = trim($_POST['cedula']);
-    $sexo = trim($_POST['sexo']);
+    $id_tdoc = trim($_POST['id_tdoc']);
+    $id_usuario = trim($_POST['id_usuario']);
+    $nombre1 = trim($_POST['nombre1']);
+    $apellido1 = trim($_POST['apellido1']);
+    $id_rol = trim($_POST['id_rol']);
+    $correo = trim($_POST['correo']);
     $telefono = trim($_POST['telefono']);
-    $cargo = trim($_POST['cargo']);
 
     $dirLocal = "fotos_empleados";
 
@@ -32,11 +33,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // Mover el archivo a la ubicación deseada
         if (move_uploaded_file($archivoTemporal, $rutaDestino)) {
 
-            $sql = "INSERT INTO $tbl_empleados (nombre, edad, cedula, sexo, telefono, cargo, avatar) 
-            VALUES ('$nombre', '$edad', '$cedula', '$sexo', '$telefono', '$cargo', '$nombreArchivo')";
+            $sql = "INSERT INTO $tbl_empleados (id_tdoc, id_usuario, nombre1, apellido1, id_rol, correo, telefono) 
+            VALUES ('$id_tdoc', '$id_usuario', '$nombre1', '$apellido1', '$id_rol', '$correo', '$telefono')";
 
             if ($db_connection->query($sql) === TRUE) {
-                header("location:../");
+                header("location:../../../src/views/pages/info_usuarios.php");
             } else {
                 echo "Error al crear el registro: " . $db_connection->error;
             }

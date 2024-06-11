@@ -10,7 +10,7 @@ require '../../controllers/security.php';
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>CRUD de Empleados en PHP, MySQL utilizando MODALES</title>
+    <title>Usuarios</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
     <link rel="stylesheet" href="../../public/css/info_usuarios.css">
@@ -29,14 +29,14 @@ require '../../controllers/security.php';
 <body>
     <?php
     include("../../../config/db_connection.php");
+    include("../components/navbar.php");
     include("../../../src/controllers/crud_usuarios/acciones.php");
 
     $usuarios = obtenerEmpleados($db_connection);
     $totalUsuarios = $usuarios->num_rows;
     ?>
 
-    <h1 class="text-center mt-5 mb-5 fw-bold">CRUD completo con PHP, MySQL y Bootstrap 5 usando Modales</h1>
-
+    <main class="main_contratacion__container min-main">
     <div class="container">
         <div class="row justify-content-md-center">
             <div class="col-md-12">
@@ -62,7 +62,7 @@ require '../../controllers/security.php';
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="../public/js/usuarios/detallesUsuarios.js"></script>
-    <script src="../public/js/usuarios/addUsuario.js"></script>
+    <script src="../../../public/js/usuarios/addUsuario.js"></script>
     <script src="../public/js/usuarios/editarUsuario.js"></script>
     <script src="../public/js/usuarios/eliminarUsuario.js"></script>
     <script src="../public/js/usuarios/refreshTableAdd.js"></script>
@@ -82,6 +82,9 @@ require '../../controllers/security.php';
             });
         });
     </script>
+    <script src="../../../public/js/navbar.js"></script>
+
+    <main>
 
 </body>
 

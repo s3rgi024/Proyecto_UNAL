@@ -1442,3 +1442,32 @@ Stack trace:
 [04-Jun-2024 22:06:23 Europe/Berlin] Passwords match: false
 
 [04-Jun-2024 22:06:23 Europe/Berlin] Inicio de sesión exitoso para el usuario: serch
+[10-Jun-2024 17:23:56 Europe/Berlin] Iniciando loginUser
+[10-Jun-2024 17:23:56 Europe/Berlin] Usuario consultado: Array
+(
+    [id_tdoc] => 1
+    [id_usuario] => 1031642393
+    [nombre1] => Sergio
+    [nombre2] => Esteban
+    [apellido1] => Chaparro
+    [apellido2] => Noguera
+    [id_rol] => 2
+    [usuario] => Serch
+    [clave] => $2y$10$J82TX8nZKMka3aMSO.j/GOTqDgVnx752c8jAolBfMDrX1MduhUjDW
+    [correo] => sechaparron@unal.edu.co
+    [telefono] => 313270352
+    [id_estado] => 1
+)
+
+[10-Jun-2024 17:23:56 Europe/Berlin] Clave ingresada: Q1B6&IhufvbE
+[10-Jun-2024 17:23:56 Europe/Berlin] Clave en BD: $2y$10$J82TX8nZKMka3aMSO.j/GOTqDgVnx752c8jAolBfMDrX1MduhUjDW
+[10-Jun-2024 17:23:56 Europe/Berlin] Resultado de password_verify: true
+[10-Jun-2024 17:23:56 Europe/Berlin] Estado del usuario: 1
+[10-Jun-2024 17:23:56 Europe/Berlin] Comparación de estado: true
+[10-Jun-2024 17:23:56 Europe/Berlin] Hashed password: $2y$10$izyNGWSDyHXXBD2/XlWUfew7BeQuAHGQcq6Za5CpUKy3xNQ1QiFc.
+
+[10-Jun-2024 17:23:56 Europe/Berlin] Stored password: $2y$10$J82TX8nZKMka3aMSO.j/GOTqDgVnx752c8jAolBfMDrX1MduhUjDW
+
+[10-Jun-2024 17:23:56 Europe/Berlin] Passwords match: false
+
+[10-Jun-2024 17:23:56 Europe/Berlin] Inicio de sesión exitoso para el usuario: serch
