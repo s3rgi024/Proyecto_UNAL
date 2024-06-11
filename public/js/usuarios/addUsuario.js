@@ -1,10 +1,10 @@
 /**
- * Modal para agregar un nuevo empleado
+ * Modal para agregar un nuevo usuario
  */
 async function modalRegistrarUsuario() {
     try {
       // Ocultar la modal si está abierta
-      const existingModal = document.getElementById("detalleEmpleadoModal");
+      const existingModal = document.getElementById("detalleUsuarioModal");
       if (existingModal) {
         const modal = bootstrap.Modal.getInstance(existingModal);
         if (modal) {
@@ -31,7 +31,7 @@ async function modalRegistrarUsuario() {
   
       // Mostrar la modal
       const myModal = new bootstrap.Modal(
-        modalContainer.querySelector("#agregarEmpleadoModal")
+        modalContainer.querySelector("#agregarUsuarioModal")
       );
       myModal.show();
     } catch (error) {
@@ -42,11 +42,11 @@ async function modalRegistrarUsuario() {
   /**
    * Función para enviar el formulario al backend
    */
-  async function registrarEmpleado(event) {
+  async function registrarUsuario(event) {
     try {
       event.preventDefault(); // Evitar que la página se recargue al enviar el formulario
   
-      const formulario = document.querySelector("#formularioEmpleado");
+      const formulario = document.querySelector("#formularioUsuario");
       // Crear un objeto FormData para enviar los datos del formulario
       const formData = new FormData(formulario);
   
@@ -64,7 +64,7 @@ async function modalRegistrarUsuario() {
   
           //Llamar a la función para mostrar un mensaje de éxito
           toastr.options = window.toastrOptions;
-          toastr.success("¡El empleado se actualizo correctamente!.");
+          toastr.success("¡El empleado se registro correctamente!.");
         }, 600);
       } else {
         console.error("Error al registrar el empleado");
