@@ -32,7 +32,6 @@ const swiper2 = new Swiper('.swiper_fileList', {
     }
 });
 
-// Manejo de clics en el segundo Swiper
 swiper2.on('click', function (event) {
     const clickedFileName = event.clickedSlide.getAttribute('data-filename');
     const slidesInSecondSwiper = document.querySelectorAll('.swiper .swiper-wrapper .swiper-slide');
@@ -48,7 +47,6 @@ swiper2.on('click', function (event) {
     }
 });
 
-// Actualizar el nombre del archivo activo en la pantalla y el ID del botón de reportar
 document.addEventListener('DOMContentLoaded', function() {
     const updateFileNameDisplay = () => {
         let fileName = document.querySelector('.swiper .swiper-wrapper .swiper-slide-active').dataset.filename;
@@ -60,7 +58,6 @@ document.addEventListener('DOMContentLoaded', function() {
     updateFileNameDisplay();
 });
 
-// Manejo del botón de reportar
 document.querySelector('.reportButton').addEventListener('click', function() {
     const fileName = this.id;
     const reportedFilesList = document.getElementById('reported-files');
@@ -101,3 +98,7 @@ document.querySelector('.approve').addEventListener('click', function() {
         }
     });
 });
+
+document.querySelector(".back").addEventListener("click", ()=>{
+    
+})

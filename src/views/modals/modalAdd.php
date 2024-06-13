@@ -132,11 +132,6 @@ if ($result->num_rows > 0) {
                         </div>
 
                         <div class="mb-3">
-                            <label class="form-label">Clave Generica</label>
-                            <input type="password" name="clave" class="form-control">
-                        </div>
-
-                        <div class="mb-3">
                             <label class="form-label">Estado</label>
                             <select name="id_estado" class="form-select" required>
                             <option selected value="">Seleccione</option>

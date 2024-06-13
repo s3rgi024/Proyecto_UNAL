@@ -17,11 +17,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $correo = trim($_POST['correo']);
     $telefono = trim($_POST['telefono']);
     $usuario = trim($_POST['usuario']);
-    $clave = trim($_POST['clave']);
     $id_estado = trim($_POST['id_estado']);
 
-    $sql = "INSERT INTO $tbl_usuarios (id_tdoc, id_usuario, nombre1, nombre2, apellido1, apellido2, id_rol, correo, telefono, usuario, clave, id_estado) 
-            VALUES ('$id_tdoc', '$id_usuario', '$nombre1', '$nombre2', '$apellido1', '$apellido2', '$id_rol', '$correo', '$telefono', '$usuario', '$clave', '$id_estado')";
+    $sql = "INSERT INTO $tbl_usuarios (id_tdoc, id_usuario, nombre1, nombre2, apellido1, apellido2, id_rol, correo, telefono, usuario, id_estado) 
+            VALUES ('$id_tdoc', '$id_usuario', '$nombre1', '$nombre2', '$apellido1', '$apellido2', '$id_rol', '$correo', '$telefono', '$usuario', '$id_estado')";
 
     if ($db_connection->query($sql) === TRUE) {
         echo json_encode(['success' => true]);
