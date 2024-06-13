@@ -29,30 +29,24 @@ a {
   padding: 2rem 0;
 }
 
-.main_contratacion__text{
+.main_contratacion__text {
   text-align: center;
   display: flex;
   flex-direction: column;
   padding: 1.5rem 2rem;
-  margin-left: 100px;
-  
-  
-  & h1{
-      font-size: 2rem;
-  }
+  margin: auto;
 }
 
 .bd-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-template-columns: repeat(4, minmax(220px, 25%));
   max-width: 1000px;
   align-items: center;
   gap: 2rem;
-  width: 100%;
 }
 
-.main.min-main{
-  margin-left: 180px;
+.main.min-main {
+  margin: auto;
 }
 
 .card {
@@ -65,29 +59,37 @@ a {
   overflow: hidden;
   cursor: pointer;
   box-shadow: 0 0rem 2rem #e5e9ef;
+  -webkit-border-radius: 1rem;
+  -moz-border-radius: 1rem;
+  -ms-border-radius: 1rem;
+  -o-border-radius: 1rem;
+  width: 220px;
 }
 
 .card__img {
   width: 180px;
   height: auto;
-  padding: 3rem 0;
-  transition: 0.5s;
-  mix-blend-mode: darken;
+  padding: 1rem 0;
+  transition: transform 0.5s; /* Simplificar la transición */
+  /* mix-blend-mode: darken; /* Comentar para probar si esto causa el parpadeo */
 }
 
 .card__name {
   position: absolute;
   left: -25%;
   top: 0;
-  width: 3.5rem;
+  width: 1.8rem;
   height: 100%;
   writing-mode: vertical-rl;
   transform: rotate(180deg);
   text-align: center;
-  background-color: var(--dark-color);
+  background-color: #3d3d3d;
   color: #fff;
   font-weight: bold;
-  transition: 0.5s;
+  transition: left 0.5s; /* Específico sobre qué propiedad transicionar */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .card__icon {
@@ -104,7 +106,7 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-  transition: 0.5s;
+  transition: transform 0.5s; /* Simplificar la transición */
 }
 
 .card__preci {
@@ -119,8 +121,15 @@ a {
 }
 
 .card__preci--now {
-  font-size: var(--h3-font-size);
+  font-size: var(--normal-font-size); /* Asegúrate de que esta variable está definida en :root */
   font-weight: bold;
+}
+
+.card__preci--after {
+  font-size: var(--smaller-font-size);
+  color: var(--accent-color);
+  margin-bottom: 0.25rem;
+  margin-top: 0.55rem;
 }
 
 .card:hover {
@@ -137,4 +146,4 @@ a {
 
 .card:hover .card__precis {
   transform: translateY(-20px);
-  }
+}
