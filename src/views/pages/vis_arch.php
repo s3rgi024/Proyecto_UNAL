@@ -1,6 +1,7 @@
 <?php 
 
-require '../../controllers/security.php';
+   require '../../controllers/security.php';
+   include ("../../../config/db_connection.php");
 
 ?>
 
@@ -16,6 +17,9 @@ require '../../controllers/security.php';
   
   <?php   
     include("../components/navbar.php");
+
+    $sql = "SELECT * FROM usuarios WHERE id_rol = 1 AND id_estado = 1";
+    $result = $db_connection->query($sql);
   ?>
 
     <section class="main_contratacion__text min-main">
@@ -27,115 +31,58 @@ require '../../controllers/security.php';
       Este módulo ha sido designado para permitirle acceder a la documentación proporcionada <br> por los docentes en el marco del proceso de vinculación con la universidad.      
       <br>
       <br>
-        Seleccione un registro a continuación:
+        Seleccione un docente a continuación:
       </p>
     </section>
 
     <main class="main bd-grid min-main">
       
-      <article class="card">
-        <div class="card__img">
-          <img src="../../../public/img/hombre.png" alt="" />
-        </div>
-        <div class="card__name">
-          <p>Revisar Documentos</p>
-        </div>
-        <div class="card__precis">
-          <a href="" class="card__icon"><i class='bx bx-info-circle'></i></ion-icon></a>
-          <div>
-            <span class="card__preci card__preci--before">Docente Ocasional</span>
-            <span class="card__preci card__preci--now">Santiago Alza</span>
-          </div>
-          <a href="./doc_revision.php" class="card__icon"><i class="fa-solid fa-magnifying-glass"></i></a>
-        </div>
-      </article>
+    <?php
 
-      <article class="card">
-        <div class="card__img">
-          <img src="../../../public/img/mujer.png" alt="" />
-        </div>
-        <div class="card__name">
-          <p>Revisar Documentos</p>
-        </div>
-        <div class="card__precis">
-          <a href="" class="card__icon"><i class='bx bx-info-circle'></i></a>
-          <div>
-            <span class="card__preci card__preci--before">Docente Ad-Honorem</span>
-            <span class="card__preci card__preci--now">Juana Martinez</span>
-          </div>
-          <a href="./doc_revision.php" class="card__icon"><i class="fa-solid fa-magnifying-glass"></i></a>
-        </div>
-      </article>
+        if ($result->num_rows > 0) {
+            // Itera sobre cada fila de los resultados
+            while($row = $result->fetch_assoc()) {
 
-      <article class="card">
-        <div class="card__img">
-          <img src="../../../public/img/hombre.png" alt="" />
-        </div>
-        <div class="card__name">
-          <p>Revisar Documentos</p>
-        </div>
-        <div class="card__precis">
-          <a href="" class="card__icon"><i class='bx bx-info-circle'></i></a>
-          <div>
-            <span class="card__preci card__preci--before">Docente Ocasional</span>
-            <span class="card__preci card__preci--now">Sergio Chaparro</span>
-          </div>
-          <a href="./doc_revision.php" class="card__icon"><i class="fa-solid fa-magnifying-glass"></i></a>
-        </div>
-      </article>
+                $sql_tdoc = "SELECT abreviatura FROM tipo_documento WHERE id_tipo_documento = '" . $row['id_tdoc'] . "'";
+                $result_tdoc = $db_connection->query($sql_tdoc);
+                $tdoc_cons = $result_tdoc->fetch_assoc();
+                ?>
 
-      <article class="card">
-        <div class="card__img">
-          <img src="../../../public/img/mujer.png" alt="" />
-        </div>
-        <div class="card__name">
-          <p>Revisar Documentos</p>
-        </div>
-        <div class="card__precis">
-          <a href="" class="card__icon"><i class='bx bx-info-circle'></i></a>
-          <div>
-            <span class="card__preci card__preci--before">Docente Ocasional</span>
-            <span class="card__preci card__preci--now">Sonia Morales</span>
-          </div>
-          <a href="./doc_revision.php" class="card__icon"><i class="fa-solid fa-magnifying-glass"></i></a>
-        </div>
-      </article>
+                  <article class="card">
+                    <div class="card__img">
+                      <img src="../../../public/img/hombre.png" alt="user image" />
+                    </div>
+                    <div class="card__name">
+                      <p>Revisar Documentos</p>
+                    </div>
+                    <div class="card__precis">
+                      <a href="" class="card__icon"><i class="fa-solid fa-circle-info"></i></ion-icon></a>
+                      <div>
+                        <span class="card__preci card__preci--before">Docente Ocasional</span>
+                        <span class="card__preci card__preci--now"><?php echo $row["nombre1"] . " " . $row["apellido1"]?></span>
+                        <span class="card__preci card__preci--after"><?php echo $tdoc_cons["abreviatura"] . " " . $row["id_usuario"];?></span>
 
-      <article class="card">
-        <div class="card__img">
-          <img src="../../../public/img/hombre.png" alt="" />
-        </div>
-        <div class="card__name">
-          <p>Revisar Documentos</p>
-        </div>
-        <div class="card__precis">
-          <a href="" class="card__icon"><i class='bx bx-info-circle'></i></a>
-          <div>
-            <span class="card__preci card__preci--before">Docente Ocasional</span>
-            <span class="card__preci card__preci--now">Jair Duque</span>
-          </div>
-          <a href="./doc_revision.php" class="card__icon"><i class="fa-solid fa-magnifying-glass"></i></a>
-        </div>
-      </article>
+                      </div>
+                      <a href="" class="card__icon"><i class="fa-solid fa-magnifying-glass"></i></a>
+                    </div>
 
-      <article class="card">
-        <div class="card__img">
-          <img src="../../../public/img/mujer.png" alt="" />
-        </div>
-        <div class="card__name">
-          <p>Revisar Documentos</p>
-        </div>
-        <div class="card__precis">
-          <a href="" class="card__icon"><i class='bx bx-info-circle'></i></a>
-          <div>
-            <span class="card__preci card__preci--before">Docente Ad-Honorem</span>
-            <span class="card__preci card__preci--now">Gloria Gallego</span>
-          </div>
-          <a href="./doc_revision.php" class="card__icon"><i class="fa-solid fa-magnifying-glass"></i></a>
-        </div>
-      </article>
+                    <form action="./doc_revision.php" id="form_<?php echo $row['id_usuario']; ?>" method="post" style="display: none;">
+                      <input type="hidden" name="id_usuario" value="<?php echo $row['id_usuario']; ?>">
+                      <input type="hidden" name="id_tdoc" value="<?php echo $row['id_tdoc']; ?>">
+                    </form>
+                  </article>
+
+                <?php
+            }
+        } else {
+            echo "<p>No se encontraron resultados</p>";
+        }
+        $db_connection->close();
+      ?>
 
     </main>
+
+    <script type="module" src="../../../public/js/AJAX/requestProfessorFiles.js"></script>
     <script src="../../../public/js/navbar.js"></script>
   </body>
 </html>

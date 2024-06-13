@@ -1,0 +1,79 @@
+
+@import url('../../node_modules/sweetalert2/dist/sweetalert2.css');
+
+.min-main{
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    height: 90%;
+
+    & .download_container{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 70%;
+        text-align: center;
+
+        & h1{
+            font-size: 3rem;
+            margin: 20px;
+        }
+
+        & button{
+            cursor: pointer;
+            font-size: 1.2rem;
+            border: none;
+            border-radius: 10px;
+            -webkit-border-radius: 10px;
+            -moz-border-radius: 10px;
+            -ms-border-radius: 10px;
+            -o-border-radius: 10px;
+            padding: 12px;
+            transition: all ease .1s;
+            -webkit-transition: all ease .1s;
+            -moz-transition: all ease .1s;
+            -ms-transition: all ease .1s;
+            -o-transition: all ease .1s;
+            
+            &:hover{
+                scale: 1.1;
+            }
+        }
+
+        & .download_options{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            margin: 20px;
+
+            & .download{
+                background-color: #198dda;
+            }
+
+            & .send_mail{
+                background-color: #daa719;
+            }
+
+        }
+
+        & .finish_options{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            margin: 20px;
+
+            & .back{
+                background-color: #c46868;
+            }
+
+            & .finish{
+                background-color: #19da49;
+            }
+        }
+    }
+}

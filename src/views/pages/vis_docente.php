@@ -1,8 +1,9 @@
 <?php 
 
-require '../../controllers/security.php';
+   require '../../controllers/security.php';
 
 ?>
+
 
 <!DOCTYPE html>
 <html lang="es">

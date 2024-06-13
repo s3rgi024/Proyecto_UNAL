@@ -1,6 +1,6 @@
 <?php 
 
-require '../../controllers/security.php';
+   require '../../controllers/security.php';
 
 ?>
 
