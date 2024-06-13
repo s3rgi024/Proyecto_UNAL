@@ -1,4 +1,7 @@
 <?php
+ob_start(); // Iniciar el buffer de salida
+
+header('Content-Type: application/json'); // Asegurar que la respuesta sea JSON
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     include("../../../config/db_connection.php");
@@ -25,18 +28,22 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     } else {
         echo json_encode(['success' => false, 'error' => 'Error al crear el registro: ' . $db_connection->error]);
     }
+} else {
+    echo json_encode(['success' => false, 'error' => 'Método no permitido']);
 }
+
+ob_end_clean(); // Limpiar el buffer de salida
 
 /**
  * Función para obtener todos los empleados 
  */
-function obtenerEmpleados($db_connection)
-{
-    $sql = "SELECT * FROM usuarios";
-    $resultado = $db_connection->query($sql);
-    if (!$resultado) {
-        return false;
-    }
-    return $resultado;
-}
-?>
+
+ function obtenerUsuarios($db_connection)
+ {
+     $sql = "SELECT * FROM usuarios";
+     $resultado = $db_connection->query($sql);
+     if (!$resultado) {
+         return false;
+     }
+     return $resultado;
+ }

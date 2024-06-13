@@ -19,7 +19,6 @@ async function modalRegistrarUsuario() {
       throw new Error("Error al cargar la modal");
     }
 
-    // response.text() es un método en programación que se utiliza para obtener el contenido de texto de una respuesta HTTP
     const data = await response.text();
 
     // Crear un elemento div para almacenar el contenido de la modal
@@ -44,15 +43,14 @@ async function registrarUsuario(event) {
     event.preventDefault(); // Evitar que la página se recargue al enviar el formulario
 
     const formulario = document.querySelector("#formularioUsuario");
-    // Crear un objeto FormData para enviar los datos del formulario
     const formData = new FormData(formulario);
 
-    // Enviar los datos del formulario al backend usando Axios
     const response = await axios.post("../../../src/controllers/crud_usuarios/acciones.php", formData);
-    console.log(response.data); // Verifica el contenido de la respuesta
+
+    console.log('Response data:', response.data); // Log para verificar la respuesta
 
     // Verificar la respuesta del backend
-    if (response.status === 200 && response.data.success) { // Asegúrate de que response.data.success exista y sea verdadero
+    if (response.status === 200 && response.data.success) {
       // Llamar a la función insertUsuarioTable para insertar el nuevo registro en la tabla
       window.insertUsuarioTable();
 
@@ -64,7 +62,9 @@ async function registrarUsuario(event) {
         }
 
         // Mostrar mensaje de éxito
-        toastr.options = window.toastrOptions;
+        if (window.toastrOptions) {
+          toastr.options = window.toastrOptions;
+        }
         toastr.success("¡El usuario se registró correctamente!");
 
         // Redireccionar a la página deseada (por ejemplo, info_usuarios.php)
@@ -72,14 +72,10 @@ async function registrarUsuario(event) {
       }, 600);
     } else {
       console.error("Error al registrar el usuario", response.data.error);
-      // Mostrar mensaje de error si la respuesta no es exitosa
-      toastr.options = window.toastrOptions;
       toastr.error("Error al registrar el usuario. Inténtalo de nuevo.");
     }
   } catch (error) {
     console.error("Error al enviar el formulario", error);
-    // Mostrar mensaje de error en caso de excepción
-    toastr.options = window.toastrOptions;
     toastr.error("Error al enviar el formulario. Inténtalo de nuevo.");
   }
 }

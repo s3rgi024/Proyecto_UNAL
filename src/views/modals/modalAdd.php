@@ -52,7 +52,7 @@ if ($result->num_rows > 0) {
                     <form id="formularioUsuario" action="" method="POST" enctype="multipart/form-data" autocomplete="off">
                         <div class="mb-3">
                             <label class="form-label">Tipo Documento</label>
-                            <select name="id_tipo_documento" class="form-select" required>
+                            <select name="id_tdoc" class="form-select" required>
                             <option selected value="">Seleccione</option>
                             <?php
                             foreach ($tipos_documentos as $tipo_documento) {

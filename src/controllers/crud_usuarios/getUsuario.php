@@ -6,7 +6,7 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
     $id_usuario = (int)$_GET['id_usuario'];
 
     // Realizar la consulta para obtener los detalles del usuario con el ID proporcionado
-    $sql = "SELECT * FROM usuarios WHERE id_usuario = $id_usuario LIMIT 1";
+    $sql = "SELECT * FROM usuarios WHERE id_usuario = $id_usuario";
     $resultado = $db_connection->query($sql);
 
     // Verificar si la consulta se ejecutó correctamente

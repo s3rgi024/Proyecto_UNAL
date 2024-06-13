@@ -32,7 +32,7 @@ require '../../controllers/security.php';
     include("../components/navbar.php");
     include("../../../src/controllers/crud_usuarios/acciones.php");
 
-    $usuarios = obtenerEmpleados($db_connection);
+    $usuarios = obtenerUsuarios($db_connection);
     $totalUsuarios = $usuarios->num_rows;
     ?>
 
