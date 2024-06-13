@@ -608,4 +608,33 @@
 
 [13-Jun-2024 08:46:55 Europe/Berlin] Passwords match: false
 
-[13-Jun-2024 08:46:55 Europe/Berlin] Inicio de sesión exitoso para el usuario: Serch
+[04-Jun-2024 21:18:13 Europe/Berlin] Inicio de sesión exitoso para el usuario: a
+[04-Jun-2024 21:19:47 Europe/Berlin] Iniciando loginUser
+[04-Jun-2024 21:19:47 Europe/Berlin] Usuario consultado: Array
+(
+    [id_tdoc] => 1
+    [id_usuario] => 1031645814
+    [nombre1] => ser
+    [nombre2] => gio
+    [apellido1] => elsa
+    [apellido2] => bado
+    [id_rol] => 1
+    [usuario] => a
+    [clave] => $2y$10$R0jIo1bhAWWGU6QgA6dXLOMFY/ulfvayuTX5AycXLOOWpuY3p7kCy
+    [correo] => sergioechaparro@gmail.com
+    [telefono] => 31352476
+    [id_estado] => 1
+)
+
+[04-Jun-2024 21:19:47 Europe/Berlin] Clave ingresada: V1Ly)vNAOX2m
+[04-Jun-2024 21:19:47 Europe/Berlin] Clave en BD: $2y$10$R0jIo1bhAWWGU6QgA6dXLOMFY/ulfvayuTX5AycXLOOWpuY3p7kCy
+[04-Jun-2024 21:19:48 Europe/Berlin] Resultado de password_verify: true
+[04-Jun-2024 21:19:48 Europe/Berlin] Estado del usuario: 1
+[04-Jun-2024 21:19:48 Europe/Berlin] Comparación de estado: true
+[04-Jun-2024 21:19:48 Europe/Berlin] Hashed password: $2y$10$wQjwxi9tRwoSHaZew19DJuW8/jCWXoRLpUqJCJC3PIxcBEdnmZYlS
+
+[04-Jun-2024 21:19:48 Europe/Berlin] Stored password: $2y$10$R0jIo1bhAWWGU6QgA6dXLOMFY/ulfvayuTX5AycXLOOWpuY3p7kCy
+
+[04-Jun-2024 21:19:48 Europe/Berlin] Passwords match: false
+
+[04-Jun-2024 21:19:48 Europe/Berlin] Inicio de sesión exitoso para el usuario: a

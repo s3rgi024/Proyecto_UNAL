@@ -1,7 +1,9 @@
 <?php 
-    require '../../controllers/security.php';
-    include ("../../../config/db_connection.php");
+
+require '../../controllers/security.php';
+
 ?>
+
 <!DOCTYPE html>
 <html lang="es">
     <head>
