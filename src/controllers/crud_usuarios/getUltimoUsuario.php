@@ -1,22 +1,22 @@
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "GET") {
-    include("../config/config.php");
+    include("../../../config/db_connection.php");
 
-    // Realizar la consulta para obtener los detalles del empleado con el ID proporcionado
-    $sql = "SELECT * FROM tbl_empleados ORDER BY id DESC LIMIT 1";
-    $resultado = $conexion->query($sql);
+    // Realizar la consulta para obtener los detalles del usuario con el ID proporcionado
+    $sql = "SELECT * FROM usuarios ORDER BY id_usuario";
+    $resultado = $db_connection->query($sql);
 
     // Verificar si la consulta se ejecutó correctamente
     if (!$resultado) {
-        echo json_encode(["error" => "Error al obtener los detalles del empleado: " . $conexion->error]);
+        echo json_encode(["error" => "Error al obtener los detalles del usuario: " . $db_connection->error]);
         exit();
     }
 
-    // Obtener los detalles del ultimo empleado registrado, como un array asociativo
-    $empleado = $resultado->fetch_assoc();
+    // Obtener los detalles del ultimo usuario registrado, como un array asociativo
+    $usuario = $resultado->fetch_assoc();
 
-    // Devolver los detalles del empleado como un objeto JSON
+    // Devolver los detalles del usuario como un objeto JSON
     header('Content-type: application/json; charset=utf-8');
-    echo json_encode($empleado);
+    echo json_encode($usuario);
     exit;
 }

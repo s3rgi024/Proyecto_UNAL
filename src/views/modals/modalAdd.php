@@ -26,6 +26,19 @@ if ($result->num_rows > 0) {
     echo "No se encontraron roles.";
 }
 
+// Realizar la consulta a la tabla estados
+$sql = "SELECT id_estado, estado FROM estados";
+$result = $db_connection->query($sql);
+
+$estado = [];
+if ($result->num_rows > 0) {
+    while ($row = $result->fetch_assoc()) {
+        $estado[] = $row;
+    }
+} else {
+    echo "No se encontraron estados.";
+}
+
 ?>
 
 <div class="modal fade" id="agregarUsuarioModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
@@ -39,7 +52,7 @@ if ($result->num_rows > 0) {
                     <form id="formularioUsuario" action="" method="POST" enctype="multipart/form-data" autocomplete="off">
                         <div class="mb-3">
                             <label class="form-label">Tipo Documento</label>
-                            <select name="tipo_documento" class="form-select" required>
+                            <select name="id_tipo_documento" class="form-select" required>
                             <option selected value="">Seleccione</option>
                             <?php
                             foreach ($tipos_documentos as $tipo_documento) {
@@ -101,13 +114,38 @@ if ($result->num_rows > 0) {
                         </div>
 
                         <div class="mb-3">
-                            <label class="form-label">Celular</label>
-                            <input type="number" name="telefono" class="form-control">
+                            <label class="form-label">Telefono</label>
+                            <input type="text" name="telefono" class="form-control" maxlength="10" oninput="validateLength(this)" pattern="\d{1,10}" required />
+                        </div>
+                        <script>
+                        function validateLength(input) {
+                            input.value = input.value.replace(/\D/g, ''); // Elimina caracteres no numéricos
+                            if (input.value.length > 10) {
+                                input.value = input.value.slice(0, 10); // Limita a 10 caracteres
+                            }
+                        }
+                        </script>
+
+                        <div class="mb-3">
+                            <label class="form-label">Usuario</label>
+                            <input type="text" name="usuario" class="form-control">
                         </div>
 
-                        <div class="mb-3 mt-4">
-                            <label class="form-label">Cambiar Foto del empleado</label>
-                            <input class="form-control form-control-sm" type="file" name="avatar" accept="image/png, image/jpeg" />
+                        <div class="mb-3">
+                            <label class="form-label">Clave Generica</label>
+                            <input type="password" name="clave" class="form-control">
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Estado</label>
+                            <select name="id_estado" class="form-select" required>
+                            <option selected value="">Seleccione</option>
+                            <?php
+                            foreach ($estado as $estado) {
+                                echo "<option value='" . $estado['id_estado'] . "'>" . $estado['estado'] . "</option>";
+                            }
+                            ?>
+                        </select>
                         </div>
 
                         <div class="d-grid gap-2">

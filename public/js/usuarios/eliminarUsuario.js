@@ -3,7 +3,7 @@
  */
 async function cargarModalConfirmacion() {
     try {
-      const existingModal = document.getElementById("editarEmpleadoModal");
+      const existingModal = document.getElementById("editarUsuarioModal");
       if (existingModal) {
         const modal = bootstrap.Modal.getInstance(existingModal);
         if (modal) {
@@ -13,7 +13,7 @@ async function cargarModalConfirmacion() {
       }
   
       // Realizar una solicitud GET usando Fetch para obtener el contenido de la modal
-      const response = await fetch("modales/modalDelete.php");
+      const response = await fetch("../../../src/views/modals/modalDelete.php");
   
       if (!response.ok) {
         throw new Error("Error al cargar la modal de confirmación");
@@ -40,7 +40,7 @@ async function cargarModalConfirmacion() {
   /**
    * Función para eliminar un empleado desde la modal
    */
-  async function eliminarEmpleado(idEmpleado, avatarEmpleado) {
+  async function eliminarUsuario(id_usuario) {
     try {
       // Llamar a la función para cargar y mostrar la modal de confirmación
       await cargarModalConfirmacion();
@@ -48,39 +48,34 @@ async function cargarModalConfirmacion() {
       // Establecer el ID y la ruta del avatar del empleado en el botón de confirmación
       document
         .getElementById("confirmDeleteBtn")
-        .setAttribute("data-id", idEmpleado);
-      document
-        .getElementById("confirmDeleteBtn")
-        .setAttribute("data-avatar", avatarEmpleado);
+        .setAttribute("data-id", id_usuario);
   
       // Agregar un event listener al botón "Eliminar empleado"
       document
         .getElementById("confirmDeleteBtn")
         .addEventListener("click", async function () {
           // Obtener el ID y la ruta del avatar del empleado a eliminar
-          var idEmpleado = this.getAttribute("data-id");
-          var avatarEmpleado = this.getAttribute("data-avatar");
+          var id_empleado = this.getAttribute("data-id");
   
           try {
-            const response = await axios.post("acciones/delete.php", {
-              id: idEmpleado,
-              avatar: avatarEmpleado,
+            const response = await axios.post("../../../src/controllers/crud_usuarios/delete.php", {
+              id: id_empleado,
             });
   
             if (response.status === 200) {
               // Eliminar la fila correspondiente a este empleado de la tabla
-              document.querySelector(`#empleado_${idEmpleado}`).remove();
+              document.querySelector(`#empleado_${id_usuario}`).remove();
               //Llamar a la función para mostrar un mensaje de éxito
               if (window.toastrOptions) {
                 toastr.options = window.toastrOptions;
-                toastr.error("¡El empleado se elimino correctamente!.");
+                toastr.error("¡El usuario se elimino correctamente!.");
               }
             } else {
-              alert(`Error al eliminar el empleado con ID ${idEmpleado}`);
+              alert(`Error al eliminar el usuario con ID ${id_usuario}`);
             }
           } catch (error) {
             console.error(error);
-            alert("Hubo un problema al eliminar al empleado");
+            alert("Hubo un problema al eliminar al usuario");
           } finally {
             // Cerrar la modal de confirmación
             var confirmModal = bootstrap.Modal.getInstance(

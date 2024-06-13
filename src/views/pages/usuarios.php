@@ -41,7 +41,7 @@ require '../../controllers/security.php';
 
         <section class="main_contratacion__options">
 
-        <a href="../../../src/views/pages/apro_usuarios.php" class="contratacion_option doc_pendiente" style="text-decoration: none; color: inherit;">
+        <a href="../../../src/views/pages/info_usuarios.php" class="contratacion_option doc_pendiente" style="text-decoration: none; color: inherit;">
             <div>
                 <img src="../../../public/img/users.webp" alt="persona buscando perfiles">
                 <div class="contratacion_actions">
@@ -52,7 +52,7 @@ require '../../controllers/security.php';
             </div>
         </a>
 
-        <a href="../../../src/views/pages/info_personal.php" class="contratacion_option doc_aprobada" style="text-decoration: none; color: inherit;">
+        <a href="../../../src/views/pages/info_usuarios.php" class="contratacion_option doc_aprobada" style="text-decoration: none; color: inherit;">
             <div>
                 <img src="../../../public/img/users_inf.webp" alt="persona buscando perfiles">
                 <div class="contratacion_actions">

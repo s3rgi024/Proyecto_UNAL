@@ -1,23 +1,23 @@
 <?php
-$host = "localhost";
-$user = "root"; 
-$pass = ""; 
-$database = "unal";
 
+include("../../../config/db_connection.php");
 
-$db_connection = new mysqli($host, $user, $pass, $database);
+// Consulta para obtener los datos de los usuarios y los nombres de los roles
+$sql = "
+    SELECT 
+        u.id_tdoc, 
+        u.id_usuario, 
+        u.nombre1, 
+        u.apellido1, 
+        u.correo, 
+        u.telefono, 
+        r.rol 
+    FROM 
+        usuarios u
+    JOIN 
+        roles r ON u.id_rol = r.id_rol
+";
 
-
-$db_connection->set_charset("utf8");
-$sql_time = "SET time_zone = '-05:00'";
-mysqli_query($db_connection, $sql_time);
-
-if ($db_connection->connect_error) {
-    die("Error de conexión a la base de datos: " . $db_connection->connect_error);
-}
-
-// Consulta para obtener los datos de los usuarios (asegúrate de usar los nombres correctos de las columnas)
-$sql = "SELECT id_tdoc, id_usuario, nombre1, apellido1, correo, telefono, id_rol FROM usuarios";
 $result = $db_connection->query($sql);
 
 // Verificar si se obtuvieron resultados
@@ -56,15 +56,15 @@ $db_connection->close();
                     <td><?php echo htmlspecialchars($usuario['apellido1']); ?></td>
                     <td><?php echo htmlspecialchars($usuario['correo']); ?></td>
                     <td><?php echo htmlspecialchars($usuario['telefono']); ?></td>
-                    <td><?php echo htmlspecialchars($usuario['id_rol']); ?></td>
+                    <td><?php echo htmlspecialchars($usuario['rol']); ?></td>
                     <td>
-                        <a title="Ver detalles del empleado" href="#" onclick="verDetallesEmpleado(<?php echo $usuario['id_usuario']; ?>)" class="btn btn-success">
+                        <a title="Ver detalles del usuario" href="#" onclick="verDetallesUsuario(<?php echo $usuario['id_usuario']; ?>)" class="btn btn-success">
                             <i class="bi bi-binoculars"></i>
                         </a>
-                        <a title="Editar datos del empleado" href="#" onclick="editarEmpleado(<?php echo $usuario['id_usuario']; ?>)" class="btn btn-warning">
+                        <a title="Editar datos del usuario" href="#" onclick="editarUsuario(<?php echo $usuario['id_usuario']; ?>)" class="btn btn-warning">
                             <i class="bi bi-pencil-square"></i>
                         </a>
-                        <a title="Eliminar datos del empleado" href="#" onclick="eliminarEmpleado(<?php echo $usuario['id_usuario']; ?>" class="btn btn-danger">
+                        <a title="Eliminar datos del usuario" href="#" onclick="eliminarUsuario(<?php echo $usuario['id_usuario']; ?>)" class="btn btn-danger">
                             <i class="bi bi-trash"></i>
                         </a>
                     </td>

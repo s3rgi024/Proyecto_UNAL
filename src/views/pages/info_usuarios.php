@@ -61,13 +61,13 @@ require '../../controllers/security.php';
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    <script src="../public/js/usuarios/detallesUsuarios.js"></script>
+    <script src="../../../public/js/usuarios/detallesUsuarios.js"></script>
     <script src="../../../public/js/usuarios/addUsuario.js"></script>
-    <script src="../public/js/usuarios/editarUsuario.js"></script>
-    <script src="../public/js/usuarios/eliminarUsuario.js"></script>
-    <script src="../public/js/usuarios/refreshTableAdd.js"></script>
-    <script src="../public/js/usuarios/refreshTableEdit.js"></script>
-    <script src="../public/js/usuarios/alertas.js"></script>
+    <script src="../../../public/js/usuarios/editarUsuario.js"></script>
+    <script src="../../../public/js/usuarios/eliminarUsuario.js"></script>
+    <script src="../../../public/js/usuarios/refreshTableAdd.js"></script>
+    <script src="../../../public/js/usuarios/refreshTableEdit.js"></script>
+    <script src="../../../public/js/usuarios/alertas.js"></script>
 
     <!-------------------------Librería  datatable para la tabla -------------------------->
     <script src="https://cdn.datatables.net/2.0.2/js/dataTables.js"></script>

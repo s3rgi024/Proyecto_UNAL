@@ -14,9 +14,9 @@ async function verDetallesUsuario(idUsuario) {
       }
   
       // Buscar la Modal de Detalles
-      const response = await fetch("./src/views/modals/modalDetalles.php");
+      const response = await fetch("../../../src/views/modals/modalDetalles.php");
       if (!response.ok) {
-        throw new Error("Error al cargar la modal de detalles del empleado");
+        throw new Error("Error al cargar la modal de detalles del usuario");
       }
       // response.text() es un método en programación que se utiliza para obtener el contenido de texto de una respuesta HTTP
       const modalHTML = await response.text();
@@ -41,12 +41,12 @@ async function verDetallesUsuario(idUsuario) {
   }
   
   /**
-   * Función para cargar y mostrar los detalles del empleado en la modal
+   * Función para cargar y mostrar los detalles del usuario en la modal
    */
   async function cargarDetalleUsuario(idUsuario) {
     try {
       const response = await axios.get(
-        `../src/controllers/crud_usuarios/detallesUsuarios.php?id_usuario=${idUsuario}`
+        `../../../src/controllers/crud_usuarios/detallesUsuarios.php?id_usuario=${idUsuario}`
       );
       if (response.status === 200) {
         console.log(response.data);
@@ -55,11 +55,11 @@ async function verDetallesUsuario(idUsuario) {
   
         // Limpiar el contenido existente de la lista ul
   
-        const ulDetalleEmpleado = document.querySelector(
-          "#detalleEmpleadoContenido ul"
+        const ulDetalleUsuario = document.querySelector(
+          "#detalleUsuarioContenido ul"
         );
   
-        ulDetalleEmpleado.innerHTML = ` 
+        ulDetalleUsuario.innerHTML = ` 
           <li class="list-group-item"><b>Tipo Documento:</b> 
             ${id_tdoc ? id_tdoc : "No disponible"}
           </li>
@@ -83,7 +83,7 @@ async function verDetallesUsuario(idUsuario) {
           </li>
         `;
       } else {
-        alert(`Error al cargar los detalles del empleado con ID ${idUsuario}`);
+        alert(`Error al cargar los detalles del usuario con DNI ${idUsuario}`);
       }
     } catch (error) {
       console.error(error);

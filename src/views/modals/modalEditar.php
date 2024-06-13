@@ -1,13 +1,13 @@
-<div class="modal fade" id="editarEmpleadoModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+<div class="modal fade" id="editarUsuarioModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h1 class="modal-title fs-5 titulo_modal">Actualizar Información Empleado</h1>
+                    <h1 class="modal-title fs-5 titulo_modal">Actualizar Información Usuario</h1>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <form id="formularioEmpleadoEdit" action="" method="POST" enctype="multipart/form-data" autocomplete="off">
-                        <input type="hidden" name="id" id="idempleado" />
+                    <form id="formularioUsuarioEdit" action="" method="POST" enctype="multipart/form-data" autocomplete="off">
+                        <input type="hidden" name="id_usuario" id="id_usuario" />
                         <div class="mb-3">
                             <label class="form-label">Nombre</label>
                             <input type="text" name="nombre" id="nombre" class="form-control" />
@@ -82,8 +82,8 @@
                         </div>
 
                         <div class="d-grid gap-2">
-                            <button type="submit" class="btn btn-primary btn_add" onclick="actualizarEmpleado(event)">
-                                Actualizar datos del empleado
+                            <button type="submit" class="btn btn-primary btn_add" onclick="actualizarUsuario(event)">
+                                Actualizar datos del usuario
                             </button>
                         </div>
                     </form>
