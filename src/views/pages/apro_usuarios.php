@@ -1,19 +1,27 @@
+<?php 
+
+   require '../../controllers/security.php';
+
+?>
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- <link rel="stylesheet" href="../../../public/css/apro_usuarios.css"> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
     <title>Aprobación Usuarios</title>
 </head>
 <body>
-
     <?php 
         include("../components/navbar.php");
     ?>
 
+    <section class="main_contratacion__background">
+    </section>
     <main class="main_contratacion__container min-main">
-    <div class="container">
+    <div class="container my5">
         <h2>Lista de Usuarios</h2>
         <a class="btn btn-primary" href="../../../src/views/pages/create_usuarios.php" role="button">Crear Usuario</a>
         <br>
@@ -76,6 +84,6 @@
     </main>
     
     <script src="../../../public/js/navbar.js"></script>
-    
+    <script src="../../../public/js/vis_docente.js"></script>
 </body>
 </html>
