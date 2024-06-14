@@ -8,10 +8,6 @@ document.addEventListener('DOMContentLoaded', function () {
     downloadButton.addEventListener('click', function () {
         const folderPath = downloadButton.getAttribute('data-folder-path');
 
-        console.log(folderPath)
-
-        alert('Ruta de carpeta: ' + folderPath);
-
         Swal.fire({
             title: '¿Desea continuar con la descarga?',
             showCancelButton: true,
@@ -24,7 +20,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     headers: {
                         'Content-Type': 'application/json'
                     },
-                    body: JSON.stringify({ folderPath: folderPath }) // Enviar la ruta de la carpeta
+                    body: JSON.stringify({ folderPath: folderPath })
                 })
                 .then(response => response.json())
                 .then(data => {
@@ -58,10 +54,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
     backButton.addEventListener('click', ()=>{
         window.location.href = './vis_arch.php';
-    })
+    });
 
     finishButton.addEventListener('click', ()=>{
         window.location.href = './doc_main.php';
-    })
+    });
 });
-
