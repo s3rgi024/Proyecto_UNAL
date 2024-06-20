@@ -31,7 +31,7 @@
         include("../components/navbar.php");
     ?>
 
-    <main class="table min-main" id="customers_table" style="margin-left: 160px;">
+    <main class="table min-main" id="customers_table">
         <section class="table__header">
             <h1>Usuarios</h1>
             <div class="input-group">
@@ -72,7 +72,7 @@
                     <td><?php echo $usuario['rol']; ?></td>
                     <td><?php echo $usuario['correo']; ?></td>
                     <td><?php echo $usuario['telefono']; ?></td>
-                    <td>
+                    <td class="btn">
                         <a href="edit_usuarios.php?id_usuario=<?php echo $usuario['id_usuario']; ?>" class="btn btn-edit">Editar</a>
                         <a href="eliminar_usuario.php?id_usuario=<?php echo $usuario['id_usuario']; ?>" class="btn btn-delete">Eliminar</a>
                     </td>

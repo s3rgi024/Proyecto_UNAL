@@ -18,9 +18,9 @@ $id_estado = $_POST['id_estado'];
 $sql = "UPDATE usuarios SET id_tdoc='$id_tdoc', nombre1='$nombre1', nombre2='$nombre2', apellido1='$apellido1', apellido2='$apellido2', correo='$correo', telefono='$telefono', usuario='$usuario', id_rol='$id_rol', id_estado='$id_estado' WHERE id_usuario=$id_usuario";
 
 if ($db_connection->query($sql) === TRUE) {
-    $_SESSION['message'] = "Usuario Actualizado Exitosamente";
+    echo json_encode(['status' => 'success', 'message' => $correo]);
 } else {
-    $_SESSION['error'] = "Error al actualizar registro: " . $db_connection->error;
+    echo json_encode(['status' => 'error', 'message' => 'Error en la actualización del usuario']);
 }
 
 $db_connection->close();

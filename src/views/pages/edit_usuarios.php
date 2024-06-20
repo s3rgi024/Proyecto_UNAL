@@ -64,10 +64,12 @@
         include("../components/navbar.php");
     ?>
 
-    <div class="container min-main">
+
+    
+    <main class="container min-main">
         <header>Usuarios</header>
 
-        <form action="../../../src/controllers/neg_dat_edit_users.php" method="post">
+        <form action="../../../src/controllers/neg_dat_edit_users.php" method="post" id="updateUser">
             <div class="form first">
                 <div class="details personal">
                     <span class="title">Datos Personales</span>
@@ -160,13 +162,13 @@
 
                     <div class="buttons">
                         <a href="../../../src/views/pages/info_usuarios.php" class="backBtn" style="text-decoration: none;">
-                            <i class="uil uil-navigator"></i>
+                            <i class="fa-solid fa-circle-arrow-right"></i>
                             <span class="btnText">Regresar</span>
                         </a>
                         
                         <button type="submit" class="submit">
                             <span class="btnText">Guardar</span>
-                            <i class="uil uil-navigator"></i>
+                            <i class="fa-solid fa-floppy-disk"></i>
                         </button>
                     </div>
                 </div> 
@@ -175,7 +177,7 @@
     </div>
 
     <script src="../../../public/js/navbar.js"></script>
-    <script src="../../../public/js/edit_usuarios.js"></script>
+    <script type="module" src="../../../public/js/AJAX/requestUpdateUser.js"></script>
 
 </body>
 </html>

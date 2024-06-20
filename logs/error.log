@@ -696,3 +696,63 @@
 [13-Jun-2024 23:06:06 Europe/Berlin] Passwords match: false
 
 [13-Jun-2024 23:06:06 Europe/Berlin] Inicio de sesión exitoso para el usuario: serch
+[20-Jun-2024 06:56:33 Europe/Berlin] Iniciando loginUser
+[20-Jun-2024 06:56:33 Europe/Berlin] Usuario no encontrado: lc}
+[20-Jun-2024 06:56:38 Europe/Berlin] Iniciando loginUser
+[20-Jun-2024 06:56:38 Europe/Berlin] Usuario consultado: Array
+(
+    [id_tdoc] => 0
+    [id_usuario] => 79711386
+    [nombre1] => Luis a
+    [nombre2] => Carlos
+    [apellido1] => Villabona
+    [apellido2] => Parra
+    [id_rol] => 1
+    [usuario] => lcvillabonap
+    [clave] => $2y$10$ZlHf21YyFal0gWWFHQulU.sxHFdGPuF7/usNCYUmk3GpA9LeZXYEy
+    [correo] => lcvillabonap@hotmail.commm
+    [telefono] => 123
+    [id_estado] => 1
+)
+
+[20-Jun-2024 06:56:38 Europe/Berlin] Clave ingresada: prueba
+[20-Jun-2024 06:56:38 Europe/Berlin] Clave en BD: $2y$10$ZlHf21YyFal0gWWFHQulU.sxHFdGPuF7/usNCYUmk3GpA9LeZXYEy
+[20-Jun-2024 06:56:38 Europe/Berlin] Resultado de password_verify: true
+[20-Jun-2024 06:56:38 Europe/Berlin] Estado del usuario: 1
+[20-Jun-2024 06:56:38 Europe/Berlin] Comparación de estado: true
+[20-Jun-2024 06:56:38 Europe/Berlin] Hashed password: $2y$10$.mCHYEb/K.YI7yqaW.L2fe2pGw.oWF.HtlYptNzl71IoUDKYj.XuC
+
+[20-Jun-2024 06:56:38 Europe/Berlin] Stored password: $2y$10$ZlHf21YyFal0gWWFHQulU.sxHFdGPuF7/usNCYUmk3GpA9LeZXYEy
+
+[20-Jun-2024 06:56:38 Europe/Berlin] Passwords match: false
+
+[20-Jun-2024 06:56:38 Europe/Berlin] Inicio de sesión exitoso para el usuario: lcvillabonap
+[20-Jun-2024 07:33:26 Europe/Berlin] Iniciando loginUser
+[20-Jun-2024 07:33:26 Europe/Berlin] Usuario consultado: Array
+(
+    [id_tdoc] => 0
+    [id_usuario] => 79711386
+    [nombre1] => Luis a
+    [nombre2] => Carlos
+    [apellido1] => Villabona
+    [apellido2] => Parra
+    [id_rol] => 1
+    [usuario] => lcvillabonap
+    [clave] => $2y$10$ZlHf21YyFal0gWWFHQulU.sxHFdGPuF7/usNCYUmk3GpA9LeZXYEy
+    [correo] => lcvillabonap@hotmail.commm
+    [telefono] => 123
+    [id_estado] => 1
+)
+
+[20-Jun-2024 07:33:26 Europe/Berlin] Clave ingresada: prueba
+[20-Jun-2024 07:33:26 Europe/Berlin] Clave en BD: $2y$10$ZlHf21YyFal0gWWFHQulU.sxHFdGPuF7/usNCYUmk3GpA9LeZXYEy
+[20-Jun-2024 07:33:26 Europe/Berlin] Resultado de password_verify: true
+[20-Jun-2024 07:33:26 Europe/Berlin] Estado del usuario: 1
+[20-Jun-2024 07:33:26 Europe/Berlin] Comparación de estado: true
+[20-Jun-2024 07:33:26 Europe/Berlin] Hashed password: $2y$10$FWVlOf2JiuFSkHJ1RG6OD.0WUs/XUS3nDHB60.vqp65TlqdW7zwm6
+
+[20-Jun-2024 07:33:26 Europe/Berlin] Stored password: $2y$10$ZlHf21YyFal0gWWFHQulU.sxHFdGPuF7/usNCYUmk3GpA9LeZXYEy
+
+[20-Jun-2024 07:33:26 Europe/Berlin] Passwords match: false
+
+[20-Jun-2024 07:33:26 Europe/Berlin] Inicio de sesión exitoso para el usuario: lcvillabonap
