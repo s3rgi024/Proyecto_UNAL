@@ -957,3 +957,61 @@
 [14-Jun-2024 15:00:26 Europe/Berlin] Passwords match: false
 
 [14-Jun-2024 15:00:26 Europe/Berlin] Inicio de sesión exitoso para el usuario: Serch
+[20-Jun-2024 17:54:41 Europe/Berlin] Iniciando loginUser
+[20-Jun-2024 17:54:42 Europe/Berlin] Usuario consultado: Array
+(
+    [id_tdoc] => 1
+    [id_usuario] => 1032642303
+    [nombre1] => sala
+    [nombre2] => manca
+    [apellido1] => elsa
+    [apellido2] => bado
+    [id_rol] => 1
+    [usuario] => 123
+    [clave] => $2y$10$IC5mifBSYWgD33AohQTLz.4MNtwI67p655TTXttp6KCmxwFbyAl8a
+    [correo] => sergioechaparro@gmail.com
+    [telefono] => 2147483647
+    [id_estado] => 2
+)
+
+[20-Jun-2024 17:54:42 Europe/Berlin] Clave ingresada: 123
+[20-Jun-2024 17:54:42 Europe/Berlin] Clave en BD: $2y$10$IC5mifBSYWgD33AohQTLz.4MNtwI67p655TTXttp6KCmxwFbyAl8a
+[20-Jun-2024 17:54:42 Europe/Berlin] Resultado de password_verify: true
+[20-Jun-2024 17:54:42 Europe/Berlin] Estado del usuario: 2
+[20-Jun-2024 17:54:42 Europe/Berlin] Comparación de estado: false
+[20-Jun-2024 17:54:42 Europe/Berlin] Hashed password: $2y$10$1.OEXI0BonRLA2KefYqheezUslkUiKVy4nYlv8O8aez79VG6j/8wS
+
+[20-Jun-2024 17:54:42 Europe/Berlin] Stored password: $2y$10$IC5mifBSYWgD33AohQTLz.4MNtwI67p655TTXttp6KCmxwFbyAl8a
+
+[20-Jun-2024 17:54:42 Europe/Berlin] Passwords match: false
+
+[20-Jun-2024 17:54:42 Europe/Berlin] El usuario 123 está inactivo
+[20-Jun-2024 17:55:15 Europe/Berlin] Iniciando loginUser
+[20-Jun-2024 17:55:15 Europe/Berlin] Usuario consultado: Array
+(
+    [id_tdoc] => 1
+    [id_usuario] => 1031642393
+    [nombre1] => Sergio
+    [nombre2] => Esteban
+    [apellido1] => Chaparro
+    [apellido2] => Noguera
+    [id_rol] => 1
+    [usuario] => Serch
+    [clave] => $2y$10$S6mZqH8ie24Y70WgDEtGeuHo43ZC0ZQTfmNVCu62.DoZ2rg6SLEoi
+    [correo] => sechaparron@unal.edu.co
+    [telefono] => 313270352
+    [id_estado] => 1
+)
+
+[20-Jun-2024 17:55:15 Europe/Berlin] Clave ingresada: 4dMn^$G4Vwsc
+[20-Jun-2024 17:55:15 Europe/Berlin] Clave en BD: $2y$10$S6mZqH8ie24Y70WgDEtGeuHo43ZC0ZQTfmNVCu62.DoZ2rg6SLEoi
+[20-Jun-2024 17:55:15 Europe/Berlin] Resultado de password_verify: true
+[20-Jun-2024 17:55:15 Europe/Berlin] Estado del usuario: 1
+[20-Jun-2024 17:55:15 Europe/Berlin] Comparación de estado: true
+[20-Jun-2024 17:55:15 Europe/Berlin] Hashed password: $2y$10$LrK/3uaCEJpSQongHS1tK.t5q9/QanImfRiPN/QSwfRf6exRpPbiW
+
+[20-Jun-2024 17:55:15 Europe/Berlin] Stored password: $2y$10$S6mZqH8ie24Y70WgDEtGeuHo43ZC0ZQTfmNVCu62.DoZ2rg6SLEoi
+
+[20-Jun-2024 17:55:15 Europe/Berlin] Passwords match: false
+
+[20-Jun-2024 17:55:15 Europe/Berlin] Inicio de sesión exitoso para el usuario: Serch
