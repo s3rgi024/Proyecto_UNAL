@@ -696,3 +696,235 @@
 [13-Jun-2024 23:06:06 Europe/Berlin] Passwords match: false
 
 [13-Jun-2024 23:06:06 Europe/Berlin] Inicio de sesión exitoso para el usuario: serch
+[14-Jun-2024 15:31:45 Europe/Berlin] Iniciando loginUser
+[14-Jun-2024 15:31:45 Europe/Berlin] Usuario consultado: Array
+(
+    [id_tdoc] => 1
+    [id_usuario] => 1031642393
+    [nombre1] => Sergio
+    [nombre2] => Esteban
+    [apellido1] => Chaparro
+    [apellido2] => Noguera
+    [id_rol] => 1
+    [usuario] => Serch
+    [clave] => $2y$10$clPT91r7w56Msjhce5pj7Oco7QJq0oFDjKnJKxeH3PC0SpDgQYXAO
+    [correo] => sechaparron@unal.edu.co
+    [telefono] => 313270352
+    [id_estado] => 1
+)
+
+[14-Jun-2024 15:31:45 Europe/Berlin] Clave ingresada: Q1B6&IhufvbE
+[14-Jun-2024 15:31:45 Europe/Berlin] Clave en BD: $2y$10$clPT91r7w56Msjhce5pj7Oco7QJq0oFDjKnJKxeH3PC0SpDgQYXAO
+[14-Jun-2024 15:31:45 Europe/Berlin] Resultado de password_verify: false
+[14-Jun-2024 15:31:45 Europe/Berlin] Estado del usuario: 1
+[14-Jun-2024 15:31:45 Europe/Berlin] Comparación de estado: true
+[14-Jun-2024 15:31:45 Europe/Berlin] Hashed password: $2y$10$bQwzsGdxxujWPkGcSDJpeOYlY2wQw0oSnjYSDMUfTcGypGBtj/l9a
+
+[14-Jun-2024 15:31:45 Europe/Berlin] Stored password: $2y$10$clPT91r7w56Msjhce5pj7Oco7QJq0oFDjKnJKxeH3PC0SpDgQYXAO
+
+[14-Jun-2024 15:31:45 Europe/Berlin] Passwords match: false
+
+[14-Jun-2024 15:31:45 Europe/Berlin] Credenciales incorrectas para el usuario: serch
+[14-Jun-2024 15:35:51 Europe/Berlin] Iniciando loginUser
+[14-Jun-2024 15:35:51 Europe/Berlin] Usuario consultado: Array
+(
+    [id_tdoc] => 1
+    [id_usuario] => 1031642393
+    [nombre1] => Sergio
+    [nombre2] => Esteban
+    [apellido1] => Chaparro
+    [apellido2] => Noguera
+    [id_rol] => 1
+    [usuario] => Serch
+    [clave] => $2y$10$clPT91r7w56Msjhce5pj7Oco7QJq0oFDjKnJKxeH3PC0SpDgQYXAO
+    [correo] => sechaparron@unal.edu.co
+    [telefono] => 313270352
+    [id_estado] => 1
+)
+
+[14-Jun-2024 15:35:51 Europe/Berlin] Clave ingresada: Q1B6&IhufvbE
+[14-Jun-2024 15:35:51 Europe/Berlin] Clave en BD: $2y$10$clPT91r7w56Msjhce5pj7Oco7QJq0oFDjKnJKxeH3PC0SpDgQYXAO
+[14-Jun-2024 15:35:51 Europe/Berlin] Resultado de password_verify: false
+[14-Jun-2024 15:35:51 Europe/Berlin] Estado del usuario: 1
+[14-Jun-2024 15:35:51 Europe/Berlin] Comparación de estado: true
+[14-Jun-2024 15:35:51 Europe/Berlin] Hashed password: $2y$10$ePcHDncKyczrfvY8MS93p.PRwQpLDHvEb1jTbgFJ3VBnSHdMqU5J.
+
+[14-Jun-2024 15:35:51 Europe/Berlin] Stored password: $2y$10$clPT91r7w56Msjhce5pj7Oco7QJq0oFDjKnJKxeH3PC0SpDgQYXAO
+
+[14-Jun-2024 15:35:52 Europe/Berlin] Passwords match: false
+
+[14-Jun-2024 15:35:52 Europe/Berlin] Credenciales incorrectas para el usuario: serch
+[14-Jun-2024 15:45:27 Europe/Berlin] Iniciando loginUser
+[14-Jun-2024 15:45:27 Europe/Berlin] Usuario consultado: Array
+(
+    [id_tdoc] => 1
+    [id_usuario] => 1031642393
+    [nombre1] => Sergio
+    [nombre2] => Esteban
+    [apellido1] => Chaparro
+    [apellido2] => Noguera
+    [id_rol] => 1
+    [usuario] => Serch
+    [clave] => $2y$10$clPT91r7w56Msjhce5pj7Oco7QJq0oFDjKnJKxeH3PC0SpDgQYXAO
+    [correo] => sechaparron@unal.edu.co
+    [telefono] => 313270352
+    [id_estado] => 1
+)
+
+[14-Jun-2024 15:45:27 Europe/Berlin] Clave ingresada: Q1B6&IhufvbE
+[14-Jun-2024 15:45:27 Europe/Berlin] Clave en BD: $2y$10$clPT91r7w56Msjhce5pj7Oco7QJq0oFDjKnJKxeH3PC0SpDgQYXAO
+[14-Jun-2024 15:45:27 Europe/Berlin] Resultado de password_verify: false
+[14-Jun-2024 15:45:27 Europe/Berlin] Estado del usuario: 1
+[14-Jun-2024 15:45:27 Europe/Berlin] Comparación de estado: true
+[14-Jun-2024 15:45:27 Europe/Berlin] Hashed password: $2y$10$lZHbXH6SPI/VC3noyk5Og.nyHclh02dvJW6lG8W9KWLdietBybIlG
+
+[14-Jun-2024 15:45:27 Europe/Berlin] Stored password: $2y$10$clPT91r7w56Msjhce5pj7Oco7QJq0oFDjKnJKxeH3PC0SpDgQYXAO
+
+[14-Jun-2024 15:45:27 Europe/Berlin] Passwords match: false
+
+[14-Jun-2024 15:45:27 Europe/Berlin] Credenciales incorrectas para el usuario: serch
+[14-Jun-2024 15:46:54 Europe/Berlin] Iniciando loginUser
+[14-Jun-2024 15:46:54 Europe/Berlin] Usuario consultado: Array
+(
+    [id_tdoc] => 1
+    [id_usuario] => 79711386
+    [nombre1] => Luis
+    [nombre2] => Carlos
+    [apellido1] => Villabona
+    [apellido2] => Parra
+    [id_rol] => 1
+    [usuario] => lcvillabonap
+    [clave] => $2y$10$ZlHf21YyFal0gWWFHQulU.sxHFdGPuF7/usNCYUmk3GpA9LeZXYEy
+    [correo] => lcvillabonap@hotmail.com
+    [telefono] => 3227446
+    [id_estado] => 1
+)
+
+[14-Jun-2024 15:46:54 Europe/Berlin] Clave ingresada: prueba
+[14-Jun-2024 15:46:54 Europe/Berlin] Clave en BD: $2y$10$ZlHf21YyFal0gWWFHQulU.sxHFdGPuF7/usNCYUmk3GpA9LeZXYEy
+[14-Jun-2024 15:46:54 Europe/Berlin] Resultado de password_verify: true
+[14-Jun-2024 15:46:54 Europe/Berlin] Estado del usuario: 1
+[14-Jun-2024 15:46:54 Europe/Berlin] Comparación de estado: true
+[14-Jun-2024 15:46:54 Europe/Berlin] Hashed password: $2y$10$fS1/hqCwtHWJQ0msMMOcX.FwAQMLD.H3ytZ8U/pnGFTZewJvLMu9K
+
+[14-Jun-2024 15:46:54 Europe/Berlin] Stored password: $2y$10$ZlHf21YyFal0gWWFHQulU.sxHFdGPuF7/usNCYUmk3GpA9LeZXYEy
+
+[14-Jun-2024 15:46:54 Europe/Berlin] Passwords match: false
+
+[14-Jun-2024 15:46:54 Europe/Berlin] Inicio de sesión exitoso para el usuario: lcvillabonap
+[15-Jun-2024 18:33:57 Europe/Berlin] Iniciando loginUser
+[15-Jun-2024 18:33:57 Europe/Berlin] Usuario consultado: Array
+(
+    [id_tdoc] => 1
+    [id_usuario] => 1031642393
+    [nombre1] => Sergio
+    [nombre2] => Esteban
+    [apellido1] => Chaparro
+    [apellido2] => Noguera
+    [id_rol] => 1
+    [usuario] => Serch
+    [clave] => $2y$10$q6Yk1OpwYU6GmBb0bdOnZe/jhJfk5o0tZ/iotTJAoLGTOholXc3o.
+    [correo] => sechaparron@unal.edu.co
+    [telefono] => 313270352
+    [id_estado] => 1
+)
+
+[15-Jun-2024 18:33:57 Europe/Berlin] Clave ingresada: Q1B6&IhufvbE
+[15-Jun-2024 18:33:57 Europe/Berlin] Clave en BD: $2y$10$q6Yk1OpwYU6GmBb0bdOnZe/jhJfk5o0tZ/iotTJAoLGTOholXc3o.
+[15-Jun-2024 18:33:57 Europe/Berlin] Resultado de password_verify: false
+[15-Jun-2024 18:33:57 Europe/Berlin] Estado del usuario: 1
+[15-Jun-2024 18:33:57 Europe/Berlin] Comparación de estado: true
+[15-Jun-2024 18:33:57 Europe/Berlin] Hashed password: $2y$10$Veh08lko55Lnaw4M.erQOOO9i8CiThSE1MUDNzbKnQ5M.yt6fJc/6
+
+[15-Jun-2024 18:33:57 Europe/Berlin] Stored password: $2y$10$q6Yk1OpwYU6GmBb0bdOnZe/jhJfk5o0tZ/iotTJAoLGTOholXc3o.
+
+[15-Jun-2024 18:33:57 Europe/Berlin] Passwords match: false
+
+[15-Jun-2024 18:33:58 Europe/Berlin] Credenciales incorrectas para el usuario: serch
+[17-Jun-2024 21:05:52 Europe/Berlin] Iniciando loginUser
+[17-Jun-2024 21:05:52 Europe/Berlin] Usuario consultado: Array
+(
+    [id_tdoc] => 1
+    [id_usuario] => 1031642393
+    [nombre1] => Sergio
+    [nombre2] => Esteban
+    [apellido1] => Chaparro
+    [apellido2] => Noguera
+    [id_rol] => 1
+    [usuario] => Serch
+    [clave] => $2y$10$q6Yk1OpwYU6GmBb0bdOnZe/jhJfk5o0tZ/iotTJAoLGTOholXc3o.
+    [correo] => sechaparron@unal.edu.co
+    [telefono] => 313270352
+    [id_estado] => 1
+)
+
+[17-Jun-2024 21:05:52 Europe/Berlin] Clave ingresada: Q1B6&IhufvbE
+[17-Jun-2024 21:05:52 Europe/Berlin] Clave en BD: $2y$10$q6Yk1OpwYU6GmBb0bdOnZe/jhJfk5o0tZ/iotTJAoLGTOholXc3o.
+[17-Jun-2024 21:05:52 Europe/Berlin] Resultado de password_verify: false
+[17-Jun-2024 21:05:52 Europe/Berlin] Estado del usuario: 1
+[17-Jun-2024 21:05:52 Europe/Berlin] Comparación de estado: true
+[17-Jun-2024 21:05:52 Europe/Berlin] Hashed password: $2y$10$t8vO4nBxAh.64JIyo6waLOmyYrNWdtMeRTgtUcHOsxXr7iHnMtRFy
+
+[17-Jun-2024 21:05:52 Europe/Berlin] Stored password: $2y$10$q6Yk1OpwYU6GmBb0bdOnZe/jhJfk5o0tZ/iotTJAoLGTOholXc3o.
+
+[17-Jun-2024 21:05:52 Europe/Berlin] Passwords match: false
+
+[17-Jun-2024 21:05:52 Europe/Berlin] Credenciales incorrectas para el usuario: serch
+[17-Jun-2024 21:08:10 Europe/Berlin] Iniciando loginUser
+[17-Jun-2024 21:08:10 Europe/Berlin] Usuario consultado: Array
+(
+    [id_tdoc] => 1
+    [id_usuario] => 79711386
+    [nombre1] => Luis
+    [nombre2] => Carlos
+    [apellido1] => Villabona
+    [apellido2] => Parra
+    [id_rol] => 1
+    [usuario] => lcvillabonap
+    [clave] => $2y$10$ZlHf21YyFal0gWWFHQulU.sxHFdGPuF7/usNCYUmk3GpA9LeZXYEy
+    [correo] => lcvillabonap@hotmail.com
+    [telefono] => 3227446
+    [id_estado] => 1
+)
+
+[17-Jun-2024 21:08:10 Europe/Berlin] Clave ingresada: prueba
+[17-Jun-2024 21:08:10 Europe/Berlin] Clave en BD: $2y$10$ZlHf21YyFal0gWWFHQulU.sxHFdGPuF7/usNCYUmk3GpA9LeZXYEy
+[17-Jun-2024 21:08:10 Europe/Berlin] Resultado de password_verify: true
+[17-Jun-2024 21:08:10 Europe/Berlin] Estado del usuario: 1
+[17-Jun-2024 21:08:10 Europe/Berlin] Comparación de estado: true
+[17-Jun-2024 21:08:10 Europe/Berlin] Hashed password: $2y$10$ZQPEIiU4mkHZ6v0rIp5H6.kle2XmdNk4N8VLicc2B22QOSuMqh/wC
+
+[17-Jun-2024 21:08:10 Europe/Berlin] Stored password: $2y$10$ZlHf21YyFal0gWWFHQulU.sxHFdGPuF7/usNCYUmk3GpA9LeZXYEy
+
+[17-Jun-2024 21:08:10 Europe/Berlin] Passwords match: false
+
+[17-Jun-2024 21:08:10 Europe/Berlin] Inicio de sesión exitoso para el usuario: lcvillabonap
+[18-Jun-2024 21:23:12 Europe/Berlin] Iniciando loginUser
+[18-Jun-2024 21:23:12 Europe/Berlin] Usuario consultado: Array
+(
+    [id_tdoc] => 1
+    [id_usuario] => 79711386
+    [nombre1] => Luis
+    [nombre2] => Carlos
+    [apellido1] => Villabona
+    [apellido2] => Parra
+    [id_rol] => 1
+    [usuario] => lcvillabonap
+    [clave] => $2y$10$ZlHf21YyFal0gWWFHQulU.sxHFdGPuF7/usNCYUmk3GpA9LeZXYEy
+    [correo] => lcvillabonap@hotmail.com
+    [telefono] => 3227446
+    [id_estado] => 1
+)
+
+[18-Jun-2024 21:23:12 Europe/Berlin] Clave ingresada: prueba
+[18-Jun-2024 21:23:12 Europe/Berlin] Clave en BD: $2y$10$ZlHf21YyFal0gWWFHQulU.sxHFdGPuF7/usNCYUmk3GpA9LeZXYEy
+[18-Jun-2024 21:23:12 Europe/Berlin] Resultado de password_verify: true
+[18-Jun-2024 21:23:12 Europe/Berlin] Estado del usuario: 1
+[18-Jun-2024 21:23:12 Europe/Berlin] Comparación de estado: true
+[18-Jun-2024 21:23:12 Europe/Berlin] Hashed password: $2y$10$7uVF.4DXuoguYz.ArzalAeKEwp88NsBD8qSqovkmytAF8wftbwXUe
+
+[18-Jun-2024 21:23:12 Europe/Berlin] Stored password: $2y$10$ZlHf21YyFal0gWWFHQulU.sxHFdGPuF7/usNCYUmk3GpA9LeZXYEy
+
+[18-Jun-2024 21:23:12 Europe/Berlin] Passwords match: false
+
+[18-Jun-2024 21:23:12 Europe/Berlin] Inicio de sesión exitoso para el usuario: lcvillabonap
