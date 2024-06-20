@@ -1,9 +1,6 @@
 <?php 
-
-   require '../../controllers/security.php';
-
+require '../../controllers/security.php';
 ?>
-
 
 <!DOCTYPE html>
 <html lang="es">
@@ -16,14 +13,15 @@
 <body>
 
     <?php 
-    
         include("../components/navbar.php");
 
         if (isset($_POST['folder']) && isset($_POST['user_id'])) {
             $id_user = $_POST['user_id'];
             $folder = $_POST['folder'];
+        } else {
+            echo "<script>alert('Faltan datos requeridos.');</script>";
+            exit();
         }
-    
     ?>
     
     <main class="min-main">
@@ -32,7 +30,7 @@
                 Carpetas de vinculación y hoja de vida generadas exitosamente
             </h1>
             <div class="download_options">
-                <button class="download" data-folder-path="<?php echo $folder; ?>">
+                <button class="download" data-folder-path="<?php echo htmlspecialchars($folder); ?>">
                     Descargar Carpetas
                 </button>
                 <button class="send_mail">
@@ -50,7 +48,6 @@
         </section>
     </main>
 
-    
     <script type="module" src="../../../public/js/AJAX/requestDownloadFiles.js"></script>
     <script src="../../../public/js/navbar.js"></script>
 </body>

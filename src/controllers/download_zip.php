@@ -1,11 +1,18 @@
 <?php
 function zipDirectory($source, $destination) {
-    if (!extension_loaded('zip') || !file_exists($source)) {
+    if (!extension_loaded('zip')) {
+        error_log('La extensión zip no está habilitada.');
+        return false;
+    }
+
+    if (!file_exists($source)) {
+        error_log("El directorio fuente no existe: $source");
         return false;
     }
 
     $zip = new ZipArchive();
-    if (!$zip->open($destination, ZIPARCHIVE::CREATE)) {
+    if (!$zip->open($destination, ZipArchive::CREATE)) {
+        error_log("No se pudo crear el archivo ZIP en la ubicación: $destination");
         return false;
     }
 
@@ -17,9 +24,9 @@ function zipDirectory($source, $destination) {
         foreach ($files as $file) {
             $file = str_replace('\\', '/', $file);
 
-            // Ignore "." and ".." folders
-            if (in_array(substr($file, strrpos($file, '/') + 1), array('.', '..')))
+            if (in_array(substr($file, strrpos($file, '/') + 1), array('.', '..'))) {
                 continue;
+            }
 
             $file = realpath($file);
 
@@ -38,18 +45,17 @@ function zipDirectory($source, $destination) {
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $data = json_decode(file_get_contents('php://input'), true);
-    $source = $data['folderPath']; // Ruta de la carpeta obtenida desde la solicitud
-    $destination = $source . '.zip'; // La ruta y nombre del archivo ZIP que se creará
+    $source = "../../docs/docentes_ocasionales/" . $data['folderPath'] . "/vinculacion";
+    $destination = "/" . $source . '.zip';
 
-    // Agregar alerta para verificar la ruta de la carpeta
-    echo "<script>alert('Ruta de carpeta: $source');</script>";
+    // Depuración
+    error_log("Intentando crear un ZIP desde: $source hacia: $destination");
 
     if (zipDirectory($source, $destination)) {
+
         echo json_encode(['success' => true, 'file' => $destination]);
     } else {
-        // Agregar alerta para identificar posibles errores
-        echo "<script>alert('Error al crear el archivo ZIP.');</script>";
-        echo json_encode(['success' => false, 'message' => 'Error al crear el archivo ZIP.']);
+        error_log('Error al crear el archivo ZIP.');
+        echo json_encode(['success' => false, 'message' => 'Error al crear el archivo ZIP. ' . $source . $destination]);
     }
 }
-

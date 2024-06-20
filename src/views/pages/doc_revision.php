@@ -39,12 +39,12 @@ include ("../../../config/db_connection.php");
 
                                 $user_folder = $user_cons['nombre1'] . $user_cons['apellido1'] . "_" . $user_cons['id_usuario'];
 
-                                $user_folder = '../../../docs/docentes_ocasionales/' . $user_folder;
+                                $final_folder = '../../../docs/docentes_ocasionales/' . $user_folder;
 
                                 // Obtener archivos en la carpeta "Vinculación"
-                                $files_vinculacion = glob($user_folder . "/Vinculacion/*");
+                                $files_vinculacion = glob($final_folder . "/Vinculacion/*");
                                 // Obtener archivos en la carpeta "Hoja de Vida"
-                                $files_hoja_de_vida = glob($user_folder . "/Hoja de Vida/*");
+                                $files_hoja_de_vida = glob($final_folder . "/Hoja de Vida/*");
 
                                 // Combinar los archivos de ambas carpetas en una sola lista
                                 $files = array_merge($files_vinculacion, $files_hoja_de_vida);
