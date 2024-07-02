@@ -29,9 +29,6 @@ document.addEventListener('DOMContentLoaded', function () {
                             icon: 'success',
                             title: 'Descarga completada',
                             text: 'El archivo se descargará en breve.',
-                            didClose: () => {
-                                window.location.href = data.file;
-                            }
                         });
                     } else {
                         Swal.fire({

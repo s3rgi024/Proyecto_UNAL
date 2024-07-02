@@ -44,6 +44,9 @@
                         <div>
                             <label for="t_doc_register">Tipo de documento *</label>
                             <select class="t_doc_register" name="t_doc_register" id="t_doc_register" required>
+                            
+                                <option value="" selected></option>
+                            
                             <?php
                                 
                             $tdoc_query = "SELECT * FROM tipo_documento";
