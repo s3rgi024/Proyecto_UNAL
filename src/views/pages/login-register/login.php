@@ -25,9 +25,15 @@
                     <div>
                         <input type="password" name="password" id="password">
                         <div class="underline"></div>
+
+                        <label class="show-hide_password">
+                            <input type="checkbox">
+                            <i class="fa-solid fa-eye" id="showPassword"></i>
+                            <i class="fa-solid fa-eye-slash" id="hidePassword"></i>
+                        </label>
                     </div>
                 </div>
-                <br>
+                
                 <div class="login__form-forget-password-link">
                     <div>
                         <a id="register_link">Olvidé mi contraseña</a>
@@ -44,9 +50,9 @@
             <span class="professor_link">
                     ¿Eres docente y no tienes una cuenta?
                     <br>
-                    Regístrate
+                    
                 <span>
-                    <a id="professor_link">aquí</a>
+                    <a id="professor_link">Regístrate aquí</a>
                 </span>
             </span>
         </div>

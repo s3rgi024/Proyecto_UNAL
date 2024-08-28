@@ -41,7 +41,7 @@ function recoverPass(){
         }
 
         if (sendEmail($email, $name, $newPass)) {
-            echo json_encode(['status' => 'success', 'message' => 'Correo enviado correctamente']);
+            echo json_encode(['status' => 'success', 'message' => $email]);
         } else {
             echo json_encode(['status' => 'error', 'message' => 'Error al enviar el correo']);
         }

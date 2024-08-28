@@ -1,6 +1,7 @@
 <?php 
-    require '../../controllers/security.php';
+    require '../../../controllers/security.php';
 
+    $dni = $_SESSION['id_usuario'];
     $nombre = $_SESSION['nombre'];
     $apellido = $_SESSION['apellido'];
     $rol = $_SESSION['rol'];
@@ -11,7 +12,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <link rel="stylesheet" href="../../../public/css/modules/navbar.css">
+    <link rel="stylesheet" href="../../../../public/css/modules/navbar.css">
 
 </head>
 <body>
@@ -90,7 +91,7 @@
             <div class="linea"></div>
     
             <div class="usuario">
-                <img src="../../../public/img/escudo_unal.webp" alt="Escudo Universidad Nacional de Colombia">
+                <img src="../../../../public/img/escudo_unal.webp" alt="Escudo Universidad Nacional de Colombia">
                 <div class="info-usuario">
                     <div class="nombre-email">
                         <span class="nombre oculto"><?php echo $nombre . " " . $apellido; ?></span>

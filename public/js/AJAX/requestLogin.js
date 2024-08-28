@@ -20,7 +20,7 @@ async function loginRequest(event) {
             if (response.ok) {
                 let result = await response.json();
                 if (result.status === 'success') {
-                    window.location.href = './src/views/pages/main.php';
+                    window.location.href = './src/views/pages/main_menu/main.php';
                 } else {
                     Swal.fire({
                         title: "Error",

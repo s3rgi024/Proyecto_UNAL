@@ -1,3 +1,5 @@
+//*===Forms animations===*/
+
 import "./form_docs.js";
 
 let register_link = document.getElementById('register_link');
@@ -45,7 +47,7 @@ register_professor_link.addEventListener( 'click', function(){
   
 
   setTimeout(() => {
-    container__login.style.height = "100vh";
+    container__login.style.height = "120vh";
     register_professor_form.classList.add("enter_form_professor_animation");
     register_professor_form.style.display = "block";
     login_form.style.display="none";
@@ -82,3 +84,4 @@ btn_back.addEventListener( 'click', function(){
 
   }, 1000);
 });
+

@@ -1,3 +1,5 @@
+@import "../../../../node_modules/@fortawesome/fontawesome-free/css/all.css";
+
 .login__form{
     width: 350px;
     height: auto;
@@ -87,6 +89,56 @@
                         transform: scaleX(1);
                     }
 
+                    & .show-hide_password{
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        position: absolute;
+                        cursor: pointer;
+                        user-select: none;
+                        right: 5%;
+                        top: 40%;
+                        transform: translateY(-50%);
+                        -webkit-transform: translateY(-50%);
+                        -moz-transform: translateY(-50%);
+                        -ms-transform: translateY(-50%);
+                        -o-transform: translateY(-50%);
+
+                        & i{
+                            font-size: 17px;
+                            color: #3a393996;
+                        }
+
+                        & .fa-eye {
+                            position: absolute;
+                            display: block;
+                            animation: keyframes-fill .5s;
+                            -webkit-animation: keyframes-fill .5s;
+                        }
+
+                        & .fa-eye-slash {
+                            position: absolute;
+                            animation: keyframes-fill .5s;
+                            display: none;
+                            -webkit-animation: keyframes-fill .5s;
+                        }
+                        
+                        & input:checked ~ .fa-eye {
+                            display: none;
+                          }
+
+                        & input:checked ~ .fa-eye-slash {
+                            display: block;
+                          }
+                        
+                        & input {
+                            position: absolute;
+                            opacity: 0;
+                            cursor: pointer;
+                            height: 0;
+                            width: 0;
+                          }
+                    }
                 } 
             }
         
@@ -157,12 +209,14 @@
                 font-weight: bold;
                 cursor: pointer;
                 margin-bottom: 15px;
-                transition: background ease-out 200ms;
-                -webkit-transition: background ease-out 200ms;
-                -moz-transition: background ease-out 200ms;
-                -ms-transition: background ease-out 200ms;
-                -o-transition: background ease-out 200ms;
+                transition: 200ms;
+                -webkit-transition: 200ms;
+                -moz-transition: 200ms;
+                -ms-transition: 200ms;
+                -o-transition: 200ms;
+                
                 &:hover{
+                    box-shadow: 0 0 0 3px #daa04a5e;
                     background-color: #d1a664;
                 }
             }
@@ -185,14 +239,14 @@
                     -o-transition:0.2s;
 
                     &:hover{
-                        color: #8685EF;
+                        color: #d1a664;
                         font-weight: bold;
                     }
 
                     &:after{
                         content: "";
                         position: absolute;
-                        background-color: #8685EF;
+                        background-color: #d1a664;
                         height: 1px;
                         width: 0;
                         left: 0;
@@ -214,3 +268,15 @@
             
     }
 }
+
+/*==Show passwprd animation==*/
+@keyframes keyframes-fill {
+    0% {
+      transform: scale(0);
+      opacity: 0;
+    }
+  
+    50% {
+      transform: scale(1.2);
+    }
+  }
