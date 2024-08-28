@@ -25,6 +25,7 @@
                 <h2>Bienvenido <?php echo $nombre; ?> </h2>
                 <p>Rol: <?php echo $rol; ?></p>
             </div>
+
             <div class="user_settings_section">
                 <div class="datetime">
                     <p>28 de abril de 2024</p>
@@ -39,6 +40,7 @@
                     <i class="fa-solid fa-gear"></i>
                 </button>
             </div>
+            
             <div class="management_section">
                 <h3>
                     <i class="fa-solid fa-house-chimney"></i> Menú principal

@@ -16,8 +16,8 @@ body {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         grid-template-rows: 0.25fr repeat(2, 1fr);
-        grid-column-gap: 15px;
-        grid-row-gap: 15px;
+        grid-column-gap: 10px;
+        grid-row-gap: 10px;
 
         & div:not(.user_section, .user_settings_section){
             border-radius: 10px;
@@ -103,10 +103,11 @@ body {
             & .options{
                 display: flex;
                 align-items: center;
-                width: 100%;
+                width: auto;
+                box-shadow: none;
                 height: 100%;
                 gap: 15px;
-                padding-left: 15px;
+                margin: 15px;
 
                 & div{
                     width: 220px;
