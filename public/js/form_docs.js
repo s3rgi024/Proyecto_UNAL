@@ -1,3 +1,6 @@
+import { registerRequest } from "./AJAX/requestRegister.js";
+
+
 const nextButton = document.querySelector('.btn-next');
 const prevButton = document.querySelector('.btn-prev');
 const submitButton = document.querySelector('.btn-submit');
@@ -151,9 +154,9 @@ prevButton.addEventListener('click', () => {
     updateProgress();
 });
 
-submitButton.addEventListener('click', () => {
+submitButton.addEventListener('click', (event) => {
     if (validateCurrentStep()) {
-        document.getElementById('register_professor').submit();
+        registerRequest(event)
     }
 });
 

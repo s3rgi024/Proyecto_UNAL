@@ -1,0 +1,95 @@
+body{
+    overflow-y: hidden;
+}
+
+.users__main_menu_container{
+
+
+    .main_content{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 100vh;
+
+        .users_menu__background{
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -2;
+            width: 80%;
+        }
+
+        .users_menu__text{
+            width: 30%;
+            margin: 30px;
+            color: #fff;
+
+            & h1{
+                font-size: 2rem;
+            }
+        }
+
+        .users_menu__buttons{
+        }
+    }
+    
+    .footer_logo{
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        margin-right: 20px;
+        width: 150px;
+        z-index: 20;
+    }
+}
+
+.waves {
+    position:relative;
+    width: 100%;
+    height:100vh;
+}
+  
+  /* Animation */
+  
+  .parallax > use {
+    animation: move-forever 25s cubic-bezier(.55,.5,.45,.5) infinite;
+    -webkit-animation: move-forever 25s cubic-bezier(.55,.5,.45,.5) infinite;
+}
+  .parallax > use:nth-child(1) {
+    animation-delay: -4.5s;
+    animation-duration: 16s;
+  }
+  .parallax > use:nth-child(2) {
+    animation-delay: -4.7s;
+    animation-duration: 18s;
+  }
+  .parallax > use:nth-child(3) {
+    animation-delay: -4.9s;
+    animation-duration: 20s;
+  }
+  .parallax > use:nth-child(4) {
+    animation-delay: -5s;
+    animation-duration: 23s;
+  }
+
+@keyframes move-forever {
+    0% {
+     transform: translate3d(-90px,0,0);
+    }
+    100% { 
+      transform: translate3d(85px,0,0);
+    }
+  }
+  /*Shrinking for mobile*/
+  @media (max-width: 768px) {
+    .waves {
+      height:40px;
+      min-height:40px;
+    }
+    .content {
+      height:30vh;
+    }
+    h1 {
+      font-size:24px;
+    }
+  }

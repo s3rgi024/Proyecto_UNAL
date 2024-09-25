@@ -1,5 +1,6 @@
 <?php 
     require '../../../controllers/security.php';
+    require '../../../../config/db_connection.php';
 
     $dni = $_SESSION['id_usuario'];
     $nombre = $_SESSION['nombre'];
@@ -38,15 +39,9 @@
         <nav class="navegacion">
             <ul>
                 <li>
-                    <a id="inbox" href="../pages/main.php">
+                    <a id="inbox" href="/src/views/pages/main_menu/main.php">
                         <i class="fa-solid fa-house-chimney"></i>
                         <span class="oculto">Inicio</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <i class="fa-solid fa-school"></i>
-                        <span class="oculto">Salones</span>
                     </a>
                 </li>
                 <li>
@@ -62,7 +57,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="../../../src/views/pages/usuarios.php">
+                    <a href="/src/views/pages/users/usuarios.php">
                         <i class="fa-solid fa-users"></i>                        
                         <span class="oculto">Usuarios</span>
                     </a>
@@ -82,7 +77,7 @@
             </ul>
         </nav>
 
-        <a class="logout" href="../../../index.php">
+        <a class="logout" href="../../../../index.php">
             <i class="fa-solid fa-arrow-right-from-bracket"></i>
             <span class="oculto">Cerrar Sesión</span>
         </a>

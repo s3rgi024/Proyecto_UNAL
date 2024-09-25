@@ -6,7 +6,7 @@ if (session_status() == PHP_SESSION_NONE) {
 }
 
 if (!isset($_SESSION['activo']) || $_SESSION['activo'] !== true) {
-    header("Location: ../../../index.php");
+    header("Location: /index.php");
     exit();
 }
 

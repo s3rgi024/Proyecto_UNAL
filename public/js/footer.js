@@ -6,9 +6,15 @@ aboutOptions.forEach(function(element) {
     let us = document.getElementById('about__content_us');
     let devs = document.getElementById('about__content_devs');
 
-    console.log(this.textContent);
+    let usOption = document.getElementById("us");
+    let devsOption = document.getElementById("devs")
 
-    if (this.textContent === "Desarrolladores") {
+    console.log(this);
+
+    if (this.id === "devs") {
+        this.classList.add("selected");
+        usOption.classList.remove("selected");
+
         us.style.opacity = 0;
         devs.style.opacity = 1;
         setTimeout(() => {
@@ -16,7 +22,10 @@ aboutOptions.forEach(function(element) {
           devs.style.display = "block";
         }, 300);
 
-    } else if(this.textContent === "Nosotros"){
+    } else if(this.id === "us"){
+        this.classList.add("selected");
+        devsOption.classList.remove("selected")
+
         us.style.opacity = 1;
         devs.style.opacity = 0;
         setTimeout(() => {
@@ -26,7 +35,7 @@ aboutOptions.forEach(function(element) {
         }, 300);
 
     } else {
-        content.textContent = "Ha ocurrido un error";
+        us.textContent = "Ha ocurrido un error";
     }
   });
 });

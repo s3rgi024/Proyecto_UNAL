@@ -26,7 +26,7 @@
                 </ul>
             </div>
             
-            <form action="" method="POST" enctype="multipart/form-data" id="register_professor">
+            <form method="POST" enctype="multipart/form-data" id="register_professor">
 
                 <div class="form-one form-step active">
 
@@ -640,6 +640,8 @@
                                     <span>Subir Archivo</span>
                                 </label>
                             </div>
+
+                            <span class="error-message" id="afiliUltiEPS_error"></span>
                         </div>
                         <div class="ultima_eps">
                             <label>Certificado Afilicación Fondo de Pensiones * <span>(Debe estar activo)</span></label>

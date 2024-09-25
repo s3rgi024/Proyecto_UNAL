@@ -1,12 +1,13 @@
 <?php 
 
-error_reporting(E_ALL);
-ini_set('display_errors', 1);
+//error_reporting(E_ALL);
+//ini_set('display_errors', 1);
+//ini_set('error_log', '../../logs/error.log');
 
 function saveFilesProfessor($professorName, $doc, $files) {
     include ("../../config/db_connection.php");
 
-    $generalRoute = "../../docs/docentes_ocasionales/" . $professorName . "_" . $doc;
+    $generalRoute = "./docs/docentes_ocasionales/" . $professorName . "_" . $doc;
     $routeHojaVida = $generalRoute . "/Hoja de Vida";
     $routeVinculacion = $generalRoute . "/Vinculacion";
 
@@ -24,7 +25,7 @@ function saveFilesProfessor($professorName, $doc, $files) {
     $dataFiles = "VALUES ('$doc'";
 
     foreach ($files as $key => $file) {
-        if (!is_array($file) || !isset($file['tmp_name'])) {
+        if (!is_array($file) || !isset($file['tmp_name']) || empty($file['tmp_name'])) {
             continue;
         }
 
@@ -41,8 +42,9 @@ function saveFilesProfessor($professorName, $doc, $files) {
         }
     }
 
-    $fieldsFiles = $fieldsFiles . ", fk_id_estado_documentacion, observaciones_estado)";
-    $dataFiles = $dataFiles . ", 1, 'Primer Registro')";
+    $date_update = date('Y-m-d H:i:s');
+    $fieldsFiles = $fieldsFiles . ", fk_id_estado_documentacion, observaciones_estado, ultima_actualizacion)";
+    $dataFiles = $dataFiles . ", 2, 'Primer Registro', '$date_update')";
 
     $sql_insert = $fieldsFiles . $dataFiles;
 
@@ -58,9 +60,11 @@ $lName2, $email, $nPhone, $userName, $password){
 
     $password = password_hash($password, PASSWORD_BCRYPT);
 
+    $date_entry = date('Y-m-d H:i:s');
+
     $sql = "INSERT INTO usuarios (id_tdoc, id_usuario, nombre1, nombre2, apellido1, 
-    apellido2, correo, telefono, id_rol, usuario, clave, id_estado) 
-    VALUES ('$tdoc', '$doc', '$name1', '$name2', '$lName1', '$lName2', '$email', '$nPhone', 1, '$userName', '$password', 2)";
+    apellido2, correo, telefono, id_rol, usuario, clave, fecha_ingreso, id_estado) 
+    VALUES ('$tdoc', '$doc', '$name1', '$name2', '$lName1', '$lName2', '$email', '$nPhone', 1, '$userName', '$password', '$date_entry', 3)";
 
     mysqli_query($db_connection, $sql);
 }
@@ -69,7 +73,7 @@ function execute_register_professor($tdoc, $doc, $name1, $name2, $lName1,
 $lName2, $email, $nPhone, $userName, $password,
 
 $hoja_vida_func_pub, $decl_jur_ley, $ver_inh_del_sex, $notif_corr_elec,
-$com_ins_vinc, $aut_trat_dat_per, $visa_ext, $fotoc_libr_mil, $tarjeta_prof, $matri_prof, $aval_sst,
+$com_ins_vinc, $aut_trat_dat_per, $visa_ext, $fotoc_libr_mil, $tarjeta_prof, $matri_prof, $aval_sst, $certPosgrado,
 $cert_segun_leng, $experien_lab, $antec_disc_procu, $antec_fisc_contral, $antec_judic_pol_nal, $form_afil_seg_social,
 $form_afil_eps, $form_afil_pension, $cert_cuen_bancaria, $cert_afil_ult_eps, $certi_afil_fond_pensiones,
 $cedula_ciu_ext, $decla_pen_sol_pens_tram, $asig_dia_hor, $reso_nombramiento){
@@ -86,6 +90,7 @@ $cedula_ciu_ext, $decla_pen_sol_pens_tram, $asig_dia_hor, $reso_nombramiento){
         "1_TarjetaProfesional" => $tarjeta_prof,
         "1_MatriculaProfesional" => $matri_prof,
         "1_AvalSST" => $aval_sst,
+        "1_certificadoCursandoPosgrado" => $certPosgrado,
         "1_CertificadoSegundaLengua" => $cert_segun_leng,
         "1_ExperienciaLaboral" => $experien_lab,
         "1_AntecedentesDisciplinariosProcuraduria" => $antec_disc_procu,
@@ -103,16 +108,16 @@ $cedula_ciu_ext, $decla_pen_sol_pens_tram, $asig_dia_hor, $reso_nombramiento){
         "2_AsignaturasDiasHorarios" => $asig_dia_hor,
         "2_ResolucionNombramiento" => $reso_nombramiento
     );
-
     
-    foreach ($files as $fieldName => $file) {
-        if (!is_array($file) || !isset($file['tmp_name'])) {
+    foreach ($files as $key => $file) {
+        if (!is_array($file) || !isset($file['tmp_name']) || empty($file['tmp_name'])) {
             continue;
         }
         
         $fileType = mime_content_type($file['tmp_name']);
+
         if ($fileType !== 'application/pdf') {
-            echo json_encode(['status' => 'error', 'message' => "Error: Todos los archivos deben ser PDFs. El archivo {$file['name']} ubicado en el campo '$fieldName' no es un PDF."]);
+            echo json_encode(['status' => 'error', 'message' => "Error: Todos los archivos deben ser PDFs. El archivo {$file['name']} ubicado en el campo '$key' no es un PDF."]);
             return;
         }
     }
@@ -135,6 +140,6 @@ $_FILES["hvFuncionPublica"], $_FILES["decJuramentada"], $_FILES["inhabDelito"], 
 $_FILES["compIntitucional"], $_FILES["autoriDatos"], $_FILES["visaExtranjeria"], $_FILES["libMilitar"], $_FILES["tarjeProfesional"],
 $_FILES["matriProfesional"], $_FILES["reportMedicoSST"],
 
-$_FILES["certSegLengua"], $_FILES["expLaboral"], $_FILES["antDisciplinarios"], $_FILES["antFiscales"], $_FILES["antJudiciales"],
+$_FILES["certPosgrado"], $_FILES["certSegLengua"], $_FILES["expLaboral"], $_FILES["antDisciplinarios"], $_FILES["antFiscales"], $_FILES["antJudiciales"],
 $_FILES["afiliSeguridad"], $_FILES["afiliEPS"], $_FILES["afiliPension"], $_FILES["cueBancaria"], $_FILES["afiliUltiEPS"],
 $_FILES["afiliUltiPension"], $_FILES["cedulaCiudadania"], $_FILES["decPensionado"], $_FILES["asignaDiasHorarios"], $_FILES["resNombramiento"]);

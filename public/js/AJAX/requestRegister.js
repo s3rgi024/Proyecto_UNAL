@@ -1,6 +1,6 @@
 import Swal from '../../../node_modules/sweetalert2/src/sweetalert2.js';
 
-function registerRequest(event) {
+export function registerRequest(event) {
 
     event.preventDefault();
 
@@ -53,5 +53,3 @@ function registerRequest(event) {
     
     
 }
-
-document.getElementById('register_professor').addEventListener('submit', registerRequest);

@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.1
+-- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 13-06-2024 a las 23:15:30
--- Versión del servidor: 10.4.32-MariaDB
--- Versión de PHP: 8.2.12
+-- Tiempo de generación: 25-09-2024 a las 23:48:13
+-- Versión del servidor: 10.4.27-MariaDB
+-- Versión de PHP: 8.2.0
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -29,45 +29,46 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `archivo_doc_oca` (
   `fk_dni` int(10) NOT NULL,
-  `hoja_vida_func_pub` varchar(150) NOT NULL,
-  `decl_jur_ley` varchar(150) NOT NULL,
-  `ver_inh_del_sex` varchar(150) NOT NULL,
-  `notif_corr_elec` varchar(150) NOT NULL,
-  `com_ins_vinc` varchar(150) NOT NULL,
-  `aut_trat_dat_per` varchar(150) NOT NULL,
-  `visa_ext` varchar(150) NOT NULL,
-  `fotoc_libr_mil` varchar(150) NOT NULL,
-  `tarjeta_prof` varchar(150) NOT NULL,
-  `matri_prof` varchar(150) NOT NULL,
-  `aval_sst` varchar(150) NOT NULL,
-  `cert_segun_leng` varchar(150) NOT NULL,
-  `experien_lab` varchar(150) NOT NULL,
-  `antec_disc_procu` varchar(150) NOT NULL,
-  `antec_fisc_contral` varchar(150) NOT NULL,
-  `antec_judic_pol_nal` varchar(150) NOT NULL,
-  `form_afil_seg_social` varchar(150) NOT NULL,
-  `form_afil_eps` varchar(150) NOT NULL,
-  `form_afil_pension` varchar(150) NOT NULL,
-  `cert_cuen_bancaria` varchar(150) NOT NULL,
-  `cert_afil_ult_eps` varchar(150) NOT NULL,
-  `certi_afil_fond_pensiones` varchar(150) NOT NULL,
-  `cedula_ciu_ext` varchar(150) NOT NULL,
-  `decla_pen_sol_pens_tram` varchar(150) NOT NULL,
-  `asig_dia_hor` varchar(150) NOT NULL,
-  `reso_nombramiento` varchar(150) NOT NULL,
+  `HojaVidaFuncionPublica` varchar(150) NOT NULL,
+  `DeclaracionJuramentadaLey4de1992` varchar(150) NOT NULL,
+  `VerificacionInhabilidadDelitoSexual` varchar(150) NOT NULL,
+  `AutorizacionNotificacionCorreoElec` varchar(150) NOT NULL,
+  `CompromisoInstitucionalVinculacion` varchar(150) NOT NULL,
+  `AutorizacionTratamientoDatPer` varchar(150) NOT NULL,
+  `VisaExtranjeria` varchar(150) NOT NULL,
+  `FotocopiaLibretaMilitar` varchar(150) NOT NULL,
+  `TarjetaProfesional` varchar(150) NOT NULL,
+  `MatriculaProfesional` varchar(150) NOT NULL,
+  `AvalSST` varchar(150) NOT NULL,
+  `CertificadoSegundaLengua` varchar(150) NOT NULL,
+  `ExperienciaLaboral` varchar(150) NOT NULL,
+  `AntecedentesDisciplinariosProcuraduria` varchar(150) NOT NULL,
+  `AntecedenteFiscalContraloria` varchar(150) NOT NULL,
+  `AntecedenteJudicialPoliciaNal` varchar(150) NOT NULL,
+  `FormatoAfiliacionSeguridadSocial` varchar(150) NOT NULL,
+  `FormularioAfiliacionEps` varchar(150) NOT NULL,
+  `FormularioAfiliacionPension` varchar(150) NOT NULL,
+  `CertificadoCuentaBancaria` varchar(150) NOT NULL,
+  `CertificadoAfiliacionUltimaEPS` varchar(150) NOT NULL,
+  `CertificadoAfiliacionFondoPensiones` varchar(150) NOT NULL,
+  `CedulaCiudadania` varchar(150) NOT NULL,
+  `DeclaPensionadoSolPensionenTramite` varchar(150) NOT NULL,
+  `AsignaturasDiasHorarios` varchar(150) NOT NULL,
+  `ResolucionNombramiento` varchar(150) NOT NULL,
   `fk_id_estado_documentacion` int(3) NOT NULL,
-  `observaciones_estado` varchar(60) NOT NULL
+  `observaciones_estado` varchar(60) NOT NULL,
+  `ultima_actualizacion` datetime DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_spanish_ci;
 
 --
 -- Volcado de datos para la tabla `archivo_doc_oca`
 --
 
-INSERT INTO `archivo_doc_oca` (`fk_dni`, `hoja_vida_func_pub`, `decl_jur_ley`, `ver_inh_del_sex`, `notif_corr_elec`, `com_ins_vinc`, `aut_trat_dat_per`, `visa_ext`, `fotoc_libr_mil`, `tarjeta_prof`, `matri_prof`, `aval_sst`, `cert_segun_leng`, `experien_lab`, `antec_disc_procu`, `antec_fisc_contral`, `antec_judic_pol_nal`, `form_afil_seg_social`, `form_afil_eps`, `form_afil_pension`, `cert_cuen_bancaria`, `cert_afil_ult_eps`, `certi_afil_fond_pensiones`, `cedula_ciu_ext`, `decla_pen_sol_pens_tram`, `asig_dia_hor`, `reso_nombramiento`, `fk_id_estado_documentacion`, `observaciones_estado`) VALUES
-(12345678, '../../docs/docentes_ocasionales/serelsa_12345678/Hoja de Vida/hoja_vida_func_pub.pdf', '../../docs/docentes_ocasionales/serelsa_12345678/Hoja de Vida/decl_jur_ley.pdf', '../../docs/docentes_ocasionales/serelsa_12345678/Hoja de Vida/ver_inh_del_sex.pdf', '../../docs/docentes_ocasionales/serelsa_12345678/Hoja de Vida/notif_corr_elec.pdf', '../../docs/docentes_ocasionales/serelsa_12345678/Hoja de Vida/com_ins_vinc.pdf', '../../docs/docentes_ocasionales/serelsa_12345678/Hoja de Vida/aut_trat_dat_per.pdf', '../../docs/docentes_ocasionales/serelsa_12345678/Hoja de Vida/visa_ext.pdf', '../../docs/docentes_ocasionales/serelsa_12345678/Hoja de Vida/fotoc_libr_mil.pdf', '../../docs/docentes_ocasionales/serelsa_12345678/Hoja de Vida/tarjeta_prof.pdf', '../../docs/docentes_ocasionales/serelsa_12345678/Hoja de Vida/matri_prof.pdf', '../../docs/docentes_ocasionales/serelsa_12345678/Hoja de Vida/aval_sst.pdf', '../../docs/docentes_ocasionales/serelsa_12345678/Hoja de Vida/cert_segun_leng.pdf', '../../docs/docentes_ocasionales/serelsa_12345678/Hoja de Vida/experien_lab.pdf', '../../docs/docentes_ocasionales/serelsa_12345678/Hoja de Vida/antec_disc_procu.pdf', '../../docs/docentes_ocasionales/serelsa_12345678/Hoja de Vida/antec_fisc_contral.pdf', '../../docs/docentes_ocasionales/serelsa_12345678/Hoja de Vida/antec_judic_pol_nal.pdf', '../../docs/docentes_ocasionales/serelsa_12345678/Vinculacion/form_afil_seg_social.pdf', '../../docs/docentes_ocasionales/serelsa_12345678/Vinculacion/form_afil_eps.pdf', '../../docs/docentes_ocasionales/serelsa_12345678/Vinculacion/form_afil_pension.pdf', '../../docs/docentes_ocasionales/serelsa_12345678/Vinculacion/cert_cuen_bancaria.pdf', '../../docs/docentes_ocasionales/serelsa_12345678/Vinculacion/cert_afil_ult_eps.pdf', '../../docs/docentes_ocasionales/serelsa_12345678/Vinculacion/certi_afil_fond_pensiones.pdf', '../../docs/docentes_ocasionales/serelsa_12345678/Vinculacion/cedula_ciu_ext.pdf', '../../docs/docentes_ocasionales/serelsa_12345678/Vinculacion/decla_pen_sol_pens_tram.pdf', '../../docs/docentes_ocasionales/serelsa_12345678/Vinculacion/asig_dia_hor.pdf', '../../docs/docentes_ocasionales/serelsa_12345678/Vinculacion/reso_nombramiento.pdf', 1, 'Primer Registro'),
-(79711386, '../../docs/docentes_ocasionales/LuisVillabona_79711386/Hoja de Vida/hoja_vida_func_pub.pdf', '../../docs/docentes_ocasionales/LuisVillabona_79711386/Hoja de Vida/decl_jur_ley.pdf', '../../docs/docentes_ocasionales/LuisVillabona_79711386/Hoja de Vida/ver_inh_del_sex.pdf', '../../docs/docentes_ocasionales/LuisVillabona_79711386/Hoja de Vida/notif_corr_elec.pdf', '../../docs/docentes_ocasionales/LuisVillabona_79711386/Hoja de Vida/com_ins_vinc.pdf', '../../docs/docentes_ocasionales/LuisVillabona_79711386/Hoja de Vida/aut_trat_dat_per.pdf', '../../docs/docentes_ocasionales/LuisVillabona_79711386/Hoja de Vida/visa_ext.pdf', '../../docs/docentes_ocasionales/LuisVillabona_79711386/Hoja de Vida/fotoc_libr_mil.pdf', '../../docs/docentes_ocasionales/LuisVillabona_79711386/Hoja de Vida/tarjeta_prof.pdf', '../../docs/docentes_ocasionales/LuisVillabona_79711386/Hoja de Vida/matri_prof.pdf', '../../docs/docentes_ocasionales/LuisVillabona_79711386/Hoja de Vida/aval_sst.pdf', '../../docs/docentes_ocasionales/LuisVillabona_79711386/Hoja de Vida/cert_segun_leng.pdf', '../../docs/docentes_ocasionales/LuisVillabona_79711386/Hoja de Vida/experien_lab.pdf', '../../docs/docentes_ocasionales/LuisVillabona_79711386/Hoja de Vida/antec_disc_procu.pdf', '../../docs/docentes_ocasionales/LuisVillabona_79711386/Hoja de Vida/antec_fisc_contral.pdf', '../../docs/docentes_ocasionales/LuisVillabona_79711386/Hoja de Vida/antec_judic_pol_nal.pdf', '../../docs/docentes_ocasionales/LuisVillabona_79711386/Vinculacion/form_afil_seg_social.pdf', '../../docs/docentes_ocasionales/LuisVillabona_79711386/Vinculacion/form_afil_eps.pdf', '../../docs/docentes_ocasionales/LuisVillabona_79711386/Vinculacion/form_afil_pension.pdf', '../../docs/docentes_ocasionales/LuisVillabona_79711386/Vinculacion/cert_cuen_bancaria.pdf', '../../docs/docentes_ocasionales/LuisVillabona_79711386/Vinculacion/cert_afil_ult_eps.pdf', '../../docs/docentes_ocasionales/LuisVillabona_79711386/Vinculacion/certi_afil_fond_pensiones.pdf', '../../docs/docentes_ocasionales/LuisVillabona_79711386/Vinculacion/cedula_ciu_ext.pdf', '../../docs/docentes_ocasionales/LuisVillabona_79711386/Vinculacion/decla_pen_sol_pens_tram.pdf', '../../docs/docentes_ocasionales/LuisVillabona_79711386/Vinculacion/asig_dia_hor.pdf', '../../docs/docentes_ocasionales/LuisVillabona_79711386/Vinculacion/reso_nombramiento.pdf', 1, 'Primer Registro'),
-(1031642585, '../../docs/docentes_ocasionales/salaelsa_1031642585/Hoja de Vida/hoja_vida_func_pub.pdf', '../../docs/docentes_ocasionales/salaelsa_1031642585/Hoja de Vida/decl_jur_ley.pdf', '../../docs/docentes_ocasionales/salaelsa_1031642585/Hoja de Vida/ver_inh_del_sex.pdf', '../../docs/docentes_ocasionales/salaelsa_1031642585/Hoja de Vida/notif_corr_elec.pdf', '../../docs/docentes_ocasionales/salaelsa_1031642585/Hoja de Vida/com_ins_vinc.pdf', '../../docs/docentes_ocasionales/salaelsa_1031642585/Hoja de Vida/aut_trat_dat_per.pdf', '../../docs/docentes_ocasionales/salaelsa_1031642585/Hoja de Vida/visa_ext.pdf', '../../docs/docentes_ocasionales/salaelsa_1031642585/Hoja de Vida/fotoc_libr_mil.pdf', '../../docs/docentes_ocasionales/salaelsa_1031642585/Hoja de Vida/tarjeta_prof.pdf', '../../docs/docentes_ocasionales/salaelsa_1031642585/Hoja de Vida/matri_prof.pdf', '../../docs/docentes_ocasionales/salaelsa_1031642585/Hoja de Vida/aval_sst.pdf', '../../docs/docentes_ocasionales/salaelsa_1031642585/Hoja de Vida/cert_segun_leng.pdf', '../../docs/docentes_ocasionales/salaelsa_1031642585/Hoja de Vida/experien_lab.pdf', '../../docs/docentes_ocasionales/salaelsa_1031642585/Hoja de Vida/antec_disc_procu.pdf', '../../docs/docentes_ocasionales/salaelsa_1031642585/Hoja de Vida/antec_fisc_contral.pdf', '../../docs/docentes_ocasionales/salaelsa_1031642585/Hoja de Vida/antec_judic_pol_nal.pdf', '../../docs/docentes_ocasionales/salaelsa_1031642585/Vinculacion/form_afil_seg_social.pdf', '../../docs/docentes_ocasionales/salaelsa_1031642585/Vinculacion/form_afil_eps.pdf', '../../docs/docentes_ocasionales/salaelsa_1031642585/Vinculacion/form_afil_pension.pdf', '../../docs/docentes_ocasionales/salaelsa_1031642585/Vinculacion/cert_cuen_bancaria.pdf', '../../docs/docentes_ocasionales/salaelsa_1031642585/Vinculacion/cert_afil_ult_eps.pdf', '../../docs/docentes_ocasionales/salaelsa_1031642585/Vinculacion/certi_afil_fond_pensiones.pdf', '../../docs/docentes_ocasionales/salaelsa_1031642585/Vinculacion/cedula_ciu_ext.pdf', '../../docs/docentes_ocasionales/salaelsa_1031642585/Vinculacion/decla_pen_sol_pens_tram.pdf', '../../docs/docentes_ocasionales/salaelsa_1031642585/Vinculacion/asig_dia_hor.pdf', '../../docs/docentes_ocasionales/salaelsa_1031642585/Vinculacion/reso_nombramiento.pdf', 1, 'Primer Registro'),
-(1031645814, '../../docs/docentes_ocasionales/serelsa_1031645814/Hoja de Vida/hoja_vida_func_pub.pdf', '../../docs/docentes_ocasionales/serelsa_1031645814/Hoja de Vida/decl_jur_ley.pdf', '../../docs/docentes_ocasionales/serelsa_1031645814/Hoja de Vida/ver_inh_del_sex.pdf', '../../docs/docentes_ocasionales/serelsa_1031645814/Hoja de Vida/notif_corr_elec.pdf', '../../docs/docentes_ocasionales/serelsa_1031645814/Hoja de Vida/com_ins_vinc.pdf', '../../docs/docentes_ocasionales/serelsa_1031645814/Hoja de Vida/aut_trat_dat_per.pdf', '../../docs/docentes_ocasionales/serelsa_1031645814/Hoja de Vida/visa_ext.pdf', '../../docs/docentes_ocasionales/serelsa_1031645814/Hoja de Vida/fotoc_libr_mil.pdf', '../../docs/docentes_ocasionales/serelsa_1031645814/Hoja de Vida/tarjeta_prof.pdf', '../../docs/docentes_ocasionales/serelsa_1031645814/Hoja de Vida/matri_prof.pdf', '../../docs/docentes_ocasionales/serelsa_1031645814/Hoja de Vida/aval_sst.pdf', '../../docs/docentes_ocasionales/serelsa_1031645814/Hoja de Vida/cert_segun_leng.pdf', '../../docs/docentes_ocasionales/serelsa_1031645814/Hoja de Vida/experien_lab.pdf', '../../docs/docentes_ocasionales/serelsa_1031645814/Hoja de Vida/antec_disc_procu.pdf', '../../docs/docentes_ocasionales/serelsa_1031645814/Hoja de Vida/antec_fisc_contral.pdf', '../../docs/docentes_ocasionales/serelsa_1031645814/Hoja de Vida/antec_judic_pol_nal.pdf', '../../docs/docentes_ocasionales/serelsa_1031645814/Vinculacion/form_afil_seg_social.pdf', '../../docs/docentes_ocasionales/serelsa_1031645814/Vinculacion/form_afil_eps.pdf', '../../docs/docentes_ocasionales/serelsa_1031645814/Vinculacion/form_afil_pension.pdf', '../../docs/docentes_ocasionales/serelsa_1031645814/Vinculacion/cert_cuen_bancaria.pdf', '../../docs/docentes_ocasionales/serelsa_1031645814/Vinculacion/cert_afil_ult_eps.pdf', '../../docs/docentes_ocasionales/serelsa_1031645814/Vinculacion/certi_afil_fond_pensiones.pdf', '../../docs/docentes_ocasionales/serelsa_1031645814/Vinculacion/cedula_ciu_ext.pdf', '../../docs/docentes_ocasionales/serelsa_1031645814/Vinculacion/decla_pen_sol_pens_tram.pdf', '../../docs/docentes_ocasionales/serelsa_1031645814/Vinculacion/asig_dia_hor.pdf', '../../docs/docentes_ocasionales/serelsa_1031645814/Vinculacion/reso_nombramiento.pdf', 1, 'Primer Registro');
+INSERT INTO `archivo_doc_oca` (`fk_dni`, `HojaVidaFuncionPublica`, `DeclaracionJuramentadaLey4de1992`, `VerificacionInhabilidadDelitoSexual`, `AutorizacionNotificacionCorreoElec`, `CompromisoInstitucionalVinculacion`, `AutorizacionTratamientoDatPer`, `VisaExtranjeria`, `FotocopiaLibretaMilitar`, `TarjetaProfesional`, `MatriculaProfesional`, `AvalSST`, `CertificadoSegundaLengua`, `ExperienciaLaboral`, `AntecedentesDisciplinariosProcuraduria`, `AntecedenteFiscalContraloria`, `AntecedenteJudicialPoliciaNal`, `FormatoAfiliacionSeguridadSocial`, `FormularioAfiliacionEps`, `FormularioAfiliacionPension`, `CertificadoCuentaBancaria`, `CertificadoAfiliacionUltimaEPS`, `CertificadoAfiliacionFondoPensiones`, `CedulaCiudadania`, `DeclaPensionadoSolPensionenTramite`, `AsignaturasDiasHorarios`, `ResolucionNombramiento`, `fk_id_estado_documentacion`, `observaciones_estado`, `ultima_actualizacion`) VALUES
+(134521541, '../../docs/docentes_ocasionales/JuanCasallas_134521541/Hoja de Vida/HojaVidaFuncionPublica.pdf', '../../docs/docentes_ocasionales/JuanCasallas_134521541/Hoja de Vida/DeclaracionJuramentadaLey4de1992.pdf', '../../docs/docentes_ocasionales/JuanCasallas_134521541/Hoja de Vida/VerificacionInhabilidadDelitoSexual.pdf', '../../docs/docentes_ocasionales/JuanCasallas_134521541/Hoja de Vida/AutorizacionNotificacionCorreoElec.pdf', '../../docs/docentes_ocasionales/JuanCasallas_134521541/Hoja de Vida/CompromisoInstitucionalVinculacion.pdf', '../../docs/docentes_ocasionales/JuanCasallas_134521541/Hoja de Vida/AutorizacionTratamientoDatPer.pdf', '', '', '', '', '../../docs/docentes_ocasionales/JuanCasallas_134521541/Hoja de Vida/AvalSST.pdf', '', '../../docs/docentes_ocasionales/JuanCasallas_134521541/Hoja de Vida/ExperienciaLaboral.pdf', '../../docs/docentes_ocasionales/JuanCasallas_134521541/Hoja de Vida/AntecedentesDisciplinariosProcuraduria.pdf', '../../docs/docentes_ocasionales/JuanCasallas_134521541/Hoja de Vida/AntecedenteFiscalContraloria.pdf', '../../docs/docentes_ocasionales/JuanCasallas_134521541/Hoja de Vida/AntecedenteJudicialPoliciaNal.pdf', '../../docs/docentes_ocasionales/JuanCasallas_134521541/Vinculacion/FormatoAfiliacionSeguridadSocial.pdf', '../../docs/docentes_ocasionales/JuanCasallas_134521541/Vinculacion/FormularioAfiliacionEps.pdf', '../../docs/docentes_ocasionales/JuanCasallas_134521541/Vinculacion/FormularioAfiliacionPension.pdf', '../../docs/docentes_ocasionales/JuanCasallas_134521541/Vinculacion/CertificadoCuentaBancaria.pdf', '../../docs/docentes_ocasionales/JuanCasallas_134521541/Vinculacion/CertificadoAfiliacionUltimaEPS.pdf', '../../docs/docentes_ocasionales/JuanCasallas_134521541/Vinculacion/CertificadoAfiliacionFondoPensiones.pdf', '../../docs/docentes_ocasionales/JuanCasallas_134521541/Vinculacion/CedulaCiudadania.pdf', '', '', '', 1, 'Primer Registro', '2024-07-05 16:57:47'),
+(1035268415, './docs/docentes_ocasionales/ValentinaVillamil_1035268415/Hoja de Vida/HojaVidaFuncionPublica.pdf', './docs/docentes_ocasionales/ValentinaVillamil_1035268415/Hoja de Vida/DeclaracionJuramentadaLey4de1992.pdf', './docs/docentes_ocasionales/ValentinaVillamil_1035268415/Hoja de Vida/VerificacionInhabilidadDelitoSexual.pdf', './docs/docentes_ocasionales/ValentinaVillamil_1035268415/Hoja de Vida/AutorizacionNotificacionCorreoElec.pdf', './docs/docentes_ocasionales/ValentinaVillamil_1035268415/Hoja de Vida/CompromisoInstitucionalVinculacion.pdf', './docs/docentes_ocasionales/ValentinaVillamil_1035268415/Hoja de Vida/AutorizacionTratamientoDatPer.pdf', '', '', './docs/docentes_ocasionales/ValentinaVillamil_1035268415/Hoja de Vida/TarjetaProfesional.pdf', '', './docs/docentes_ocasionales/ValentinaVillamil_1035268415/Hoja de Vida/AvalSST.pdf', '', './docs/docentes_ocasionales/ValentinaVillamil_1035268415/Hoja de Vida/ExperienciaLaboral.pdf', './docs/docentes_ocasionales/ValentinaVillamil_1035268415/Hoja de Vida/AntecedentesDisciplinariosProcuraduria.pdf', './docs/docentes_ocasionales/ValentinaVillamil_1035268415/Hoja de Vida/AntecedenteFiscalContraloria.pdf', './docs/docentes_ocasionales/ValentinaVillamil_1035268415/Hoja de Vida/AntecedenteJudicialPoliciaNal.pdf', './docs/docentes_ocasionales/ValentinaVillamil_1035268415/Vinculacion/FormatoAfiliacionSeguridadSocial.pdf', './docs/docentes_ocasionales/ValentinaVillamil_1035268415/Vinculacion/FormularioAfiliacionEps.pdf', './docs/docentes_ocasionales/ValentinaVillamil_1035268415/Vinculacion/FormularioAfiliacionPension.pdf', './docs/docentes_ocasionales/ValentinaVillamil_1035268415/Vinculacion/CertificadoCuentaBancaria.pdf', './docs/docentes_ocasionales/ValentinaVillamil_1035268415/Vinculacion/CertificadoAfiliacionUltimaEPS.pdf', './docs/docentes_ocasionales/ValentinaVillamil_1035268415/Vinculacion/CertificadoAfiliacionFondoPensiones.pdf', './docs/docentes_ocasionales/ValentinaVillamil_1035268415/Vinculacion/CedulaCiudadania.pdf', './docs/docentes_ocasionales/ValentinaVillamil_1035268415/Vinculacion/DeclaPensionadoSolPensionenTramite.pdf', '', '', 3, 'Primer Registro', '2024-07-07 00:00:00'),
+(1042518654, '../../docs/docentes_ocasionales/SantiagoRodríguez_1042518654/Hoja de Vida/HojaVidaFuncionPublica.pdf', '../../docs/docentes_ocasionales/SantiagoRodríguez_1042518654/Hoja de Vida/DeclaracionJuramentadaLey4de1992.pdf', '../../docs/docentes_ocasionales/SantiagoRodríguez_1042518654/Hoja de Vida/VerificacionInhabilidadDelitoSexual.pdf', '../../docs/docentes_ocasionales/SantiagoRodríguez_1042518654/Hoja de Vida/AutorizacionNotificacionCorreoElec.pdf', '../../docs/docentes_ocasionales/SantiagoRodríguez_1042518654/Hoja de Vida/CompromisoInstitucionalVinculacion.pdf', '../../docs/docentes_ocasionales/SantiagoRodríguez_1042518654/Hoja de Vida/AutorizacionTratamientoDatPer.pdf', '', '', '', '', '../../docs/docentes_ocasionales/SantiagoRodríguez_1042518654/Hoja de Vida/AvalSST.pdf', '', '../../docs/docentes_ocasionales/SantiagoRodríguez_1042518654/Hoja de Vida/ExperienciaLaboral.pdf', '../../docs/docentes_ocasionales/SantiagoRodríguez_1042518654/Hoja de Vida/AntecedentesDisciplinariosProcuraduria.pdf', '../../docs/docentes_ocasionales/SantiagoRodríguez_1042518654/Hoja de Vida/AntecedenteFiscalContraloria.pdf', '../../docs/docentes_ocasionales/SantiagoRodríguez_1042518654/Hoja de Vida/AntecedenteJudicialPoliciaNal.pdf', '../../docs/docentes_ocasionales/SantiagoRodríguez_1042518654/Vinculacion/FormatoAfiliacionSeguridadSocial.pdf', '../../docs/docentes_ocasionales/SantiagoRodríguez_1042518654/Vinculacion/FormularioAfiliacionEps.pdf', '../../docs/docentes_ocasionales/SantiagoRodríguez_1042518654/Vinculacion/FormularioAfiliacionPension.pdf', '../../docs/docentes_ocasionales/SantiagoRodríguez_1042518654/Vinculacion/CertificadoCuentaBancaria.pdf', '../../docs/docentes_ocasionales/SantiagoRodríguez_1042518654/Vinculacion/CertificadoAfiliacionUltimaEPS.pdf', '../../docs/docentes_ocasionales/SantiagoRodríguez_1042518654/Vinculacion/CertificadoAfiliacionFondoPensiones.pdf', '../../docs/docentes_ocasionales/SantiagoRodríguez_1042518654/Vinculacion/CedulaCiudadania.pdf', '', '', '', 1, 'Primer Registro', '2024-08-07 00:00:00'),
+(1065298654, '../../docs/docentes_ocasionales/DianaRojas_1065298654/Hoja de Vida/HojaVidaFuncionPublica.pdf', '../../docs/docentes_ocasionales/DianaRojas_1065298654/Hoja de Vida/DeclaracionJuramentadaLey4de1992.pdf', '../../docs/docentes_ocasionales/DianaRojas_1065298654/Hoja de Vida/VerificacionInhabilidadDelitoSexual.pdf', '../../docs/docentes_ocasionales/DianaRojas_1065298654/Hoja de Vida/AutorizacionNotificacionCorreoElec.pdf', '../../docs/docentes_ocasionales/DianaRojas_1065298654/Hoja de Vida/CompromisoInstitucionalVinculacion.pdf', '../../docs/docentes_ocasionales/DianaRojas_1065298654/Hoja de Vida/AutorizacionTratamientoDatPer.pdf', '', '', '', '', '../../docs/docentes_ocasionales/DianaRojas_1065298654/Hoja de Vida/AvalSST.pdf', '', '../../docs/docentes_ocasionales/DianaRojas_1065298654/Hoja de Vida/ExperienciaLaboral.pdf', '../../docs/docentes_ocasionales/DianaRojas_1065298654/Hoja de Vida/AntecedentesDisciplinariosProcuraduria.pdf', '../../docs/docentes_ocasionales/DianaRojas_1065298654/Hoja de Vida/AntecedenteFiscalContraloria.pdf', '../../docs/docentes_ocasionales/DianaRojas_1065298654/Hoja de Vida/AntecedenteJudicialPoliciaNal.pdf', '../../docs/docentes_ocasionales/DianaRojas_1065298654/Vinculacion/FormatoAfiliacionSeguridadSocial.pdf', '../../docs/docentes_ocasionales/DianaRojas_1065298654/Vinculacion/FormularioAfiliacionEps.pdf', '../../docs/docentes_ocasionales/DianaRojas_1065298654/Vinculacion/FormularioAfiliacionPension.pdf', '../../docs/docentes_ocasionales/DianaRojas_1065298654/Vinculacion/CertificadoCuentaBancaria.pdf', '../../docs/docentes_ocasionales/DianaRojas_1065298654/Vinculacion/CertificadoAfiliacionUltimaEPS.pdf', '../../docs/docentes_ocasionales/DianaRojas_1065298654/Vinculacion/CertificadoAfiliacionFondoPensiones.pdf', '../../docs/docentes_ocasionales/DianaRojas_1065298654/Vinculacion/CedulaCiudadania.pdf', '', '', '', 2, 'Primer Registro', '2024-09-09 00:00:00');
 
 -- --------------------------------------------------------
 
@@ -135,7 +136,8 @@ CREATE TABLE `estados` (
 
 INSERT INTO `estados` (`id_estado`, `estado`) VALUES
 (1, 'Activo'),
-(2, 'Inactivo');
+(2, 'Inactivo'),
+(3, 'Nuevo');
 
 -- --------------------------------------------------------
 
@@ -358,6 +360,7 @@ CREATE TABLE `usuarios` (
   `clave` varchar(80) NOT NULL,
   `correo` varchar(40) NOT NULL,
   `telefono` int(11) NOT NULL,
+  `fecha_ingreso` datetime DEFAULT NULL,
   `id_estado` int(2) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_spanish_ci;
 
@@ -365,11 +368,12 @@ CREATE TABLE `usuarios` (
 -- Volcado de datos para la tabla `usuarios`
 --
 
-INSERT INTO `usuarios` (`id_tdoc`, `id_usuario`, `nombre1`, `nombre2`, `apellido1`, `apellido2`, `id_rol`, `usuario`, `clave`, `correo`, `telefono`, `id_estado`) VALUES
-(1, 12345678, 'ser', 'manca', 'elsa', 'ee', 1, '123', '$2y$10$v9nq7GC50jIQhas8PkG9MOASsmSsSS7j1VlZxwOKjNJ1Po1bMveS6', '123@mail.ed', 123, 1),
-(1, 79711386, 'Luis', 'Carlos', 'Villabona', 'Parra', 1, 'lcvillabonap', '$2y$10$ZlHf21YyFal0gWWFHQulU.sxHFdGPuF7/usNCYUmk3GpA9LeZXYEy', 'lcvillabonap@hotmail.com', 3227446, 1),
-(1, 1031642393, 'Sergio', 'Esteban', 'Chaparro', 'Noguera', 1, 'Serch', '$2y$10$hp2LF2mSXbKgpuapw.7SSuTdpwmk/Pu39xfBwUgxurpJ9WXniElSm', 'sechaparron@unal.edu.co', 313270352, 1),
-(1, 1031642585, 'sala', 'manca', 'elsa', 'bado', 1, '123', '$2y$10$z.nonDkTWIEeFW7tAvy1POEAhBr52tHI1finS9NZvnfcuRHvzAMmi', 'sergioechaparro@gmail.com', 31352476, 1);
+INSERT INTO `usuarios` (`id_tdoc`, `id_usuario`, `nombre1`, `nombre2`, `apellido1`, `apellido2`, `id_rol`, `usuario`, `clave`, `correo`, `telefono`, `fecha_ingreso`, `id_estado`) VALUES
+(2, 134521541, 'Juan', '', 'Casallas', '', 1, 'Juann', '$2y$10$.Jd1TAWU9u54udKTmRm7PeelJ148/ZawLqnAglSoTA0dKZ94vUIWq', 'juan@gmail.com', 2147483647, '2024-07-16 16:57:46', 3),
+(1, 1031642393, 'Sergio', 'Esteban', 'Chaparro', 'Noguera', 3, 'Serch', '$2y$10$S6mZqH8ie24Y70WgDEtGeuHo43ZC0ZQTfmNVCu62.DoZ2rg6SLEoi', 'sechaparron@unal.edu.co', 313270352, '2024-09-01 23:10:45', 1),
+(3, 1035268415, 'Valentina', '', 'Villamil', '', 1, 'vvilla', '$2y$10$mYGvej9CipWSwoAZV/OJZOz/.9o00zQjs2cfirE02ITUkZ8AJ4tjy', 'vvillamil@gmail.com', 2147483647, '2024-09-09 23:07:00', 1),
+(1, 1042518654, 'Santiago', '', 'Rodríguez', '', 1, 'santi123', '$2y$10$HDsAtDA6XAHtuPM2JpV9r.G.R40aE1A7xHATLq7AVXlf/o7TtdfmG', 'santiago@gmail.com', 2147483647, '2024-08-13 21:41:42', 3),
+(3, 1065298654, 'Diana', '', 'Rojas', '', 1, 'diana123', '$2y$10$puUNj5o80yrnvwW9QVAyTu5uo2LDfmGqSB0JULTeausxGQvi5TYie', 'diana@gmail.com', 313526452, '2024-06-13 21:45:58', 3);
 
 -- --------------------------------------------------------
 
@@ -505,7 +509,7 @@ ALTER TABLE `docentes`
 -- AUTO_INCREMENT de la tabla `estados`
 --
 ALTER TABLE `estados`
-  MODIFY `id_estado` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id_estado` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT de la tabla `estado_documentacion`

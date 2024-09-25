@@ -73,6 +73,9 @@ function loginUser($userName, $password) {
                 } else if($estado == 2){
                     $response['message'] = 'Usuario inactivo';
                     error_log("El usuario $userName está inactivo");
+                } else if ($estado == 3){
+                    $response['message'] = 'Usuario pendiente de aprobación';
+                    error_log("El usuario $userName está pendiente de aprobación");
                 } else {
                     $response['message'] = 'Credenciales incorrectas';
                     error_log("Credenciales incorrectas para el usuario: $userName");
