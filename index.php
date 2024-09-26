@@ -8,7 +8,6 @@
     <title>Iniciar Sesión</title>
 </head>
 <body>
-
     
     <?php
         include ("./src/views/components/header.php");
