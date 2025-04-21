@@ -77,7 +77,7 @@
             </ul>
         </nav>
 
-        <a class="logout" href="../../../../index.php">
+        <a class="logout" href="/index.php">
             <i class="fa-solid fa-arrow-right-from-bracket"></i>
             <span class="oculto">Cerrar Sesión</span>
         </a>
@@ -86,7 +86,7 @@
             <div class="linea"></div>
     
             <div class="usuario">
-                <img src="../../../../public/img/escudo_unal.webp" alt="Escudo Universidad Nacional de Colombia">
+                <img src="/public/img/escudo_unal.webp" alt="Escudo Universidad Nacional de Colombia">
                 <div class="info-usuario">
                     <div class="nombre-email">
                         <span class="nombre oculto"><?php echo $nombre . " " . $apellido; ?></span>
@@ -96,10 +96,6 @@
             </div>
         </div>
     </div>
-
-    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-    
 
 </body>
 </html>

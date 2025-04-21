@@ -1,4 +1,4 @@
-import Swal from '../../../node_modules/sweetalert2/src/sweetalert2.js';
+import Swal from '/node_modules/sweetalert2/src/sweetalert2.js';
 
 async function loginRequest(event) {
     event.preventDefault();

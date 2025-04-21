@@ -10,13 +10,14 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Sergio Chaparro y Santiago Alza",
+  "authors": ["Sergio Chaparro", "Santiago Alza"],
   "license": "ISC",
   "dependencies": {
     "@fortawesome/fontawesome-free": "^6.6.0",
     "chart.js": "^4.4.4",
     "hamburgers": "^1.2.1",
     "sweetalert2": "^11.6.13",
-    "swiper": "^11.1.1"
+    "swiper": "^11.1.1",
+    "tabulator-tables": "^6.3.0"
   }
 }

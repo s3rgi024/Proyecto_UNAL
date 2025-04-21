@@ -28,6 +28,12 @@ img {
   height: auto;
 }
 
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
 .tooltip_container {
   position: relative;
   display: inline-block;
@@ -36,7 +42,6 @@ img {
   z-index: 100;
 
   & .tooltip_text {
-    visibility: hidden;
     padding: 10px;
     max-width: 100px;
     min-width: 100px;
@@ -49,15 +54,22 @@ img {
     bottom: 120%;
     left: 50%;
     opacity: 0;
-    transition: opacity 0.3s;
+    transition: opacity 0.3s ease; /* Transición suave sin retraso por defecto */
     font-size: .7rem;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    pointer-events: none; /* Evitar interacción cuando no es visible */
   }
-  
+
   &:hover .tooltip_text {
-    visibility: visible;
-    opacity: 1;
+      opacity: 1;
+      transition-delay:.5s; /* Aplicar retraso solo cuando se hace hover (aparece) */
   }
+
+  &:not(:hover) .tooltip_text {
+      opacity: 0;
+      transition-delay: 0s; /* Sin retraso al desaparecer */
+  }
+
+
+
 }
-
-

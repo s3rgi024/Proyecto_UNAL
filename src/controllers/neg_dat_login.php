@@ -1,7 +1,7 @@
 <?php
 
 function loginUser($userName, $password) {
-    include '../../config/db_connection.php';
+    require_once '../../config/db_connection.php';
 
     ini_set('log_errors', 1);
     ini_set('error_log', '../../logs/error.log');
@@ -43,7 +43,6 @@ function loginUser($userName, $password) {
             error_log("Estado del usuario: " . $estado);
             error_log("Comparación de estado: " . ($estado == 1 ? 'true' : 'false'));
 
-            
             error_log ("Hashed password: " . $hashedPassword . "\n");
             error_log ("Stored password: " . $clave_bd . "\n");
             error_log ("Passwords match: " . (password_verify($clave_bd, $hashedPassword) ? "true" : "false") . "\n");

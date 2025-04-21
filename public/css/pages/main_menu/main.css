@@ -130,18 +130,9 @@ body {
                     cursor: pointer;
                     color: #fff;
                     position: relative;
-                    overflow: hidden;
                     border-radius: 10px;
-                    -webkit-border-radius: 10px;
-                    -moz-border-radius: 10px;
-                    -ms-border-radius: 10px;
-                    -o-border-radius: 10px;
                     transform-style: preserve-3d;
                     transition: transform 0.2s, box-shadow 0.2s, scale .2s;
-                    -webkit-transition: transform 0.2s, box-shadow 0.2s, scale .2s;
-                    -moz-transition: transform 0.2s, box-shadow 0.2s, scale .2s;
-                    -ms-transition: transform 0.2s, box-shadow 0.2s, scale .2s;
-                    -o-transition: transform 0.2s, box-shadow 0.2s, scale .2s;
                     
                     &:hover{
                         box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
@@ -387,7 +378,7 @@ body {
                 transform: rotate(0);
       }
       100% {
-        -webkit-transform: rotate(90deg);
-                transform: rotate(90deg);
+        -webkit-transform: rotate(180deg);
+                transform: rotate(180deg);
       }
 }

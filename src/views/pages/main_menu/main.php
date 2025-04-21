@@ -1,7 +1,7 @@
 <?php 
 
-   require '../../../controllers/security.php';
-
+    require '../../../controllers/security.php';
+    
 ?>
 
 <!DOCTYPE html>
@@ -9,7 +9,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../../../public/css/pages/main_menu/main.css">
+    <link rel="stylesheet" href="/public/css/pages/main_menu/main.css">
     <title>Menú Principal</title>
 </head>
 <body>
@@ -48,28 +48,34 @@
                     <i class="fa-solid fa-house-chimney"></i> Menú principal
                 </h3>
                 <div class="options">
-                    <a href="../users/usuarios.php">
-                        <button class="users">
+                    <a href="../users/main_users.php">
+                        <button class="users btn_3d">
                             <i class="fa-solid fa-users"></i>
                             <span class="circle"></span>
                             <span>Usuarios</span>
                         </button>
                     </a>
-                    <button class="contract">
-                        <i class="fa-solid fa-file-contract"></i>
-                        <span class="circle"></span>
-                        <span>Contratación</span>
-                    </button>
-                    <button class="stats">
-                        <i class="fa-solid fa-chart-column"></i>
-                        <span class="circle"></span>
-                        <span>Informes</span>
-                    </button>
-                    <button class="settings">
-                        <i class="fa-solid fa-gear"></i>
-                        <span class="circle"></span>
-                        <span>Ajustes</span>
-                    </button>
+                    <a href="">
+                        <button class="contract btn_3d">
+                            <i class="fa-solid fa-file-contract"></i>
+                            <span class="circle"></span>
+                            <span>Contratación</span>
+                        </button>
+                    </a>
+                    <a href="">
+                        <button class="stats btn_3d">
+                            <i class="fa-solid fa-chart-column"></i>
+                            <span class="circle"></span>
+                            <span>Informes</span>
+                        </button>
+                    </a>
+                    <a href="">
+                        <button class="settings btn_3d">
+                            <i class="fa-solid fa-gear"></i>
+                            <span class="circle"></span>
+                            <span>Ajustes</span>
+                        </button>
+                    </a>
                 </div>
             </div>
             
@@ -86,12 +92,11 @@
         </section>
         
         <footer class="footer_logo">
-            <img src="../../../../public/img/logo_FCE_negro.webp" alt="Logo de la facultad de ciencias económicas">
+            <img src="/public/img/logo_FCE_negro.webp" alt="Logo de la facultad de ciencias económicas">
         </footer>
     </main>
 
-    <script src="../../../../public/js/navbar.js"></script>
-    <script src="../../../../public/js/main_menu.js"></script>
+    <script type="module" src="/public/js/pages/main_menu/main_menu.js"></script>
     <script src="./particles.min.js"></script>
     <script>
         particlesJS(
