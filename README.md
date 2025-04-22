@@ -1,39 +1,66 @@
-# Proyecto UNAL - FCE
+<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
-## Descripción del Proyecto
-Este proyecto tiene como objetivo automatizar procesos administrativos complejos relacionados con la contratación y renovación de docentes ocasionales en la Facultad de Ciencias Económicas (FCE). Para lograrlo, se plantearon tres módulos principales:
+<p align="center">
+<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
+<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
+<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
+<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
+</p>
 
-- **Usuarios:** Este módulo gestiona los permisos y usuarios del sistema, organizándolos en tres roles principales: Administrador, Administrativo y Docente.
-- **Documentos:** Facilita la gestión de la documentación requerida por los docentes ocasionales para avanzar en el proceso de contratación.
-- **Informes:** Proporciona herramientas para auditar los módulos del sistema y generar información útil para las áreas que lo necesiten.
+## About Laravel
 
-## Estado del Proyecto
-- **Estado actual:** 30% (Incompleto).
-- **Justificación para reiniciar:** Recomiendo iniciar un nuevo proyecto desde cero utilizando un stack moderno. El proyecto actual presenta limitaciones significativas, como problemas de escalabilidad y seguridad, una estructura obsoleta que dificulta el mantenimiento y la evolución, y la falta de frameworks o librerías que promuevan buenas prácticas de desarrollo. Un stack moderno no solo mejorará la eficiencia y seguridad del sistema, sino que también facilitará la colaboración entre desarrolladores y la integración de nuevas funcionalidades.
+Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
 
-He desarrollado una nueva estructura utilizando **Laravel 12**, **React 19** y **Inertia.js** para facilitar el inicio del desarrollo. Sin embargo, su uso no es obligatorio, y animo a los desarrolladores a explorar otros enfoques con stacks que consideren más adecuados. Si están interesados en esta estructura, pueden encontrarla en la rama **"V2"** del repositorio. Esta rama incluye modelos, migraciones y seeders, proporcionando un punto de partida limpio con un backend y frontend robustos y fáciles de conectar.
+- [Simple, fast routing engine](https://laravel.com/docs/routing).
+- [Powerful dependency injection container](https://laravel.com/docs/container).
+- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
+- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
+- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
+- [Robust background job processing](https://laravel.com/docs/queues).
+- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
 
-## Tecnologías Utilizadas
-En la versión actual del proyecto, se utilizó PHP en su forma básica (vanilla) con MySQLi para la interacción con la base de datos. Además, se incorporaron las siguientes librerías de JavaScript para el frontend:
+Laravel is accessible, powerful, and provides tools required for large, robust applications.
 
-- **ChartJS:** Ideal para integrar gráficas de estadísticas en el frontend.
-- **FontAwesome:** Proporciona una colección de íconos para usar en las vistas del sistema.
-- **Swiper:** Permite crear carruseles de contenido en el cliente.
-- **Tabulator:** Útil para generar tablas de datos dinámicas y personalizadas.
-- **SweetAlert2:** Facilita la creación de alertas dentro del sistema.
+## Learning Laravel
 
-## Documentación
- Puedes acceder a la documentación generada durante el desarrollo del proyecto a través del siguiente [enlace](https://drive.google.com/drive/folders/12WDi1QS_VUCPUfrEzaRd0XZY1ECAkkwB?usp=sharing).
+Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
 
-## Estructura del Proyecto
-El proyecto sigue una arquitectura **MVC (Modelo-Vista-Controlador)**, ampliamente utilizada en el desarrollo de aplicaciones web por su capacidad para separar responsabilidades entre los componentes.
+You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
 
-## Vistas Realizadas
-Los mockups del proyecto fueron diseñados en Figma. Puedes visualizarlos en el siguiente [enlace](https://www.figma.com/design/6Co3Gz7o3mEgDGO3FLBTIK/Mockups-Sistema-de-gesti%C3%B3n-de-archivos-UNAL?node-id=0-1&t=VBWPc2Em0UxKFmGp-1).
+If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
 
-## Contacto
-Si tienes alguna pregunta o necesitas más información, no dudes en contactarme:
+## Laravel Sponsors
 
-- **Correo Electrónico:** sergioechaparro@gmail.com
+We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
 
-- **Teléfono**: +57 3132703529
+### Premium Partners
+
+- **[Vehikl](https://vehikl.com/)**
+- **[Tighten Co.](https://tighten.co)**
+- **[WebReinvent](https://webreinvent.com/)**
+- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
+- **[64 Robots](https://64robots.com)**
+- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
+- **[Cyber-Duck](https://cyber-duck.co.uk)**
+- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
+- **[Jump24](https://jump24.co.uk)**
+- **[Redberry](https://redberry.international/laravel/)**
+- **[Active Logic](https://activelogic.com)**
+- **[byte5](https://byte5.de)**
+- **[OP.GG](https://op.gg)**
+
+## Contributing
+
+Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+
+## Code of Conduct
+
+In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+
+## Security Vulnerabilities
+
+If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+
+## License
+
+The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
