@@ -1,6 +1,5 @@
 import '../css/app.css';
 import './bootstrap';
-import '../css/app.css';
 
 import { createInertiaApp } from '@inertiajs/react';
 import { resolvePageComponent } from 'laravel-vite-plugin/inertia-helpers';
@@ -12,8 +11,8 @@ createInertiaApp({
     title: (title) => `${title} - ${appName}`,
     resolve: (name) =>
         resolvePageComponent(
-            `./Pages/${name}.jsx`,
-            import.meta.glob('./Pages/**/*.jsx'),
+            `./Modules/${name}.jsx`,
+            import.meta.glob('./Modules/**/pages/**/*.jsx'),
         ),
     setup({ el, App, props }) {
         const root = createRoot(el);

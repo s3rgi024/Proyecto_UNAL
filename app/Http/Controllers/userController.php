@@ -8,13 +8,13 @@ use Inertia\Inertia;
 
 class userController extends Controller
 {
-    function index(){
+    function showLogin()
+    {
+        return Inertia::render('auth/pages/Login');
+    }
 
-        $users = User::all();
-
-        return Inertia::render('index', [
-            'users' => $users
-        ]);
-
+    function showRegister()
+    {
+        return Inertia::render('auth/pages/Register');
     }
 }

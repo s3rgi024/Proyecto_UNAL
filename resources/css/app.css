@@ -1,1 +1,72 @@
-@import "tailwindcss";
+@import 'tailwindcss';
+
+@layer base {
+  * {
+    font-family: var(--font-family);
+  }
+
+  html {
+    scrollbar-width: thin;
+  }
+
+  :is(h1, h2, h3, h4, h5, h6) {
+    text-wrap: pretty;
+    font-weight: 700;
+  }
+
+  :is(p, span) {
+    text-wrap: balance;
+    font-weight: 200;
+  }
+
+  label {
+    font-weight: 400;
+  }
+
+  :is(button, a) {
+    cursor: pointer;
+  }
+}
+
+@theme {
+  --font-family: 'Roboto Condensed', sans-serif;
+  --color-primary: #fea742;
+  --color-primary-light: #ffbd84;
+  --color-primary-dark: #e68e2e;
+  --color-secondary: #7544ff;
+  --color-secondary-light: #b8a2ff;
+  --color-secondary-dark: #270fa5;
+  --color-gray: #3a3939;
+  --color-gray-light: #5f5f5f;
+  --color-success: #00d58c;
+  --color-error: #ff3333;
+  --color-error-light: #ff9898;
+}
+
+@font-face {
+  font-family: 'Roboto Condensed';
+  src:
+    url('/fonts/RobotoCondensed-Light.woff2') format('woff2'),
+    url('/fonts/RobotoCondensed-Light.woff') format('woff');
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Roboto Condensed';
+  src:
+    url('/fonts/RobotoCondensed-Regular.woff2') format('woff2'),
+    url('/fonts/RobotoCondensed-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Roboto Condensed';
+  src:
+    url('/fonts/RobotoCondensed-Bold.woff2') format('woff2'),
+    url('/fonts/RobotoCondensed-Bold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+}
