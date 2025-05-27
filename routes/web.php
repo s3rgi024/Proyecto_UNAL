@@ -1,10 +1,17 @@
 <?php
 
-use App\Http\Controllers\userController;
-use Illuminate\Foundation\Application;
+use App\Http\Controllers\AuthController;
 use Illuminate\Support\Facades\Route;
-use Inertia\Inertia;
 
-Route::get('/', [userController::class, 'showLogin'])->name('user.login');
+Route::middleware('guest')->group(function () {
+    Route::get('/', function () {
+        return redirect()->route('auth.login.show');
+    });
+    Route::get('/iniciar_sesion', [AuthController::class, 'showLogin'])->name('auth.login.show');
+    Route::get('/registro', [AuthController::class, 'showRegister'])->name('auth.register.show');
+    Route::get('/recuperar_contrasena', [AuthController::class, 'showForgotPassword'])->name('auth.forgotPassword.show');
+});
 
-Route::get('/registro', [userController::class, 'showRegister'])->name('user.register');
+Route::middleware('auth')->group(function () {
+    Route::post('/cerrar_sesion', [AuthController::class, 'logout'])->name('auth.logout');
+});
