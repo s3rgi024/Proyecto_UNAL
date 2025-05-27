@@ -12,7 +12,7 @@ const FooterDetails = () => {
   };
 
   return (
-    <div className="flex h-full w-full items-center justify-between gap-1.5 transition-all duration-600 ease-out lg:flex-1 lg:gap-4">
+    <div className="flex h-full w-full items-center justify-between gap-1.5 transition-all duration-600 ease-out lg:basis-1/3 lg:gap-4">
       {isDesktop && (
         <div className="ml-10 flex h-35 w-1.5 flex-col gap-1.5">
           <div className="h-[80%] w-full bg-primary" />
@@ -27,7 +27,7 @@ const FooterDetails = () => {
             aria-selected={isSelectedInfo}
             tabIndex={0}
             className={clsx(
-              'flex cursor-pointer items-center gap-0.5',
+              'transition-scale flex cursor-pointer items-center gap-0.5 duration-100 hover:scale-102 hover:text-secondary-light',
               isSelectedInfo && 'border-b-2'
             )}
             onKeyDown={(e) => {
@@ -44,7 +44,7 @@ const FooterDetails = () => {
             aria-selected={!isSelectedInfo}
             tabIndex={0}
             className={clsx(
-              'flex cursor-pointer items-center gap-0.5',
+              'transition-scale flex cursor-pointer items-center gap-0.5 duration-100 hover:scale-102 hover:text-secondary-light',
               !isSelectedInfo && 'border-b-2'
             )}
             onKeyDown={(e) => {

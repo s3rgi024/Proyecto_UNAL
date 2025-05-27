@@ -6,12 +6,12 @@ const FooterLinks = () => {
   const authLinkClasses = 'text-white hover:text-gray-300 text-md after:bg-gray-300';
 
   return (
-    <div className="mx-8 mt-6 md:mt-10 md:mb-12 md:mx-15 mb-8 flex items-center justify-between gap-1 pb-5 md:flex-1 lg:m-0 lg:justify-center lg:p-0 lg:px-10">
-      <nav aria-labelledby="footer-contact-title" className="flex-1">
+    <div className="mx-8 mt-6 mb-8 flex items-center justify-between gap-1 pb-5 md:mx-15 md:mt-10 md:mb-12 md:flex-1 lg:m-0 lg:basis-1/3 lg:justify-center lg:p-0 lg:px-10">
+      <nav aria-labelledby="footer-contact-title" className="flex-1 lg:flex-none">
         <h4 id="footer-contact-title" className="text-md md:text-lg">
           Contacto
         </h4>
-        <div className="h-[2px] w-10 bg-white mb-1.5" />
+        <div className="mb-1.5 h-[2px] w-10 bg-white" />
         <ul className="text-[0.8rem] md:text-[1rem]">
           <li>
             <AuthLink
@@ -63,11 +63,11 @@ const FooterLinks = () => {
           />
         </a>
       </div>
-      <nav aria-labelledby="footer-links-title" className="flex-1 text-right">
+      <nav aria-labelledby="footer-links-title" className="text-right flex-1 lg:flex-none">
         <h4 id="footer-links-title" className="text-md md:text-lg">
           Enlaces
         </h4>
-        <div className="ml-auto h-[2px] w-8 bg-white mb-1.5" />
+        <div className="mb-1.5 ml-auto h-[2px] w-8 bg-white" />
         <ul className="text-[0.8rem] md:text-[1rem]">
           <li>
             <AuthLink

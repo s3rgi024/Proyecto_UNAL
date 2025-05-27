@@ -11,7 +11,7 @@ const FooterDeskLayout = () => {
     <div className="relative flex items-center justify-between gap-2 pt-12 pb-18">
       <FooterDetails />
       <FooterLinks />
-      <div className="mr-10 flex flex-1 items-center justify-end">
+      <div className="mr-10 flex basis-1/3 items-center justify-end">
         <div className="w-75">
           <img src="images/unal/icons/logo_FCE_blanco.webp" alt="Logo FCE" className="" />
           <SocialMedia size={45} />
