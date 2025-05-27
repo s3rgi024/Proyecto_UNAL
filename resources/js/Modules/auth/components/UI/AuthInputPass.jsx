@@ -2,44 +2,80 @@ import React, { useState } from 'react';
 import { IoMdEye, IoMdEyeOff } from 'react-icons/io';
 import { FaLock } from 'react-icons/fa6';
 import clsx from 'clsx';
-import { Switch } from '@headlessui/react';
+import { twMerge } from 'tailwind-merge';
+import { Checkbox, Field, Input, Label } from '@headlessui/react';
 import InputError from './InputError';
 import AuthLink from './AuthLink';
+import { useFormContext, Controller } from 'react-hook-form';
+import { route } from 'ziggy-js';
 
-const AuthInputPass = ({ color, forgotPass = false, errors }) => {
+const AuthInputPass = ({ label, name, placeholder, color, forgotPass = false, error }) => {
+  const { control, trigger } = useFormContext();
+
   const [isChecked, setIsChecked] = useState(false);
+  const [isFocus, setIsFocus] = useState(false);
+
+  const bgColors = {
+    primary: 'before:bg-primary',
+    secondary: 'before:bg-secondary',
+  };
 
   return (
-    <div className="flex w-full flex-col gap-2 px-15">
-      <div className='flex items-start'>
-        <label htmlFor="password" className="text-md text-gray-700">
-          Contraseña
-        </label>
+    <Field className="flex w-full flex-col px-12">
+      <div className="flex items-start">
+        <Label htmlFor={name} className="text-md text-gray-700">
+          {label}
+        </Label>
       </div>
-      <div className="relative flex w-full items-center gap-1.5">
-        <label htmlFor="password">
-          <FaLock size={25} className={errors ? 'text-error' : 'text-gray-700'} />
-        </label>
+      <div className="relative mb-1 flex w-full items-center gap-1.5">
+        <Label htmlFor={name}>
+          <FaLock
+            size={25}
+            className={twMerge(
+              clsx(
+                'transition-colors duration-200',
+                error ? 'text-error' : 'text-gray-700',
+                isFocus && !error && `text-${color}`
+              )
+            )}
+          />
+        </Label>
+
         <div className="relative w-full">
-          <input
-            type={isChecked ? 'text' : 'password'}
-            id="password"
-            name="password"
-            required
-            placeholder="Ingrese su contraseña"
-            aria-describedby={errors ? 'password-error' : undefined}
-            className={clsx(
-              'peer w-full border-b-2 focus:ring-0 focus:outline-none',
-              errors ? 'border-error' : 'border-gray-light'
+          <Controller
+            name={name}
+            control={control}
+            defaultValue=""
+            render={({ field }) => (
+              <Input
+                {...field}
+                type={isChecked ? 'text' : 'password'}
+                id={name}
+                name={name}
+                placeholder={placeholder}
+                onFocus={() => setIsFocus(true)}
+                onBlurCapture={() => setIsFocus(false)}
+                onChange={(e) => {
+                  field.onChange(e);
+                  trigger(name);
+                }}
+                aria-label="Campo para ingresar la contraseña"
+                aria-describedby={error ? `${name}-error` : undefined}
+                aria-invalid={!!error}
+                className={clsx(
+                  'peer w-full border-b-2 focus:ring-0 focus:outline-none',
+                  error ? 'border-error' : 'border-gray-light'
+                )}
+              />
             )}
           />
           <div
             className={clsx(
-              "absolute bottom-0 z-10 h-1 w-full before:absolute before:h-full before:w-full before:scale-x-0 before:transform before:bg-primary before:transition-transform before:duration-300 before:content-[''] peer-focus:before:scale-x-100",
-              color && `before:${color}`
+              "absolute bottom-0 z-10 h-1 w-full before:absolute before:h-full before:w-full before:scale-x-0 before:transform before:transition-transform before:duration-300 before:content-[''] peer-focus:before:scale-x-100",
+              error ? 'before:bg-error' : bgColors[color]
             )}
           />
-          <Switch
+          <Checkbox
             checked={isChecked}
             onChange={setIsChecked}
             tabIndex="0"
@@ -48,29 +84,36 @@ const AuthInputPass = ({ color, forgotPass = false, errors }) => {
                 setIsChecked(!isChecked);
               }
             }}
-            className="absolute top-1 right-0 cursor-pointer transition-transform hover:scale-109"
+            className={clsx(
+              'absolute top-1 right-0 cursor-pointer transition-all hover:scale-109',
+              `hover:text-${color}`
+            )}
             aria-label={isChecked ? 'Ocultar contraseña' : 'Mostrar contraseña'}
           >
             {isChecked ? (
-              <IoMdEyeOff size={20} className={clsx(errors && 'text-error')} />
+              <IoMdEyeOff size={20} className={clsx(error && 'text-error')} />
             ) : (
-              <IoMdEye size={20} className={clsx(errors && 'text-error')} />
+              <IoMdEye size={20} className={clsx(error && 'text-error')} />
             )}
-          </Switch>
+          </Checkbox>
         </div>
       </div>
-      {errors && <InputError error={errors} className="pl-7" id="password-error" />}
+      <InputError
+        error={error}
+        id={`${name}-error`}
+        className={clsx('pl-7 opacity-0', error && 'opacity-100')}
+      />
       {forgotPass && (
         <div className="flex justify-end">
           <AuthLink
             type="link"
-            route=""
+            route={route('auth.forgotPassword.show')}
             text="¿Olvidaste tu contraseña?"
             aria-label="Recuperar contraseña"
           />
         </div>
       )}
-    </div>
+    </Field>
   );
 };
 

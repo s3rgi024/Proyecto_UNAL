@@ -4,17 +4,19 @@ import InputError from './InputError';
 import { Field, Input, Label } from '@headlessui/react';
 import { twMerge } from 'tailwind-merge';
 
-const AuthInput = ({
+const AuthInputNumber = ({
   label,
   Icon,
   name,
   type = 'text',
   placeholder = '',
-  color = 'primary',
+  color,
   ariaLabel,
+  min,
+  max,
+  pattern,
   register,
   error,
-  children = null,
 }) => {
   const [isFocus, setIsFocus] = useState(false);
 
@@ -27,7 +29,7 @@ const AuthInput = ({
           </Label>
         </div>
       )}
-      <div className="mb-1 flex w-full items-center gap-1.5">
+      <div className="flex w-full items-center gap-1.5">
         {Icon && (
           <Label htmlFor={name}>
             <Icon
@@ -46,13 +48,19 @@ const AuthInput = ({
           <Input
             type={type}
             id={name}
+            name={name}
             placeholder={placeholder}
             onFocus={() => setIsFocus(true)}
             onBlurCapture={() => setIsFocus(false)}
+            onChange={(e) => handleChange(e.target.name, e.target.value)}
             aria-label={ariaLabel || label}
             aria-describedby={error ? `${name}-error` : undefined}
             aria-invalid={!!error}
-            autoComplete={type}
+            autoComplete={type || undefined}
+            minLength={min}
+            maxLength={max}
+            pattern={pattern}
+            inputMode="numeric"
             {...register(name)}
             className={clsx(
               'peer w-full border-b-2 focus:ring-0 focus:outline-none',
@@ -61,7 +69,7 @@ const AuthInput = ({
           />
           <div
             className={clsx(
-              'absolute bottom-0 z-10 h-1 w-full before:absolute before:h-full before:w-full before:scale-x-0 before:transform before:transition-transform before:duration-300 before:content-[""] peer-focus:before:scale-x-100',
+              "absolute bottom-0 z-10 h-1 w-full before:absolute before:h-full before:w-full before:scale-x-0 before:transform before:transition-transform before:duration-300 before:content-[''] peer-focus:before:scale-x-100",
               error ? 'before:bg-error' : `before:bg-${color}`
             )}
           />
@@ -72,9 +80,8 @@ const AuthInput = ({
         id={`${name}-error`}
         className={clsx('pl-7 opacity-0', error && 'opacity-100')}
       />
-      {children}
     </Field>
   );
 };
 
-export default AuthInput;
+export default AuthInputNumber;

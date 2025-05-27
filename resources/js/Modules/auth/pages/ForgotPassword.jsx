@@ -1,9 +1,8 @@
-import React from 'react';
-import AppLayout from '@/Layouts/AppLayout';
-import LoginForm from '@/Modules/auth/components/LoginForm';
+import AppLayout from '@/Layouts/AppLayout'
+import React from 'react'
+import ForgotPasswordForm from '@/Modules/auth/components/ForgotPasswordForm'
 
-const Login = () => {
-
+const ForgotPassword = () => {
   return (
     <AppLayout
       title="Iniciar sesión"
@@ -11,10 +10,10 @@ const Login = () => {
       background='bg-[url(images/unal/pics/fce_building.webp)]'
     >
       <div className="flex h-full w-full items-center justify-center">
-        <LoginForm />
+        <ForgotPasswordForm />
       </div>
     </AppLayout>
-  );
-};
+  )
+}
 
-export default Login;
+export default ForgotPassword
