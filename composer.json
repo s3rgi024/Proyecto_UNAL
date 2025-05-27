@@ -1,8 +1,8 @@
 {
     "$schema": "https://getcomposer.org/schema.json",
-    "name": "contratacion_docentes_fce",
+    "name": "fce/contratacion-docentes_ocasionales",
     "type": "project",
-    "description": "The skeleton application for the Laravel framework.",
+    "description": "Proyecto para la contratación de docentes ocasionales en la FCE",
     "keywords": [
         "laravel",
         "framework"
